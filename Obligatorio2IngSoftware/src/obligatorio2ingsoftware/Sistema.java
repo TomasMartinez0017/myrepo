@@ -63,7 +63,7 @@ public class Sistema {
     }
     
     public boolean eliminarCliente(Cliente unCliente){
-        if(!this.listaClientes.contains(unCliente)){
+        if(this.listaClientes.contains(unCliente)){
             this.listaClientes.remove(unCliente);   
             return true;
         }
@@ -86,7 +86,7 @@ public class Sistema {
     }
     
     public boolean eliminarArticulo(Articulo unArticulo){
-        if(!this.listaArticulos.contains(unArticulo)){
+        if(this.listaArticulos.contains(unArticulo)){
             this.listaArticulos.remove(unArticulo);   
             return true;
         }
@@ -109,7 +109,7 @@ public class Sistema {
     }
     
     public boolean eliminarLocal(Local unLocal){
-        if(!this.listaLocales.contains(unLocal)){
+        if(this.listaLocales.contains(unLocal)){
             this.listaLocales.remove(unLocal);   
             return true;
         }
@@ -132,7 +132,7 @@ public class Sistema {
     }
     
     public boolean eliminarVenta(Venta unaVenta){
-        if(!this.listaVentas.contains(unaVenta)){
+        if(this.listaVentas.contains(unaVenta)){
             this.listaVentas.remove(unaVenta);   
             return true;
         }
@@ -155,7 +155,7 @@ public class Sistema {
     }
     
     public boolean eliminarEnvase(Envase unEnvase){
-        if(!this.listaEnvases.contains(unEnvase)){
+        if(this.listaEnvases.contains(unEnvase)){
             this.listaEnvases.remove(unEnvase);   
             return true;
         }
@@ -163,6 +163,16 @@ public class Sistema {
             return false;
         }
     }    
+    
+    public static boolean esNumerico(String dato) {
+        boolean esNumerico = true;
+        try {
+            int valor = Integer.parseInt(dato);
+        } catch (NumberFormatException e) {
+            esNumerico = false;
+        }
+        return esNumerico;
+    }
     
 }    
 

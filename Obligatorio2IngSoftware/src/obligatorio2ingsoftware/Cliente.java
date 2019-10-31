@@ -63,6 +63,10 @@ public class Cliente implements Comparable<Cliente> {
     public int compareTo (Cliente unCliente){
         return this.getNombre().compareTo(unCliente.getNombre());
     }
+     @Override
+    public String toString() {
+        return "Nombre: " + this.getNombre();
+    }
     
     
 }

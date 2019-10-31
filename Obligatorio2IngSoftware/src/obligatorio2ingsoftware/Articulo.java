@@ -83,5 +83,10 @@ public class Articulo implements Comparable<Articulo> {
     @Override
     public int compareTo (Articulo unArticulo){
         return this.getNombre().compareTo(unArticulo.getNombre());
-    }    
+    }
+    
+      @Override
+    public String toString() {
+        return "Nombre: " + this.getNombre();
+    }
 }

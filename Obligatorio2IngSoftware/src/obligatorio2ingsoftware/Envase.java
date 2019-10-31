@@ -58,4 +58,9 @@ public class Envase {
         return this.getNroEnvase()==envase.getNroEnvase();
     }    
     
+      @Override
+    public String toString() {
+        return "Nombre: " + this.getNombre();
+    }
+    
 }
