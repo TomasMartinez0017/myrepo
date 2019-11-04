@@ -5,34 +5,68 @@ import java.util.*;
  * @author tomasmartinez
  */
 public class Venta {
-    private ArrayList<Envase> listaEnvases;
     private Cliente cliente;
+    private ArrayList<Envase> listaEnvasesUtilizados;
     private ArrayList<Articulo> listaArticulos;
-    private String fecha;
+    private int dia;
+    private int mes;
+    private int anio;
     private int nroVenta;
     
     public Venta(){
-        listaEnvases = new ArrayList();
         cliente = new Cliente();
         listaArticulos = new ArrayList();
-        fecha = "";
+        listaEnvasesUtilizados=new ArrayList();
         nroVenta = 0;
+        dia=0;
+        mes=0;
+        anio=0;
         
     }
 
+    public int getDia() {
+        return dia;
+    }
 
-    public Venta(ArrayList<Envase> unaListaEnvases, Cliente cliente, ArrayList<Articulo> unaListaArticulos, String fecha, int nroVenta) {
-        this.listaEnvases = unaListaEnvases;
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public ArrayList<Envase> getListaEnvasesUtilizados() {
+        return listaEnvasesUtilizados;
+    }
+
+    public void setListaEnvasesUtilizados(ArrayList<Envase> listaEnvases) {
+        this.listaEnvasesUtilizados = listaEnvases;
+    }
+
+
+    public Venta(ArrayList<Envase> unaListaEnvases, Cliente cliente, ArrayList<Articulo> unaListaArticulos,int mes,int anio,int dia, int nroVenta) {
         this.setCliente(cliente);
         this.listaArticulos = unaListaArticulos;
-        this.setFecha(fecha);
+        this.listaEnvasesUtilizados=unaListaEnvases;
+        this.setAnio(anio);
+        this.setDia(dia);
+        this.setMes(mes);
         this.setNroVenta(nroVenta);
     }
 
-    
-    public ArrayList<Envase> getListaEnvases() {
-        return listaEnvases;
-    }
 
     public ArrayList<Articulo> getListaArticulos() {
         return listaArticulos;
@@ -46,18 +80,14 @@ public class Venta {
         return cliente;
     }
     
-    public String getFecha(){
-        return fecha;
-    }
+   
     
     
     public void setCliente(Cliente unCliente){
         cliente = unCliente;
     }
     
-    public void setFecha(String unaFecha){
-        fecha = unaFecha;
-    }
+  
     
     public void setNroVenta(int nroVenta) {
         this.nroVenta = nroVenta;

@@ -163,6 +163,44 @@ public class Sistema {
             return false;
         }
     }    
+    //Ordeno la lista de articulos segun la cantidad de veces que se vendio.
+    public ArrayList<Articulo> productosMasVendidos(ArrayList<Articulo> lista){
+        Collections.sort(lista);
+        return lista;
+    }
+    
+    public ArrayList<Envase> EnvasesReutilizados(){
+        ArrayList<Envase> listaReutilizados=new ArrayList();
+        for(int i=0;i<this.listaVentas.size();i++){
+            Venta vent=this.listaVentas.get(i);
+            for(int j=0;j<vent.getListaEnvasesUtilizados().size();j++){
+                listaReutilizados.add(vent.getListaEnvasesUtilizados().get(j));
+            }
+        }
+        eliminarEnvasesRepetidos(listaReutilizados);
+        return listaReutilizados;
+    }
+    
+    public void eliminarEnvasesRepetidos(ArrayList<Envase> lista){
+        for(int i=0;i<lista.size();i++){
+            for(int j=i+1;j<lista.size();j++){
+                if(lista.get(i).getNroEnvase()==lista.get(j).getNroEnvase()){
+                    lista.remove(i);
+                }
+            }
+        }
+    }
+    
+    public int VentasDadoUnMes(int mes){
+        int cant=0;
+        for(int i=0;i<this.listaVentas.size();i++){
+            Venta vent= this.listaVentas.get(i);
+            if(vent.getMes()==mes){
+                cant++;
+            }
+        }
+        return cant;
+    }
     
     public static boolean esNumerico(String dato) {
         boolean esNumerico = true;
@@ -172,6 +210,10 @@ public class Sistema {
             esNumerico = false;
         }
         return esNumerico;
+    }
+    
+    public static boolean esCedula(String ci){
+        return ci.length()==8;
     }
     
 }    

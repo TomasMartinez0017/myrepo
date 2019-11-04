@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package Interfaz;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import obligatorio2ingsoftware.Sistema;
+import javax.swing.ListSelectionModel;
 
 /**
  *
@@ -14,8 +19,9 @@ public class VentanaVendedor extends javax.swing.JFrame {
     /**
      * Creates new form VentanaVendedor
      */
-    public VentanaVendedor() {
+    public VentanaVendedor(Sistema unSistema) {
         initComponents();
+        modelo=unSistema;
     }
 
     /**
@@ -31,6 +37,7 @@ public class VentanaVendedor extends javax.swing.JFrame {
         jButtonEditarArticulos = new javax.swing.JButton();
         jButtonEditarClientes = new javax.swing.JButton();
         jButtonEditarLocales = new javax.swing.JButton();
+        btnEstadisticas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +57,13 @@ public class VentanaVendedor extends javax.swing.JFrame {
 
         jButtonEditarLocales.setText("Editar Locales");
 
+        btnEstadisticas.setText("Estadisticas");
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadisticasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -59,19 +73,22 @@ public class VentanaVendedor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonEditarArticulos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonEditarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonEditarLocales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonEditarLocales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEstadisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(93, 93, 93)
+                .addGap(58, 58, 58)
                 .addComponent(jButtonEditarArticulos)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonEditarClientes)
-                .addGap(39, 39, 39)
+                .addGap(18, 18, 18)
+                .addComponent(btnEstadisticas)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonEditarLocales)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -90,16 +107,30 @@ public class VentanaVendedor extends javax.swing.JFrame {
 
     private void jButtonEditarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarClientesActionPerformed
         // TODO add your handling code here:
+        VentanaEditarCliente vent=new VentanaEditarCliente(modelo);
+        vent.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_jButtonEditarClientesActionPerformed
 
     private void jButtonEditarArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarArticulosActionPerformed
         // TODO add your handling code here:
+        VentanaEditarArticulos vent=new VentanaEditarArticulos(modelo);
+        vent.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonEditarArticulosActionPerformed
 
+    private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnEstadisticasActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEstadisticas;
     private javax.swing.JButton jButtonEditarArticulos;
     private javax.swing.JButton jButtonEditarClientes;
     private javax.swing.JButton jButtonEditarLocales;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    Sistema modelo;
 }

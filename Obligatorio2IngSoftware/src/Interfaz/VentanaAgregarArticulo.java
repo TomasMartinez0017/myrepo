@@ -184,14 +184,23 @@ public class VentanaAgregarArticulo extends javax.swing.JFrame {
                 articulo.getListaEnvases().add(listE.get(i));
                 }
                 articulo.setCodigo(Integer.parseInt(codigo));
+                if(!modelo.agregarArticulo(articulo)){
+                    JOptionPane.showMessageDialog(this, "Articulo ya existente", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else{
                 articulo.setPrecio(Integer.parseInt(precio));
                 articulo.setMaterial(material);
                 articulo.setOrigen(origen);
                 articulo.setNombre(nombre);
-            
-                modelo.agregarArticulo(articulo);
+                articulo.setCantidadVendidos(0);
+   
+               
                 JOptionPane.showMessageDialog(this, "Articulo registrado");
                 this.setVisible(false);
+                VentanaEditarArticulos vent1=new VentanaEditarArticulos(modelo);
+                vent1.setVisible(true);
+                }
+                
             }
             else{
                 JOptionPane.showMessageDialog(this, "Hay datos que no son numericos", "ERROR", JOptionPane.ERROR_MESSAGE);

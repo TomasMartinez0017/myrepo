@@ -6,7 +6,7 @@
 package obligatorio2ingsoftware;
 import Interfaz.VentanaEditarArticulos;
 import Interfaz.VentanaAgregarArticulo;
-
+import Interfaz.VentanaVendedor;
 
 /**
  *
@@ -26,14 +26,21 @@ public class Obligatorio2IngSoftware {
         s.agregarEnvase(e2);
         s.agregarEnvase(e1);
         
-        Articulo art1=new Articulo(1,2,"uru","metal","Pasas de uva",s.getListaEnvases());
+        Articulo art1=new Articulo(1,200,"uru","uva","Pasas de uva",s.getListaEnvases(),4);
         s.agregarArticulo(art1);
+        
+        
+        Cliente c1=new Cliente("juan",24537865, "cuareim");
+        s.agregarCliente(c1);
+        
+        VentanaVendedor vent3=new VentanaVendedor(s);
+        vent3.setVisible(true);
         
         VentanaEditarArticulos vent=new VentanaEditarArticulos(s);
         vent.setVisible(false);
         
         VentanaAgregarArticulo vent2= new VentanaAgregarArticulo(s);
-        vent2.setVisible(true);
+        vent2.setVisible(false);
         
         
     }

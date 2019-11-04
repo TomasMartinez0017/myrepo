@@ -8,6 +8,7 @@ public class Articulo implements Comparable<Articulo> {
     private String origen;
     private String material;
     private String nombre;
+    private int cantidadVendidos;
     private ArrayList<Envase> listaEnvases;
     
     public Articulo(){
@@ -17,15 +18,25 @@ public class Articulo implements Comparable<Articulo> {
         material = "";
         nombre = "";
         listaEnvases = new ArrayList();
+        cantidadVendidos=0;
     }
     
-    public Articulo(int codigo, int precio, String origen, String material, String nombre, ArrayList<Envase> unaLista) {
+    public Articulo(int codigo, int precio, String origen, String material, String nombre, ArrayList<Envase> unaLista, int cantidadVendidos) {
         this.setCodigo(codigo);
         this.setPrecio(precio);
         this.setOrigen(origen);
         this.setMaterial(material);
         this.setNombre(nombre);
+        this.setCantidadVendidos(cantidadVendidos);
         this.listaEnvases = unaLista;
+    }
+
+    public int getCantidadVendidos() {
+        return cantidadVendidos;
+    }
+
+    public void setCantidadVendidos(int cantidadVendidos) {
+        this.cantidadVendidos = cantidadVendidos;
     }
     
     
@@ -81,8 +92,8 @@ public class Articulo implements Comparable<Articulo> {
     }
     
     @Override
-    public int compareTo (Articulo unArticulo){
-        return this.getNombre().compareTo(unArticulo.getNombre());
+     public int compareTo(Articulo unArticulo) {
+        return unArticulo.getCantidadVendidos() - this.getCantidadVendidos();
     }
     
       @Override

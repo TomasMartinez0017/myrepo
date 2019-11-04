@@ -180,7 +180,6 @@
         <Component class="javax.swing.JButton" name="jButtonAgregarArticulo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Agregar Articulo"/>
-            <Property name="actionCommand" type="java.lang.String" value="Agregar Articulo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAgregarArticuloActionPerformed"/>
