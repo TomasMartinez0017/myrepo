@@ -5,6 +5,8 @@
  */
 package obligatorio2ingsoftware;
 
+import java.awt.Image;
+
 /**
  *
  * @author tomasmartinez
