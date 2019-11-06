@@ -122,7 +122,8 @@ public class VentanaVendedor extends javax.swing.JFrame {
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
         // TODO add your handling code here:
-        
+        VentanaEstadisticas vent=new VentanaEstadisticas(modelo);
+        vent.setVisible(true);
     }//GEN-LAST:event_btnEstadisticasActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

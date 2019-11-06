@@ -165,6 +165,7 @@ public class Sistema {
     }    
     //Ordeno la lista de articulos segun la cantidad de veces que se vendio.
     public ArrayList<Articulo> productosMasVendidos(ArrayList<Articulo> lista){
+        
         Collections.sort(lista);
         return lista;
     }

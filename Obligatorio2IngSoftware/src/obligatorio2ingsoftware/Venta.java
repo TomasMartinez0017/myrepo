@@ -8,6 +8,7 @@ public class Venta {
     private Cliente cliente;
     private ArrayList<Envase> listaEnvasesUtilizados;
     private ArrayList<Articulo> listaArticulos;
+    private Local local;
     private int dia;
     private int mes;
     private int anio;
@@ -17,11 +18,20 @@ public class Venta {
         cliente = new Cliente();
         listaArticulos = new ArrayList();
         listaEnvasesUtilizados=new ArrayList();
+        local=new Local();
         nroVenta = 0;
         dia=0;
         mes=0;
         anio=0;
         
+    }
+
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(Local local) {
+        this.local = local;
     }
 
     public int getDia() {
@@ -57,8 +67,9 @@ public class Venta {
     }
 
 
-    public Venta(ArrayList<Envase> unaListaEnvases, Cliente cliente, ArrayList<Articulo> unaListaArticulos,int mes,int anio,int dia, int nroVenta) {
+    public Venta(ArrayList<Envase> unaListaEnvases, Cliente cliente, ArrayList<Articulo> unaListaArticulos,int mes,int anio,int dia, int nroVenta,Local local) {
         this.setCliente(cliente);
+        this.setLocal(local);
         this.listaArticulos = unaListaArticulos;
         this.listaEnvasesUtilizados=unaListaEnvases;
         this.setAnio(anio);

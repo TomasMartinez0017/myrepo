@@ -7,6 +7,8 @@ package obligatorio2ingsoftware;
 import Interfaz.VentanaEditarArticulos;
 import Interfaz.VentanaAgregarArticulo;
 import Interfaz.VentanaVendedor;
+import Interfaz.VentanaPrincipal;
+
 
 /**
  *
@@ -33,8 +35,14 @@ public class Obligatorio2IngSoftware {
         Cliente c1=new Cliente("juan",24537865, "cuareim");
         s.agregarCliente(c1);
         
+        
+        
+        VentanaPrincipal vent4= new VentanaPrincipal(s);
+        vent4.setVisible(true);
+        
+        
         VentanaVendedor vent3=new VentanaVendedor(s);
-        vent3.setVisible(true);
+        vent3.setVisible(false);
         
         VentanaEditarArticulos vent=new VentanaEditarArticulos(s);
         vent.setVisible(false);
