@@ -196,12 +196,13 @@ public class Sistema {
         int cant=0;
         for(int i=0;i<this.listaVentas.size();i++){
             Venta vent= this.listaVentas.get(i);
-            if(vent.getMes()==mes){
+            if(vent.getFecha().getMonth()==mes){
                 cant++;
             }
         }
         return cant;
     }
+
     
     public static boolean esNumerico(String dato) {
         boolean esNumerico = true;

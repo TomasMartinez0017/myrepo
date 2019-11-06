@@ -43,6 +43,7 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButtonBorarArticulo = new javax.swing.JButton();
         jButtonAgregarArticulo = new javax.swing.JButton();
+        jButtonAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,16 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
             }
         });
 
+        jButtonAtras.setText("Atras");
+        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -87,6 +98,10 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
                             .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonAgregarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(227, 227, 227))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +115,9 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(jButtonAgregarArticulo))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,9 +149,18 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButtonAgregarArticuloActionPerformed
 
+    private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
+        // TODO add your handling code here:
+        VentanaVendedor vent = new VentanaVendedor(modelo);
+        this.setVisible(false);
+        vent.setVisible(true);
+        vent.setResizable(false);
+    }//GEN-LAST:event_jButtonAtrasActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAgregarArticulo;
+    private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonBorarArticulo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

@@ -36,5 +36,10 @@ public class Local {
         Local local = (Local)objeto;
         return this.getNroLocal()==local.getNroLocal();
     }
+  
+    @Override
+    public String toString() {
+        return "EcoShop: " + this.getNroLocal();
+    }    
       
 }

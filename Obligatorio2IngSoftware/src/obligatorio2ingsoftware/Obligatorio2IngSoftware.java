@@ -8,6 +8,8 @@ import Interfaz.VentanaEditarArticulos;
 import Interfaz.VentanaAgregarArticulo;
 import Interfaz.VentanaVendedor;
 import Interfaz.VentanaPrincipal;
+import Interfaz.VentanaCalendario;
+import java.util.Date;
 
 
 /**
@@ -47,21 +49,34 @@ public class Obligatorio2IngSoftware {
         s.agregarCliente(c2);
         s.agregarCliente(c3);
         
+        Local l1 = new Local("Pocitos", 1);
+        Date fecha = new Date();
+        fecha.setMonth(1);
+        s.agregarLocal(l1);
+        
+        Venta v1 = new Venta(s.getListaEnvases(), c1, s.getListaArticulos(), 1, l1, fecha);
+        s.agregarVenta(v1);
         
         
-        VentanaPrincipal vent4= new VentanaPrincipal(s);
-        vent4.setVisible(true);
-        vent4.setResizable(false);
+        
+        VentanaPrincipal vent1= new VentanaPrincipal(s);
+        vent1.setVisible(true);
+        vent1.setResizable(false);
         
         
-        VentanaVendedor vent3=new VentanaVendedor(s);
+        VentanaVendedor vent2=new VentanaVendedor(s);
+        vent2.setVisible(false);
+        
+        VentanaEditarArticulos vent3=new VentanaEditarArticulos(s);
         vent3.setVisible(false);
         
-        VentanaEditarArticulos vent=new VentanaEditarArticulos(s);
-        vent.setVisible(false);
+        VentanaAgregarArticulo vent4 = new VentanaAgregarArticulo(s);
+        vent4.setVisible(false);
         
-        VentanaAgregarArticulo vent2= new VentanaAgregarArticulo(s);
-        vent2.setVisible(false);
+        VentanaCalendario vent5 = new VentanaCalendario(s);
+        vent5.setVisible(false);
+        
+        
         
         
     }

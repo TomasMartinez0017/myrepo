@@ -62,6 +62,11 @@ public class VentanaVendedor extends javax.swing.JFrame {
         });
 
         jButtonEditarLocales.setText("Editar Locales");
+        jButtonEditarLocales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarLocalesActionPerformed(evt);
+            }
+        });
 
         btnEstadisticas.setText("Estadisticas");
         btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +171,14 @@ public class VentanaVendedor extends javax.swing.JFrame {
         vent.setVisible(true);
         vent.setResizable(false);
     }//GEN-LAST:event_jButtonAtrasActionPerformed
+
+    private void jButtonEditarLocalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarLocalesActionPerformed
+        // TODO add your handling code here:
+        VentanaEditarLocal vent = new VentanaEditarLocal(modelo);
+        this.setVisible(false);
+        vent.setVisible(true);
+        vent.setResizable(false);
+    }//GEN-LAST:event_jButtonEditarLocalesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEstadisticas;
