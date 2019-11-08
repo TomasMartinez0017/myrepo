@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package obligatorio2ingsoftware;
+import java.util.*;
 import Interfaz.VentanaEditarArticulos;
 import Interfaz.VentanaAgregarArticulo;
 import Interfaz.VentanaVendedor;
@@ -32,14 +33,35 @@ public class Obligatorio2IngSoftware {
         s.agregarEnvase(e1);
         s.agregarEnvase(e4);
         
-        Articulo art1 = new Articulo(1, 200, "Uruguay", "Uva", "Pasas de uva", s.getListaEnvases(), 4);
-        Articulo art2 = new Articulo(2, 500, "Colombia", "Granos de café", "Café Parsero", s.getListaEnvases(), 2);
-        Articulo art3 = new Articulo(3, 700, "Japon", "Organico", "Hongo Shiitake", s.getListaEnvases(), 6);
-        Articulo art4 = new Articulo(4, 400, "Alemania", "Té", "Kombucha", s.getListaEnvases(), 6);
+        ArrayList<Envase> art1Envases = new ArrayList();
+        art1Envases.add(e2);
+        art1Envases.add(e4);
+        
+        ArrayList<Envase> art2Envases = new ArrayList();
+        art2Envases.add(e4);
+        art2Envases.add(e2);  
+        
+        ArrayList<Envase> art3Envases = new ArrayList();
+        art3Envases.add(e2);
+        art3Envases.add(e3);
+
+        ArrayList<Envase> art4Envases = new ArrayList();
+        art4Envases.add(e1);     
+        
+        Articulo art1 = new Articulo(1, 200, "Uruguay", "Uva", "Pasas de uva", art1Envases, 4);
+        Articulo art2 = new Articulo(2, 500, "Colombia", "Granos de café", "Café Parsero", art2Envases, 2);
+        Articulo art3 = new Articulo(3, 700, "Japon", "Organico", "Hongo Shiitake", art3Envases, 6);
+        Articulo art4 = new Articulo(4, 400, "Alemania", "Té", "Kombucha", art4Envases, 6);
+                
         s.agregarArticulo(art1);
         s.agregarArticulo(art2);
         s.agregarArticulo(art3);
         s.agregarArticulo(art4);
+        
+        s.getListaArticulosOriginales().add(art1);
+        s.getListaArticulosOriginales().add(art2);
+        s.getListaArticulosOriginales().add(art3);
+        s.getListaArticulosOriginales().add(art4);
  
         
         Cliente c1 = new Cliente("Juan",51308672, "Mercedez 8042");
@@ -75,6 +97,7 @@ public class Obligatorio2IngSoftware {
         
         VentanaCalendario vent5 = new VentanaCalendario(s);
         vent5.setVisible(false);
+        
         
         
         

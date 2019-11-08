@@ -112,6 +112,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jButtonClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClienteActionPerformed
         // TODO add your handling code here:
+        VentanaCliente vent = new VentanaCliente(modelo);
+        this.setVisible(false);
+        vent.setVisible(true);
+        vent.setResizable(false);
         
         
     }//GEN-LAST:event_jButtonClienteActionPerformed

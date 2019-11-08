@@ -8,6 +8,15 @@ public class Sistema {
     private ArrayList<Local> listaLocales = new ArrayList<>();
     private ArrayList<Venta> listaVentas = new ArrayList<>();
     private ArrayList<Envase> listaEnvases = new ArrayList<>();
+    private ArrayList<Articulo> listaArticulosOriginales = new ArrayList<>();
+
+    public ArrayList<Articulo> getListaArticulosOriginales() {
+        return listaArticulosOriginales;
+    }
+
+    public void setListaArticulosOriginales(ArrayList<Articulo> listaArticulosOriginales) {
+        this.listaArticulosOriginales = listaArticulosOriginales;
+    }
 
     public ArrayList<Cliente> getListaClientes() {
         return listaClientes;
@@ -216,6 +225,36 @@ public class Sistema {
     
     public static boolean esCedula(String ci){
         return ci.length()==8;
+    }
+    
+    public  boolean sonIguales(ArrayList<Articulo> listaArticulos){
+        if (this.listaArticulosOriginales.size() == listaArticulos.size()){
+            for(int i = 0; i<this.listaArticulosOriginales.size(); i++){
+                if(this.listaArticulosOriginales.get(i) != listaArticulos.get(i)){
+                    return false;
+                }
+            }
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public boolean estaRegistrado(Cliente cliente){
+        return (this.listaClientes.contains(cliente));       
+    }
+    
+    public boolean validacionCompra(ArrayList<Articulo> listaArticulos, ArrayList<Envase> listaEnvases){
+        return (listaArticulos.size() == listaEnvases.size());
+    }
+    
+    public ArrayList<Articulo> copiarLista(ArrayList<Articulo> lista){
+        ArrayList<Articulo> retorno = new ArrayList();
+        for(int i = 0; i < lista.size(); i++){
+            retorno.add(lista.get(i));
+        }
+        return retorno;
     }
     
 }    
