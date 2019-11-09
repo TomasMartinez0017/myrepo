@@ -200,7 +200,7 @@ public class VentanaAgregarArticulo extends javax.swing.JFrame {
         if(!material.isEmpty() && !codigo.isEmpty() && !precio.isEmpty() && !origen.isEmpty() && !nombre.isEmpty() && !listE.isEmpty()){
             if(modelo.esNumerico(codigo) && modelo.esNumerico(precio)){
                 for(int i=0;i<listE.size();i++){
-                articulo.getListaEnvases().add(listE.get(i));
+                    articulo.getListaEnvases().add(listE.get(i));
                 }
                 articulo.setCodigo(Integer.parseInt(codigo));
                 if(!modelo.agregarArticulo(articulo)){

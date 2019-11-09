@@ -127,6 +127,16 @@ public class Venta {
         this.setNroVenta(nroVenta);
         this.setFecha(fecha);
     }
+    
+    public void agregarArticuloVenta(Articulo art){
+        if(this.listaArticulos.contains(art)){
+            int pos = listaArticulos.indexOf(art);
+            this.listaArticulos.get(pos).setCantidadVendidos(this.listaArticulos.get(pos).getCantidadVendidos()+ 1);
+        }
+        else{
+            this.listaArticulos.add(art);
+        }
+    }
 
     
     @Override

@@ -21,6 +21,7 @@ public class VentanaEditarLocal extends javax.swing.JFrame {
     public VentanaEditarLocal(Sistema unSistema) {
         initComponents();
         modelo = unSistema;
+        this.setLocationRelativeTo(null);
         lstLocales.setListData(modelo.getListaLocales().toArray());
         
     }
@@ -50,7 +51,6 @@ public class VentanaEditarLocal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 560));
         setMinimumSize(new java.awt.Dimension(800, 560));
-        setPreferredSize(new java.awt.Dimension(800, 560));
 
         lstLocales.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
