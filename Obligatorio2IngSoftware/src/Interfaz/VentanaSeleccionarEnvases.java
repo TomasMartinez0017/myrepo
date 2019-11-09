@@ -22,6 +22,7 @@ public class VentanaSeleccionarEnvases extends javax.swing.JFrame {
      */
     public VentanaSeleccionarEnvases(Sistema unSistema) {
         initComponents();
+        this.setLocationRelativeTo(null); 
         modelo = unSistema;
         listaArticulosAux = modelo.copiarLista(modelo.getListaVentas().get(modelo.getListaVentas().size()-1).getListaArticulos());
         lstArticulos.setListData(listaArticulosAux.toArray());

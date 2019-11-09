@@ -4,8 +4,14 @@
  * and open the template in the editor.
  */
 package Interfaz;
+import java.util.Date;
+import java.util.List;
 import obligatorio2ingsoftware.Sistema;
 import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import obligatorio2ingsoftware.Cliente;
+import obligatorio2ingsoftware.Venta;
+import obligatorio2ingsoftware.Articulo;
 
 /**
  *
@@ -19,6 +25,9 @@ public class VentanaCompra2 extends javax.swing.JFrame {
     public VentanaCompra2(Sistema unSistema) {
         initComponents();
         modelo = unSistema;
+        this.setLocationRelativeTo(null);
+        lstArticulos.setListData(modelo.getListaArticulos().toArray());
+        lstArticulos.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
     }
 
     /**
@@ -30,24 +39,129 @@ public class VentanaCompra2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstArticulos = new javax.swing.JList();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        JTextFieldCI = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 560));
+        setMinimumSize(new java.awt.Dimension(800, 560));
+        setPreferredSize(new java.awt.Dimension(800, 560));
+
+        lstArticulos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(lstArticulos);
+
+        jLabel1.setText("Estamos actualizando nuestro catálogo de productos");
+
+        jLabel2.setText("Seleccione de la lista los articulos que desee");
+
+        jButton1.setText("Comprar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Cedula de Identidad:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(125, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(JTextFieldCI, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(71, 71, 71)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(131, 131, 131))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(70, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel3)
+                        .addGap(10, 10, 10)
+                        .addComponent(JTextFieldCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(58, 58, 58))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Venta venta = new Venta();
+        String ci = JTextFieldCI.getText();
+        if(modelo.esCedula(ci)){
+            if(modelo.estaRegistrado(ci)){
+                List<Articulo> listaA = lstArticulos.getSelectedValuesList();
+                if(!listaA.isEmpty()){
+                    for(int i = 0; i < listaA.size(); i++){
+                        venta.getListaArticulos().add(listaA.get(i));  
+                    }
+                    
+                    Cliente aux = new Cliente();
+                    aux.setCedula(Integer.parseInt(ci));
+                    int pos = modelo.getListaClientes().indexOf(aux);
+                
+                    venta.setCliente(modelo.getListaClientes().get(pos));
+                
+                    Date fecha = new Date();
+                    venta.setFecha(fecha);
+                    
+                    modelo.getListaVentas().add(venta);
+                    
+                    VentanaSeleccionarEnvases vent = new VentanaSeleccionarEnvases(modelo);
+                    this.setVisible(false);
+                    vent.setVisible(true);
+                    vent.setResizable(false);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Seleccione Articulos", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Cliente No Registrado", "ERROR", JOptionPane.ERROR_MESSAGE);               
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Ingrese una cedula válida", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }    
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JTextFieldCI;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList lstArticulos;
     // End of variables declaration//GEN-END:variables
     Sistema modelo;
 }

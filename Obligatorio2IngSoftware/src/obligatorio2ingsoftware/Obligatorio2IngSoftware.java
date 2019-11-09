@@ -85,7 +85,7 @@ public class Obligatorio2IngSoftware {
         vent1.setVisible(true);
         vent1.setResizable(false);
         
-        
+        /*
         VentanaVendedor vent2=new VentanaVendedor(s);
         vent2.setVisible(false);
         
@@ -97,6 +97,7 @@ public class Obligatorio2IngSoftware {
         
         VentanaCalendario vent5 = new VentanaCalendario(s);
         vent5.setVisible(false);
+        */
         
         
         

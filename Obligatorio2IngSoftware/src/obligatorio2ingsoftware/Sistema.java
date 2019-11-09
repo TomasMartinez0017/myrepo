@@ -213,7 +213,7 @@ public class Sistema {
     }
 
     
-    public static boolean esNumerico(String dato) {
+    public boolean esNumerico(String dato) {
         boolean esNumerico = true;
         try {
             int valor = Integer.parseInt(dato);
@@ -223,7 +223,7 @@ public class Sistema {
         return esNumerico;
     }
     
-    public static boolean esCedula(String ci){
+    public boolean esCedula(String ci){
         return ci.length()==8;
     }
     
@@ -241,8 +241,10 @@ public class Sistema {
         }
     }
     
-    public boolean estaRegistrado(Cliente cliente){
-        return (this.listaClientes.contains(cliente));       
+    public boolean estaRegistrado(String ci){
+        Cliente aux = new Cliente();
+        aux.setCedula(Integer.parseInt(ci));
+        return (this.listaClientes.contains(aux));       
     }
     
     public boolean validacionCompra(ArrayList<Articulo> listaArticulos, ArrayList<Envase> listaEnvases){
