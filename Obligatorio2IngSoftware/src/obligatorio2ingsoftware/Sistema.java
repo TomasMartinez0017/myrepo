@@ -215,12 +215,18 @@ public class Sistema {
     
     public boolean esNumerico(String dato) {
         boolean esNumerico = true;
-        try {
-            int valor = Integer.parseInt(dato);
-        } catch (NumberFormatException e) {
-            esNumerico = false;
+        if(dato.equals("")){
+            return false;
         }
-        return esNumerico;
+        else{
+            try {
+                int valor = Integer.parseInt(dato);
+            } catch (NumberFormatException e) {
+                esNumerico = false;
+        }
+        return esNumerico;    
+        }
+        
     }
     
     public boolean esCedula(String ci){

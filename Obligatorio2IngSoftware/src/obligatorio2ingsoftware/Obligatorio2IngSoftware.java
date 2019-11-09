@@ -76,8 +76,6 @@ public class Obligatorio2IngSoftware {
         fecha.setMonth(1);
         s.agregarLocal(l1);
         
-        Venta v1 = new Venta(s.getListaEnvases(), c1, s.getListaArticulos(), 1, l1, fecha);
-        s.agregarVenta(v1);
         
         
         

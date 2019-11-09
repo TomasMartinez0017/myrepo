@@ -3,16 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaEditarLocal.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Venta.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Obligatorio2IngSoftware.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Local.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaSeleccionarEnvases.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Sistema.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCompra2.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCompra1.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Articulo.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaVendedor.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Cliente.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCalendario.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Venta.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaAgregarCliente.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCompra1.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Envase.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Articulo.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaVendedor.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaEditarArticulos.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaAgregarArticulo.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaEditarLocal.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Obligatorio2IngSoftware.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Sistema.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaPrincipal.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCompra2.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/obligatorio2ingsoftware/Local.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaCliente.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaSeleccionarEnvases.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaEstadisticas.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware/src/Interfaz/VentanaEditarCliente.java</file>
         </group>
     </open-files>
 </project-private>

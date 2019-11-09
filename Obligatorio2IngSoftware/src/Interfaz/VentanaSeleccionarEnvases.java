@@ -144,15 +144,21 @@ public class VentanaSeleccionarEnvases extends javax.swing.JFrame {
         // TODO add your handling code here:
         Envase envase = (Envase)lstEnvases.getSelectedValue();
         if(envase!=null){
-        modelo.getListaVentas().get(modelo.getListaVentas().size()-1).getListaEnvasesUtilizados().add(envase);
-        int pos = listaArticulosAux.indexOf(articuloAux);
-        listaArticulosAux.remove(pos);
-        lstArticulos.setListData(listaArticulosAux.toArray());
-         ArrayList<String> vaciar = new ArrayList();
-        lstEnvases.setListData(vaciar.toArray());
+            modelo.getListaVentas().get(modelo.getListaVentas().size()-1).getListaEnvasesUtilizados().add(envase);
+            int pos = listaArticulosAux.indexOf(articuloAux);
+            listaArticulosAux.remove(pos);
+            lstArticulos.setListData(listaArticulosAux.toArray());
+            ArrayList<String> vaciar = new ArrayList();
+            lstEnvases.setListData(vaciar.toArray());
         }
         else{
-            JOptionPane.showMessageDialog(this, "Debe seleccionar un Envase", "ERROR", JOptionPane.ERROR_MESSAGE);
+            if(lstEnvases.getModel().getSize()==0){
+                JOptionPane.showMessageDialog(this, "No quedan envases por agregar", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Debe seleccionar un envase", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+            
         }
        
        
