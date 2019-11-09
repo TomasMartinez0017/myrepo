@@ -115,6 +115,7 @@ public class VentanaCompra2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Venta venta = new Venta();
+        
         String ci = JTextFieldCI.getText();
         if(modelo.esCedula(ci)){
             if(modelo.estaRegistrado(ci)){

@@ -39,7 +39,7 @@ public class Local {
   
     @Override
     public String toString() {
-        return "EcoShop: " + this.getNroLocal();
+        return "EcoShop: " + this.getNroLocal() + "Direccion: " + this.getDireccion();
     }    
       
 }

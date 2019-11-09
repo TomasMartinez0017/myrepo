@@ -49,7 +49,6 @@ public class VentanaSeleccionarEnvases extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 560));
         setMinimumSize(new java.awt.Dimension(800, 560));
-        setPreferredSize(new java.awt.Dimension(800, 560));
 
         lstArticulos.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -132,18 +131,31 @@ public class VentanaSeleccionarEnvases extends javax.swing.JFrame {
     private void jButtonSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeleccionarActionPerformed
         // TODO add your handling code here:
         articuloAux = (Articulo)lstArticulos.getSelectedValue();
-        lstEnvases.setListData(articuloAux.getListaEnvases().toArray());        
+        if(articuloAux!=null){
+            lstEnvases.setListData(articuloAux.getListaEnvases().toArray()); 
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un articulo de su lista", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+               
     }//GEN-LAST:event_jButtonSeleccionarActionPerformed
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
         // TODO add your handling code here:
         Envase envase = (Envase)lstEnvases.getSelectedValue();
+        if(envase!=null){
         modelo.getListaVentas().get(modelo.getListaVentas().size()-1).getListaEnvasesUtilizados().add(envase);
         int pos = listaArticulosAux.indexOf(articuloAux);
         listaArticulosAux.remove(pos);
         lstArticulos.setListData(listaArticulosAux.toArray());
-        ArrayList<String> vaciar = new ArrayList();
+         ArrayList<String> vaciar = new ArrayList();
         lstEnvases.setListData(vaciar.toArray());
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un Envase", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+       
+       
         
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
