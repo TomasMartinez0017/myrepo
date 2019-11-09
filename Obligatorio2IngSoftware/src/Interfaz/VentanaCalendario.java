@@ -33,8 +33,9 @@ public class VentanaCalendario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        calendar = new rojeru_san.componentes.RSCalendar();
+        rSCalendar1 = new rojeru_san.componentes.RSCalendar();
         jButtonMostrarFecha = new javax.swing.JButton();
+        calendar = new rojeru_san.componentes.RSCalendar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 560));
@@ -42,7 +43,6 @@ public class VentanaCalendario extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 560));
 
         jButtonMostrarFecha.setText("Mostrar fecha");
-        jButtonMostrarFecha.setActionCommand("Mostrar fecha");
         jButtonMostrarFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMostrarFechaActionPerformed(evt);
@@ -54,20 +54,19 @@ public class VentanaCalendario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(calendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonMostrarFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addGap(232, 232, 232)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(calendar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonMostrarFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(calendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonMostrarFecha)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -94,6 +93,7 @@ public class VentanaCalendario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.componentes.RSCalendar calendar;
     private javax.swing.JButton jButtonMostrarFecha;
+    private rojeru_san.componentes.RSCalendar rSCalendar1;
     // End of variables declaration//GEN-END:variables
     Sistema modelo;
 }

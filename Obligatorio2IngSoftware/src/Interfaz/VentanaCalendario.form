@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="rojeru_san.componentes.RSCalendar" name="rSCalendar1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -32,39 +36,37 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="calendar" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonMostrarFecha" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="calendar" max="32767" attributes="0"/>
+                  <Component id="jButtonMostrarFecha" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="466" max="32767" attributes="0"/>
+              <EmptySpace pref="254" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
               <Component id="calendar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jButtonMostrarFecha" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="172" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="rojeru_san.componentes.RSCalendar" name="calendar">
-    </Component>
     <Component class="javax.swing.JButton" name="jButtonMostrarFecha">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar fecha"/>
-        <Property name="actionCommand" type="java.lang.String" value="Mostrar fecha"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMostrarFechaActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="rojeru_san.componentes.RSCalendar" name="calendar">
     </Component>
   </SubComponents>
 </Form>
