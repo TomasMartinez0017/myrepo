@@ -25,7 +25,7 @@ public class Venta {
         nroVenta = 0;    
     }
     
-    public boolean isEsPreventa() {
+    public boolean getEsPreventa() {
         return esPreventa;
     }
 

@@ -57,6 +57,8 @@ public class VentanaCompra2 extends javax.swing.JFrame {
         lstCarrito = new javax.swing.JList();
         jScrollPane3 = new javax.swing.JScrollPane();
         lstLocales = new javax.swing.JList();
+        rSDateChooser1 = new rojeru_san.componentes.RSDateChooser();
+        jLabelLocal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 560));
@@ -100,26 +102,35 @@ public class VentanaCompra2 extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(lstLocales);
 
+        jLabelLocal.setText("Seleccione un local:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabelCantidad)
-                    .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAgregar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtCI, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelCI, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(79, 79, 79)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCI, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelCI, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(77, 77, 77)
+                        .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabelCantidad)
+                        .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAgregar))
+                            .addGap(79, 79, 79)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                                .addComponent(jLabelLocal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -139,16 +150,24 @@ public class VentanaCompra2 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2)
                         .addGap(33, 33, 33)
-                        .addComponent(jLabelCI)
-                        .addGap(10, 10, 10)
-                        .addComponent(txtCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelCI)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabelCantidad)
-                        .addGap(8, 8, 8)
-                        .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonAgregar)
-                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelCantidad)
+                                .addGap(8, 8, 8)
+                                .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22)
+                                .addComponent(jButtonAgregar)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabelLocal)
+                                .addGap(7, 7, 7)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3)
                             .addComponent(jScrollPane2))))
@@ -177,7 +196,6 @@ public class VentanaCompra2 extends javax.swing.JFrame {
         String cantidad = txtCantidad.getText();
         if(ventaAux == null){
             String ci = txtCI.getText();
-            Date fecha = new Date();
             if(modelo.esCedula(ci)){
                 if(modelo.estaRegistrado(ci)){
                     Articulo art = (Articulo)lstArticulos.getSelectedValue();
@@ -185,23 +203,50 @@ public class VentanaCompra2 extends javax.swing.JFrame {
                         Local local = (Local)lstLocales.getSelectedValue();
                         if(local != null){
                             if(modelo.esNumerico(cantidad)){
-                                ventaAux = new Venta();
-                                art.setCantidadVendidos(Integer.parseInt(cantidad));
-                                Cliente aux = new Cliente();
-                                aux.setCedula(Integer.parseInt(ci));
-                                int pos = modelo.getListaClientes().indexOf(aux);
-                                ventaAux.setCliente(modelo.getListaClientes().get(pos));
-                                ventaAux.getListaArticulos().add(art);
-                                ventaAux.setLocal(local);
-                                ventaAux.setFecha(fecha);
-                                modelo.getListaVentas().add(ventaAux);
-                                lstCarrito.setListData(ventaAux.getListaArticulos().toArray());
-                                lstLocales.setVisible(false);
-                                txtCI.setVisible(false);
-                                String lstLocalVacia = "Local ya ingresado";
-                                String vaciar[] = new String[1];
-                                vaciar[0] = lstLocalVacia;
-                                lstLocales.setListData(vaciar); 
+                                Date fecha = rSDateChooser1.getDatoFecha();
+                                if(fecha!=null){
+                                    Date fechaHoy = new Date();
+                                    Calendar cal = Calendar.getInstance();
+                                    cal.setTime(fechaHoy);
+                                    int anoHoy = cal.get(Calendar.YEAR);
+                                    int mesHoy = cal.get(Calendar.MONTH);
+                                    int diaHoy = cal.get(Calendar.DAY_OF_MONTH);
+                    
+                                    Date fechaSeleccionada = rSDateChooser1.getDatoFecha();
+                                    Calendar cal2 = Calendar.getInstance();
+                                    cal2.setTime(fechaSeleccionada);
+                                    int anoS = cal2.get(Calendar.YEAR);
+                                    int mesS = cal2.get(Calendar.MONTH);
+                                    int diaS = cal2.get(Calendar.DAY_OF_MONTH);
+                                
+                                    if(anoHoy<anoS || mesHoy<mesS || diaHoy<diaS){
+                                        ventaAux = new Venta();
+                                        art.setCantidadVendidos(Integer.parseInt(cantidad));
+                                        Cliente aux = new Cliente();
+                                        aux.setCedula(Integer.parseInt(ci));
+                                        int pos = modelo.getListaClientes().indexOf(aux);
+                                        ventaAux.setCliente(modelo.getListaClientes().get(pos));
+                                        ventaAux.getListaArticulos().add(art);
+                                        ventaAux.setLocal(local);
+                                        ventaAux.setFecha(fecha);
+                                        modelo.getListaVentas().add(ventaAux);
+                                        lstCarrito.setListData(ventaAux.getListaArticulos().toArray());
+                                        jLabelCI.setVisible(false);
+                                        txtCI.setVisible(false);
+                                        jLabelLocal.setVisible(false);
+                                        String lstLocalVacia = "Local ya ingresado";
+                                        String vaciar[] = new String[1];
+                                        vaciar[0] = lstLocalVacia;
+                                        lstLocales.setListData(vaciar);  
+                                        rSDateChooser1.setVisible(false);
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(this, "Ingrese una fecha válida", "ERROR", JOptionPane.ERROR_MESSAGE);   
+                                    }
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(this, "Ingrese una fecha", "ERROR", JOptionPane.ERROR_MESSAGE);
+                                }    
                             }
                             else{
                                 JOptionPane.showMessageDialog(this, "Ingrese una cantidad válida", "ERROR", JOptionPane.ERROR_MESSAGE);
@@ -248,12 +293,14 @@ public class VentanaCompra2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelCI;
     private javax.swing.JLabel jLabelCantidad;
+    private javax.swing.JLabel jLabelLocal;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JList lstArticulos;
     private javax.swing.JList lstCarrito;
     private javax.swing.JList lstLocales;
+    private rojeru_san.componentes.RSDateChooser rSDateChooser1;
     private javax.swing.JTextField txtCI;
     private javax.swing.JTextField txtCantidad;
     // End of variables declaration//GEN-END:variables

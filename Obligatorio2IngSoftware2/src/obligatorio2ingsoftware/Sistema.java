@@ -275,5 +275,17 @@ public class Sistema {
         return retorno;
     }
     
+    public String precioTotal(ArrayList<Articulo> lista){
+        int total = 0;
+        for(int i = 0; i<lista.size(); i++){
+            for(int j = 0; j < lista.get(i).getCantidadVendidos(); j++){
+                total = total + lista.get(i).getPrecio();
+            }
+            
+        }
+        String retorno = Integer.toString(total);
+        return retorno;
+    }
+    
 }    
 

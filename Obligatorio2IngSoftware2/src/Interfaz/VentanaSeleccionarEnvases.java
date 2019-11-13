@@ -165,7 +165,11 @@ public class VentanaSeleccionarEnvases extends javax.swing.JFrame {
         // TODO add your handling code here:
         Venta venta = modelo.getListaVentas().get(modelo.getListaVentas().size()-1);
         if(modelo.validacionCompra(venta.getListaArticulos(), venta.getListaEnvasesUtilizados())){
-            JOptionPane.showMessageDialog(this, "Compra Realizada");            
+            JOptionPane.showMessageDialog(this, "Compra Realizada");
+            VentanaTicket vent = new VentanaTicket(modelo);
+            this.setVisible(false);
+            vent.setVisible(true);
+            vent.setResizable(false);
         }
         else{
             JOptionPane.showMessageDialog(this, "Quedan articulos sin envase", "ERROR", JOptionPane.ERROR_MESSAGE);

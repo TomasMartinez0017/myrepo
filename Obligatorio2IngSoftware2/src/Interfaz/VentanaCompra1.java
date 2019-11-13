@@ -13,8 +13,6 @@ import obligatorio2ingsoftware.Cliente;
 import obligatorio2ingsoftware.Local;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Calendar;
-import java.time.*;
 
 
 
@@ -59,7 +57,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         lstLocales = new javax.swing.JList();
         jLabel3 = new javax.swing.JLabel();
-        rsCalendar = new rojeru_san.componentes.RSDateChooser();
+        rSDateChooser = new rojeru_san.componentes.RSDateChooser();
         jLabel5 = new javax.swing.JLabel();
 
         jComboBoxCafe1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -157,7 +155,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                             .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rsCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rSDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,7 +206,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rsCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rSDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,57 +231,65 @@ public class VentanaCompra1 extends javax.swing.JFrame {
             if(modelo.estaRegistrado(ci)){
                 Local loc = (Local)lstLocales.getSelectedValue();
                 if(loc != null){
-                    Cliente aux = new Cliente();
-                    aux.setCedula(Integer.parseInt(ci));
-                    int pos = modelo.getListaClientes().indexOf(aux);
-                    venta.setCliente(modelo.getListaClientes().get(pos));
-
+                    Date fecha = rSDateChooser.getDatoFecha();
+                    if(fecha!=null){                        
+                        Date fechaHoy = new Date();
+                        Calendar cal = Calendar.getInstance();
+                        cal.setTime(fechaHoy);
+                        int anoHoy = cal.get(Calendar.YEAR);
+                        int mesHoy = cal.get(Calendar.MONTH);
+                        int diaHoy = cal.get(Calendar.DAY_OF_MONTH);
+                    
+                        Date fechaSeleccionada = rSDateChooser.getDatoFecha();
+                        Calendar cal2 = Calendar.getInstance();
+                        cal2.setTime(fechaSeleccionada);
+                        int anoS = cal2.get(Calendar.YEAR);
+                        int mesS = cal2.get(Calendar.MONTH);
+                        int diaS = cal2.get(Calendar.DAY_OF_MONTH);
+                        if(anoHoy<anoS || mesHoy<mesS || diaHoy<diaS){
+                            venta.setEsPreventa(true);
+                            Cliente aux = new Cliente();
+                            aux.setCedula(Integer.parseInt(ci));
+                            int pos = modelo.getListaClientes().indexOf(aux);
+                            venta.setCliente(modelo.getListaClientes().get(pos));                        
+                            venta.setFecha(fecha);
+                        
+                            venta.setLocal(loc);
         
-                    if(cantidadPasas>0){
-                        Articulo artPasas = modelo.getListaArticulosOriginales().get(0);
-                        artPasas.setCantidadVendidos(cantidadPasas);
-                        venta.getListaArticulos().add(artPasas);
+                            if(cantidadPasas>0){
+                                Articulo artPasas = modelo.getListaArticulosOriginales().get(0);
+                                artPasas.setCantidadVendidos(cantidadPasas);
+                                venta.getListaArticulos().add(artPasas);
+                            }
+                            if(cantidadCafe>0){
+                                Articulo artCafe = modelo.getListaArticulosOriginales().get(1);
+                                artCafe.setCantidadVendidos(cantidadCafe);
+                                venta.getListaArticulos().add(artCafe);
+                            }
+                            if(cantidadHongos>0){
+                                Articulo artHongos = modelo.getListaArticulosOriginales().get(2);
+                                artHongos.setCantidadVendidos(cantidadHongos);
+                                venta.getListaArticulos().add(artHongos);
+                            }
+                            if(cantidadKombucha>0){
+                                Articulo artKombucha = modelo.getListaArticulosOriginales().get(3);
+                                artKombucha.setCantidadVendidos(cantidadKombucha);
+                                venta.getListaArticulos().add(artKombucha);
+                            }
+
+                            modelo.getListaVentas().add(venta);
+                            VentanaSeleccionarEnvases vent = new VentanaSeleccionarEnvases(modelo);
+                            this.setVisible(false);
+                            vent.setVisible(true);
+                            vent.setResizable(false);
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(this, "Seleccione una fecha válida", "ERROR", JOptionPane.ERROR_MESSAGE);
+                        }
                     }
-                    if(cantidadCafe>0){
-                        Articulo artCafe = modelo.getListaArticulosOriginales().get(1);
-                        artCafe.setCantidadVendidos(cantidadCafe);
-                        venta.getListaArticulos().add(artCafe);
+                    else{
+                        JOptionPane.showMessageDialog(this, "Seleccione una fecha", "ERROR", JOptionPane.ERROR_MESSAGE);
                     }
-                    if(cantidadHongos>0){
-                        Articulo artHongos = modelo.getListaArticulosOriginales().get(2);
-                        artHongos.setCantidadVendidos(cantidadHongos);
-                        venta.getListaArticulos().add(artHongos);
-                    }
-                    if(cantidadKombucha>0){
-                        Articulo artKombucha = modelo.getListaArticulosOriginales().get(3);
-                        artKombucha.setCantidadVendidos(cantidadKombucha);
-                        venta.getListaArticulos().add(artKombucha);
-                    }
-                    int prueba=0;
-                    Date fechaSeleccionada = rsCalendar.getDatoFecha();
-                    LocalDateTime now=LocalDateTime.now();
-                    Date s=rsCalendar.getDatoFecha();
-                    int anoHoy = now.getYear();
-                    int mesHoy = now.getMonthValue();
-                    int diaHoy = now.getDayOfMonth();
-                    
-                    int anoSeleccionado = rsCalendar.realYear;
-                    int mesSeleccionado = rsCalendar.currentMonth;
-                    int diaSeleccionado = rsCalendar.realDay;
-                    
-                    if(anoHoy<anoSeleccionado || mesHoy<mesSeleccionado || diaHoy<diaSeleccionado){
-                        venta.setFecha(fechaSeleccionada);
-                        modelo.getListaPreventas().add(venta);
-                    }
-                    else{//mal
-                        venta.setFecha(now);
-                        modelo.getListaVentas().add(venta);
-                    }
-                    
-                    VentanaSeleccionarEnvases vent = new VentanaSeleccionarEnvases(modelo);
-                    this.setVisible(false);
-                    vent.setVisible(true);
-                    vent.setResizable(false); 
                 }
                 else{
                     JOptionPane.showMessageDialog(this, "Seleccione un local", "ERROR", JOptionPane.ERROR_MESSAGE);
@@ -325,7 +331,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPasas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lstLocales;
-    private rojeru_san.componentes.RSDateChooser rsCalendar;
+    private rojeru_san.componentes.RSDateChooser rSDateChooser;
     private javax.swing.JTextField txtCedula;
     // End of variables declaration//GEN-END:variables
     Sistema modelo;

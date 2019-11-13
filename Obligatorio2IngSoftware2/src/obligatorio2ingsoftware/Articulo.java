@@ -98,6 +98,6 @@ public class Articulo implements Comparable<Articulo> {
     
       @Override
     public String toString() {
-        return "Nombre: " + this.getNombre();
+        return this.getNombre();
     }
 }
