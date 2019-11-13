@@ -13,6 +13,10 @@ import obligatorio2ingsoftware.Cliente;
 import obligatorio2ingsoftware.Local;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Calendar;
+import java.time.*;
+
+
 
 /**
  *
@@ -55,15 +59,13 @@ public class VentanaCompra1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         lstLocales = new javax.swing.JList();
         jLabel3 = new javax.swing.JLabel();
-        rSDateChooser1 = new rojeru_san.componentes.RSDateChooser();
+        rsCalendar = new rojeru_san.componentes.RSDateChooser();
         jLabel5 = new javax.swing.JLabel();
 
         jComboBoxCafe1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 560));
         setMinimumSize(new java.awt.Dimension(800, 560));
-        setPreferredSize(new java.awt.Dimension(800, 560));
 
         jLabelKombucha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/kombucha-bio-voelkel-ecovidasolar.jpg"))); // NOI18N
         jLabelKombucha.setText("IMAGEN KOMBUCHA");
@@ -155,18 +157,14 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                             .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rsCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addContainerGap(87, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107))))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jButtonComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,8 +200,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBoxCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jComboBoxCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
@@ -211,7 +208,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rsCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -263,23 +260,23 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         venta.getListaArticulos().add(artKombucha);
                     }
                     
-                    Date fechaHoy = new Date();
-                    Date fechaSeleccionada = rSDateChooser1.getDatoFecha();
+                    Date fechaSeleccionada = rsCalendar.getDatoFecha();
+                    LocalDateTime now=LocalDateTime.now();
+                    Date s=rsCalendar.getDatoFecha();
+                    int anoHoy = now.getYear();
+                    int mesHoy = now.getMonthValue();
+                    int diaHoy = now.getDayOfMonth();
                     
-                    int anoHoy = fechaHoy.getYear();
-                    int mesHoy = fechaHoy.getMonth();
-                    int diaHoy = fechaHoy.getDay();
-                    
-                    int anoSeleccionado = fechaSeleccionada.getYear();
-                    int mesSeleccionado = fechaSeleccionada.getMonth();
-                    int diaSeleccionado = fechaSeleccionada.getDay();
+                    int anoSeleccionado = rsCalendar.realYear;
+                    int mesSeleccionado = rsCalendar.currentMonth;
+                    int diaSeleccionado = rsCalendar.realDay;
                     
                     if(anoHoy<anoSeleccionado || mesHoy<mesSeleccionado || diaHoy<diaSeleccionado){
                         venta.setFecha(fechaSeleccionada);
                         modelo.getListaPreventas().add(venta);
                     }
-                    else{
-                        venta.setFecha(fechaHoy);
+                    else{//mal
+                        venta.setFecha(now);
                         modelo.getListaVentas().add(venta);
                     }
                     
@@ -328,7 +325,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPasas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lstLocales;
-    private rojeru_san.componentes.RSDateChooser rSDateChooser1;
+    private rojeru_san.componentes.RSDateChooser rsCalendar;
     private javax.swing.JTextField txtCedula;
     // End of variables declaration//GEN-END:variables
     Sistema modelo;

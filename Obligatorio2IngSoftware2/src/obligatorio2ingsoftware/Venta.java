@@ -1,4 +1,5 @@
 package obligatorio2ingsoftware;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Date;
 /**
@@ -108,5 +109,9 @@ public class Venta {
     public boolean equals (Object objeto){
         Venta venta = (Venta)objeto;
         return this.getNroVenta()==venta.getNroVenta();
+    }
+
+    public void setFecha(LocalDateTime now) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
