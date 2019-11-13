@@ -259,7 +259,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         artKombucha.setCantidadVendidos(cantidadKombucha);
                         venta.getListaArticulos().add(artKombucha);
                     }
-                    
+                    int prueba=0;
                     Date fechaSeleccionada = rsCalendar.getDatoFecha();
                     LocalDateTime now=LocalDateTime.now();
                     Date s=rsCalendar.getDatoFecha();
