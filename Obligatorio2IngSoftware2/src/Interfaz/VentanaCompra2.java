@@ -219,7 +219,7 @@ public class VentanaCompra2 extends javax.swing.JFrame {
                                     int mesS = cal2.get(Calendar.MONTH);
                                     int diaS = cal2.get(Calendar.DAY_OF_MONTH);
                                 
-                                    if(anoHoy<anoS || mesHoy<mesS || diaHoy<diaS){
+                                    if(anoHoy<=anoS && mesHoy<=mesS && diaHoy<=diaS){
                                         ventaAux = new Venta();
                                         art.setCantidadVendidos(Integer.parseInt(cantidad));
                                         Cliente aux = new Cliente();

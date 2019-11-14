@@ -52,17 +52,20 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jButtonAtras" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="715" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="342" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButtonEditarArticulos" max="32767" attributes="0"/>
-                      <Component id="jButtonEditarClientes" max="32767" attributes="0"/>
-                      <Component id="jButtonEditarLocales" max="32767" attributes="0"/>
-                      <Component id="btnEstadisticas" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jButtonAtras" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="342" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jButtonEditarArticulos" max="32767" attributes="0"/>
+                              <Component id="jButtonEditarClientes" max="32767" attributes="0"/>
+                              <Component id="jButtonEditarLocales" max="32767" attributes="0"/>
+                              <Component id="btnEstadisticas" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>

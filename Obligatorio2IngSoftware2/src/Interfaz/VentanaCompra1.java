@@ -73,8 +73,10 @@ public class VentanaCompra1 extends javax.swing.JFrame {
 
         jLabel2.setText("Pasas de Uva: 200$");
 
+        jLabelPasas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPasas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/PasasdeUvas.jpg"))); // NOI18N
         jLabelPasas.setText("IMAGEN PASAS DE UVA");
+        jLabelPasas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jLabelPasas.setMaximumSize(new java.awt.Dimension(100, 100));
         jLabelPasas.setMinimumSize(new java.awt.Dimension(100, 100));
         jLabelPasas.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -246,7 +248,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         int anoS = cal2.get(Calendar.YEAR);
                         int mesS = cal2.get(Calendar.MONTH);
                         int diaS = cal2.get(Calendar.DAY_OF_MONTH);
-                        if(anoHoy<anoS || mesHoy<mesS || diaHoy<diaS){
+                        if(anoHoy<=anoS && mesHoy<=mesS && diaHoy<=diaS){
                             venta.setEsPreventa(true);
                             Cliente aux = new Cliente();
                             aux.setCedula(Integer.parseInt(ci));
