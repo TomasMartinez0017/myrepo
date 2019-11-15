@@ -287,5 +287,21 @@ public class Sistema {
         return retorno;
     }
     
+    public boolean esHoy(Date FechaHoy,Date FechaSeleccionado){
+        Calendar cal=Calendar.getInstance();
+        cal.setTime(FechaHoy);
+        int anoHoy=cal.get(Calendar.YEAR);
+        int mesHoy=cal.get(Calendar.MONTH);
+        int diaHoy=cal.get(Calendar.DAY_OF_MONTH);
+        
+        Calendar cal2=Calendar.getInstance();
+        cal.setTime(FechaSeleccionado);
+        int anoSeleccionado=cal2.get(Calendar.YEAR);
+        int mesSeleccionado=cal2.get(Calendar.MONTH);
+        int diaSeleccionado=cal2.get(Calendar.DAY_OF_MONTH);
+        
+        return (anoHoy == anoSeleccionado) && (mesHoy==mesSeleccionado) && (diaHoy==diaSeleccionado);  
+    }
+    
 }    
 

@@ -36,41 +36,116 @@ public class VentanaEditarCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnAgregarCliente = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         lstClientes = new javax.swing.JList<>();
         btnBorrarCliente = new javax.swing.JButton();
-        btnAgregarCliente = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButtonHome = new javax.swing.JButton();
         jButtonAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 560));
         setMinimumSize(new java.awt.Dimension(800, 560));
+        setPreferredSize(new java.awt.Dimension(800, 560));
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("Lista Clientes");
+        jPanel2.setBackground(new java.awt.Color(51, 204, 0));
+        jPanel2.setMaximumSize(new java.awt.Dimension(800, 100));
+        jPanel2.setMinimumSize(new java.awt.Dimension(800, 100));
 
-        lstClientes.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(lstClientes);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Edición de Clientes");
 
-        btnBorrarCliente.setText("Borrar Cliente");
-        btnBorrarCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarClienteActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 880, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
+        );
 
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 1680, 80);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setMaximumSize(new java.awt.Dimension(800, 560));
+        jPanel1.setMinimumSize(new java.awt.Dimension(800, 560));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 560));
+        jPanel1.setLayout(null);
+
+        btnAgregarCliente.setBackground(new java.awt.Color(51, 204, 0));
+        btnAgregarCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAgregarCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregarCliente.setText("Agregar Cliente");
         btnAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarClienteActionPerformed(evt);
             }
         });
+        jPanel1.add(btnAgregarCliente);
+        btnAgregarCliente.setBounds(430, 70, 160, 25);
 
-        jButtonAtras.setText("Atras");
+        lstClientes.setBackground(new java.awt.Color(204, 255, 204));
+        lstClientes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lstClientes.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        lstClientes.setMaximumSize(new java.awt.Dimension(47, 95));
+        lstClientes.setMinimumSize(new java.awt.Dimension(47, 95));
+        lstClientes.setPreferredSize(new java.awt.Dimension(47, 95));
+        jScrollPane1.setViewportView(lstClientes);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(120, 60, 210, 310);
+
+        btnBorrarCliente.setBackground(new java.awt.Color(204, 204, 204));
+        btnBorrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trash.png"))); // NOI18N
+        btnBorrarCliente.setBorder(null);
+        btnBorrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarClienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBorrarCliente);
+        btnBorrarCliente.setBounds(330, 330, 70, 40);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Lista Clientes");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(120, 30, 160, 30);
+
+        jButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home (1).png"))); // NOI18N
+        jButtonHome.setBorder(null);
+        jButtonHome.setMaximumSize(new java.awt.Dimension(63, 63));
+        jButtonHome.setMinimumSize(new java.awt.Dimension(63, 63));
+        jButtonHome.setPreferredSize(new java.awt.Dimension(63, 63));
+        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonHome);
+        jButtonHome.setBounds(700, 380, 60, 60);
+
+        jButtonAtras.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        jButtonAtras.setBorder(null);
         jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
         jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
         jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
@@ -79,43 +154,11 @@ public class VentanaEditarCliente extends javax.swing.JFrame {
                 jButtonAtrasActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonAtras);
+        jButtonAtras.setBounds(20, 380, 63, 60);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAgregarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnBorrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(253, 253, 253))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBorrarCliente)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAgregarCliente))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 80, 800, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -142,13 +185,25 @@ public class VentanaEditarCliente extends javax.swing.JFrame {
         vent.setResizable(false);
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
+    private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipal vent = new VentanaPrincipal(modelo);
+        this.setVisible(false);
+        vent.setVisible(true);
+        vent.setResizable(false);
+    }//GEN-LAST:event_jButtonHomeActionPerformed
+
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarCliente;
     private javax.swing.JButton btnBorrarCliente;
     private javax.swing.JButton jButtonAtras;
+    private javax.swing.JButton jButtonHome;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lstClientes;
     // End of variables declaration//GEN-END:variables
