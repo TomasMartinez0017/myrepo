@@ -94,10 +94,10 @@ public class VentanaVendedor extends javax.swing.JFrame {
         jPanel2.setBounds(0, 0, 1680, 80);
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel3.setLayout(null);
 
         jButtonEditarArticulos.setBackground(new java.awt.Color(51, 255, 51));
         jButtonEditarArticulos.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonEditarArticulos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/baseline_edit_black_18dp.png"))); // NOI18N
         jButtonEditarArticulos.setText("Editar Articulos");
         jButtonEditarArticulos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jButtonEditarArticulos.addActionListener(new java.awt.event.ActionListener() {
@@ -105,11 +105,10 @@ public class VentanaVendedor extends javax.swing.JFrame {
                 jButtonEditarArticulosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButtonEditarArticulos);
-        jButtonEditarArticulos.setBounds(10, 110, 125, 30);
 
         jButtonEditarClientes.setBackground(new java.awt.Color(51, 255, 51));
         jButtonEditarClientes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonEditarClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/baseline_person_add_disabled_black_18dp.png"))); // NOI18N
         jButtonEditarClientes.setText("Editar Clientes");
         jButtonEditarClientes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jButtonEditarClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -117,11 +116,10 @@ public class VentanaVendedor extends javax.swing.JFrame {
                 jButtonEditarClientesActionPerformed(evt);
             }
         });
-        jPanel3.add(jButtonEditarClientes);
-        jButtonEditarClientes.setBounds(10, 200, 125, 30);
 
         btnEstadisticas.setBackground(new java.awt.Color(51, 255, 51));
         btnEstadisticas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/baseline_bar_chart_black_18dp.png"))); // NOI18N
         btnEstadisticas.setText("Estadisticas");
         btnEstadisticas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
@@ -129,15 +127,42 @@ public class VentanaVendedor extends javax.swing.JFrame {
                 btnEstadisticasActionPerformed(evt);
             }
         });
-        jPanel3.add(btnEstadisticas);
-        btnEstadisticas.setBounds(10, 290, 125, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Menu");
-        jPanel3.add(jLabel3);
-        jLabel3.setBounds(40, 20, 110, 40);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEditarArticulos, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEditarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(186, 186, 186))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButtonEditarArticulos)
+                .addGap(46, 46, 46)
+                .addComponent(jButtonEditarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(btnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 80, 210, 520);

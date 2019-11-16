@@ -1,7 +1,9 @@
 
 package Interfaz;
 import obligatorio2ingsoftware.Sistema;
-
+import obligatorio2ingsoftware.Mapa;
+import com.teamdev.jxmaps.*;
+import java.util.concurrent.TimeUnit;
 
 public class VentanaCliente extends javax.swing.JFrame {
 
@@ -173,6 +175,39 @@ public class VentanaCliente extends javax.swing.JFrame {
 
     private void jButtonPreVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreVentaActionPerformed
         // TODO add your handling code here:
+        
+        Mapa map= new Mapa("Locales");
+        System.out.print("Wait until map is generated ");
+	try {
+		for(int i=0;i<10;i++)
+		{
+			TimeUnit.SECONDS.sleep(1);
+			System.out.print(".");
+		}
+	} catch (InterruptedException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	} 
+        
+        MapOptions mapOptions = new MapOptions();
+        MapTypeControlOptions controlOptions = new MapTypeControlOptions();
+        mapOptions.setMapTypeControlOptions(controlOptions);
+        
+        
+        map.getMap().setOptions(mapOptions);
+        
+        Marker mark1 = new Marker(map.getMap());        
+        mark1.setPosition(new LatLng(-34.894891, -56.099988));
+        
+        Marker mark2 = new Marker(map.getMap());
+        mark2.setPosition(new LatLng(-34.829551, -56.272001));
+        
+        Marker mark3 = new Marker(map.getMap());
+        mark3.setPosition(new LatLng(-34.923603, -56.158539));
+        
+        Marker mark4 = new Marker(map.getMap());
+        mark4.setPosition(new LatLng(-34.915133, -56.155370));
+        
     }//GEN-LAST:event_jButtonPreVentaActionPerformed
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed

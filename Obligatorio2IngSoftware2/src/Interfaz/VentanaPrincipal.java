@@ -50,7 +50,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jButtonCliente.setBackground(new java.awt.Color(153, 255, 51));
         jButtonCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/baseline_person_black_18dp.png"))); // NOI18N
         jButtonCliente.setText("Cliente");
+        jButtonCliente.setActionCommand("");
         jButtonCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButtonCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,10 +60,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonCliente);
-        jButtonCliente.setBounds(200, 270, 93, 55);
+        jButtonCliente.setBounds(200, 270, 100, 55);
 
         jButtonVendedor.setBackground(new java.awt.Color(153, 255, 51));
         jButtonVendedor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/baseline_business_center_black_18dp.png"))); // NOI18N
         jButtonVendedor.setText("Vendedor");
         jButtonVendedor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButtonVendedor.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +73,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonVendedor);
-        jButtonVendedor.setBounds(480, 270, 93, 55);
+        jButtonVendedor.setBounds(480, 270, 110, 55);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
         jPanel1.add(jLabel2);

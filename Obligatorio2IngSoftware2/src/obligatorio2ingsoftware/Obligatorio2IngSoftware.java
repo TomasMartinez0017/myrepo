@@ -70,11 +70,14 @@ public class Obligatorio2IngSoftware {
         s.agregarCliente(c2);
         s.agregarCliente(c3);
         
-        Local l1 = new Local("Pocitos", 1);
-        Date fecha = new Date();
-        fecha.setMonth(1);
+        Local l1 = new Local("Av 18 de Diciembre 1623", 1);
+        Local l2 = new Local("Av. Luis Batlle Berres 6634", 2);
+        Local l3 = new Local("José Ellauri 350", 3);
+        Local l4 = new Local("Dr José Scoseria 2659", 4);
         s.agregarLocal(l1);
-        
+        s.agregarLocal(l2);
+        s.agregarLocal(l3);
+        s.agregarLocal(l4);
         
         
         
