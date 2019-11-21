@@ -62,7 +62,7 @@ public class Envase {
     
       @Override
     public String toString() {
-        return "Nombre: " + this.getNombre();
+        return this.getNombre();
     }
     
 }

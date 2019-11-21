@@ -14,16 +14,25 @@ public class Venta {
     private Date fecha;
     boolean esPreventa;
     private int nroVenta;
-    
-    
-    
+    int huellaCarbono;
+
     public Venta(){
         cliente = new Cliente();
         listaArticulos = new ArrayList();
         listaEnvasesUtilizados=new ArrayList();
         local=new Local();
         nroVenta = 0;    
+        huellaCarbono=0;
     }
+    
+    public int getHuellaCarbono() {
+        return huellaCarbono;
+    }
+
+    public void setHuellaCarbono(int huellaCarbono) {
+        this.huellaCarbono = huellaCarbono;
+    }
+    
     
     public boolean getEsPreventa() {
         return esPreventa;
@@ -114,4 +123,15 @@ public class Venta {
     public void setFecha(LocalDateTime now) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    //metodo que dado una lista de articulos me devuelve la cantidad de co2 ahorrado.
+    //para ello por cada producto, envase de plastico contamina 10g aprox
+    public int calculoHuella(ArrayList<Articulo> lstArt){
+        int cant=0;
+        for (int i = 0; i < lstArt.size(); i++) {
+            cant+=lstArt.get(i).getCantidadVendidos()*10;
+        }
+        return cant;
+    }
+    
 }

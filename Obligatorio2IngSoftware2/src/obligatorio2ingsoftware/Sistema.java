@@ -184,9 +184,9 @@ public class Sistema {
     }    
     //Ordeno la lista de articulos segun la cantidad de veces que se vendio.
     public ArrayList<Articulo> productosMasVendidos(ArrayList<Articulo> lista){
-        
-        Collections.sort(lista);
-        return lista;
+        ArrayList<Articulo> copia=copiarLista(lista);
+        Collections.sort(copia);
+        return copia;
     }
     
     public ArrayList<Envase> EnvasesReutilizados(){
@@ -215,7 +215,10 @@ public class Sistema {
         int cant=0;
         for(int i=0;i<this.listaVentas.size();i++){
             Venta vent= this.listaVentas.get(i);
-            if(vent.getFecha().getMonth()==mes){
+            Calendar calaux=Calendar.getInstance();
+            calaux.setTime(vent.getFecha());
+            int mesaux=calaux.get(Calendar.MONTH);
+            if(mesaux==mes){
                 cant++;
             }
         }
@@ -295,13 +298,35 @@ public class Sistema {
         int diaHoy=cal.get(Calendar.DAY_OF_MONTH);
         
         Calendar cal2=Calendar.getInstance();
-        cal.setTime(FechaSeleccionado);
+        cal2.setTime(FechaSeleccionado);
         int anoSeleccionado=cal2.get(Calendar.YEAR);
         int mesSeleccionado=cal2.get(Calendar.MONTH);
         int diaSeleccionado=cal2.get(Calendar.DAY_OF_MONTH);
         
         return (anoHoy == anoSeleccionado) && (mesHoy==mesSeleccionado) && (diaHoy==diaSeleccionado);  
     }
+    
+    public boolean aplicaDescuento(ArrayList<Articulo> lstArticulo){
+        int cont = 0;
+        for(int i = 0; i< lstArticulo.size(); i++){
+            cont += lstArticulo.get(i).getCantidadVendidos();
+        }
+        return cont>4;
+    }
+    
+    public int calculoDescuento(int precioTotal){
+        int descuento = (int) (precioTotal*0.10);
+        return precioTotal-descuento;
+        
+    }
+    public ArrayList<Integer> listaCantidadVendidos(ArrayList<Articulo> lstArticulos){
+        ArrayList<Integer> retorno = new ArrayList<>();
+        for(int i=0; i<lstArticulos.size(); i++){
+            retorno.add(lstArticulos.get(i).getCantidadVendidos());
+        }
+        return retorno;
+    }
+    
     
 }    
 

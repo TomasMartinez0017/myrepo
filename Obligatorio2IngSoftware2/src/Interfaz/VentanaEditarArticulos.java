@@ -37,51 +37,21 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jButtonAgregarArticulo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         lstArticulos = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
         jButtonBorarArticulo = new javax.swing.JButton();
-        jButtonAgregarArticulo = new javax.swing.JButton();
-        jButtonAtras = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButtonAtras1 = new javax.swing.JButton();
+        jButtonAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setMaximumSize(new java.awt.Dimension(800, 560));
-        jPanel1.setMinimumSize(new java.awt.Dimension(800, 560));
-        jPanel1.setLayout(null);
-
-        lstArticulos.setBackground(new java.awt.Color(204, 255, 204));
-        lstArticulos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lstArticulos.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "-Item 1", "-Item 2", "-Item 3", "-Item 4", "-Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(lstArticulos);
-
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(150, 150, 260, 350);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Lista Articulos");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(150, 120, 140, 22);
-
-        jButtonBorarArticulo.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonBorarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trash.png"))); // NOI18N
-        jButtonBorarArticulo.setBorder(null);
-        jButtonBorarArticulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBorarArticuloActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonBorarArticulo);
-        jButtonBorarArticulo.setBounds(410, 460, 70, 40);
+        setMaximumSize(new java.awt.Dimension(952, 683));
+        setMinimumSize(new java.awt.Dimension(952, 683));
+        setPreferredSize(new java.awt.Dimension(952, 683));
+        setSize(new java.awt.Dimension(952, 683));
 
         jButtonAgregarArticulo.setBackground(new java.awt.Color(51, 204, 0));
         jButtonAgregarArticulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -92,22 +62,27 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
                 jButtonAgregarArticuloActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAgregarArticulo);
-        jButtonAgregarArticulo.setBounds(460, 160, 180, 25);
 
-        jButtonAtras.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
-        jButtonAtras.setBorder(null);
-        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Lista Articulos");
+
+        lstArticulos.setBackground(new java.awt.Color(204, 255, 204));
+        lstArticulos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lstArticulos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "-Item 1", "-Item 2", "-Item 3", "-Item 4", "-Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(lstArticulos);
+
+        jButtonBorarArticulo.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonBorarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trash.png"))); // NOI18N
+        jButtonBorarArticulo.setBorder(null);
+        jButtonBorarArticulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAtrasActionPerformed(evt);
+                jButtonBorarArticuloActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAtras);
-        jButtonAtras.setBounds(20, 490, 70, 60);
 
         jPanel2.setBackground(new java.awt.Color(51, 204, 0));
         jPanel2.setMaximumSize(new java.awt.Dimension(800, 100));
@@ -119,12 +94,9 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Edición de Articulos");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 0, 800, 80);
+        jLabel2.setBounds(0, 0, 940, 80);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1680, 80);
-
-        jButtonAtras1.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonAtras1.setBackground(new java.awt.Color(51, 204, 0));
         jButtonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home (1).png"))); // NOI18N
         jButtonAtras1.setBorder(null);
         jButtonAtras1.setMaximumSize(new java.awt.Dimension(63, 63));
@@ -135,18 +107,56 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
                 jButtonAtras1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAtras1);
-        jButtonAtras1.setBounds(722, 500, 60, 50);
+        jPanel2.add(jButtonAtras1);
+        jButtonAtras1.setBounds(870, 10, 60, 63);
+
+        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));
+        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        jButtonAtras.setBorder(null);
+        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonAtras);
+        jButtonAtras.setBounds(10, 10, 70, 63);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 941, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonAgregarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(213, 213, 213))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(107, 107, 107)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonAgregarArticulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
@@ -197,7 +207,6 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
     private javax.swing.JButton jButtonBorarArticulo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lstArticulos;

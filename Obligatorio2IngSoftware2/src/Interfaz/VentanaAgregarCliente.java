@@ -20,6 +20,7 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
      */
     public VentanaAgregarCliente(Sistema unSistema) {
         initComponents();
+        this.setLocationRelativeTo(null);
         modelo=unSistema;
     }
 
@@ -38,31 +39,25 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
         txtCI = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtDireccion = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        btnAgregar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButtonAtras = new javax.swing.JButton();
         jButtonHome = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 560));
-        setMinimumSize(new java.awt.Dimension(800, 560));
-        getContentPane().setLayout(null);
+        setMaximumSize(new java.awt.Dimension(952, 683));
+        setMinimumSize(new java.awt.Dimension(952, 683));
+        setPreferredSize(new java.awt.Dimension(952, 683));
+        setSize(new java.awt.Dimension(952, 683));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(337, 177, 60, 17);
 
         txtNombre.setBackground(new java.awt.Color(204, 255, 204));
-        getContentPane().add(txtNombre);
-        txtNombre.setBounds(337, 197, 126, 20);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Cedula de identidad");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(337, 235, 119, 17);
 
         txtCI.setBackground(new java.awt.Color(204, 255, 204));
         txtCI.addActionListener(new java.awt.event.ActionListener() {
@@ -70,75 +65,11 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
                 txtCIActionPerformed(evt);
             }
         });
-        getContentPane().add(txtCI);
-        txtCI.setBounds(337, 255, 126, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Direccion");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(337, 293, 56, 17);
 
         txtDireccion.setBackground(new java.awt.Color(204, 255, 204));
-        getContentPane().add(txtDireccion);
-        txtDireccion.setBounds(337, 313, 126, 20);
-
-        jPanel2.setBackground(new java.awt.Color(51, 204, 0));
-        jPanel2.setMaximumSize(new java.awt.Dimension(800, 100));
-        jPanel2.setMinimumSize(new java.awt.Dimension(800, 100));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Edición de Clientes");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 880, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 1680, 80);
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setLayout(null);
-
-        jButtonAtras.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
-        jButtonAtras.setBorder(null);
-        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
-        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAtrasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonAtras);
-        jButtonAtras.setBounds(30, 360, 63, 60);
-
-        jButtonHome.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home (1).png"))); // NOI18N
-        jButtonHome.setBorder(null);
-        jButtonHome.setMaximumSize(new java.awt.Dimension(63, 63));
-        jButtonHome.setMinimumSize(new java.awt.Dimension(63, 63));
-        jButtonHome.setPreferredSize(new java.awt.Dimension(63, 63));
-        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHomeActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonHome);
-        jButtonHome.setBounds(700, 370, 60, 50);
 
         btnAgregar.setBackground(new java.awt.Color(51, 204, 0));
         btnAgregar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -149,11 +80,99 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAgregar);
-        btnAgregar.setBounds(340, 290, 123, 39);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 80, 800, 490);
+        jPanel1.setBackground(new java.awt.Color(51, 204, 0));
+
+        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));
+        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        jButtonAtras.setBorder(null);
+        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
+
+        jButtonHome.setBackground(new java.awt.Color(51, 204, 0));
+        jButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home (1).png"))); // NOI18N
+        jButtonHome.setBorder(null);
+        jButtonHome.setMaximumSize(new java.awt.Dimension(63, 63));
+        jButtonHome.setMinimumSize(new java.awt.Dimension(63, 63));
+        jButtonHome.setPreferredSize(new java.awt.Dimension(63, 63));
+        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHomeActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Agregar Cliente");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(411, 411, 411)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombre)
+                    .addComponent(txtCI)
+                    .addComponent(txtDireccion)
+                    .addComponent(jLabel3)
+                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(415, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(10, 10, 10)
+                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -220,7 +239,6 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtCI;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtNombre;

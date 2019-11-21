@@ -47,10 +47,10 @@ public class Obligatorio2IngSoftware {
         ArrayList<Envase> art4Envases = new ArrayList();
         art4Envases.add(e1);     
         
-        Articulo art1 = new Articulo(1, 200, "Uruguay", "Uva", "Pasas de uva", art1Envases, 4);
-        Articulo art2 = new Articulo(2, 500, "Colombia", "Granos de café", "Café Parsero", art2Envases, 2);
-        Articulo art3 = new Articulo(3, 700, "Japon", "Organico", "Hongo Shiitake", art3Envases, 6);
-        Articulo art4 = new Articulo(4, 400, "Alemania", "Té", "Kombucha", art4Envases, 6);
+        Articulo art1 = new Articulo(1, 200, "Uruguay", "Uva", "Pasas de uva", art1Envases, 0);
+        Articulo art2 = new Articulo(2, 500, "Colombia", "Granos de café", "Café Parsero", art2Envases, 0);
+        Articulo art3 = new Articulo(3, 700, "Japon", "Organico", "Hongo Shiitake", art3Envases, 0);
+        Articulo art4 = new Articulo(4, 400, "Alemania", "Té", "Kombucha", art4Envases, 0);
                 
         s.agregarArticulo(art1);
         s.agregarArticulo(art2);
@@ -63,9 +63,9 @@ public class Obligatorio2IngSoftware {
         s.getListaArticulosOriginales().add(art4);
  
         
-        Cliente c1 = new Cliente("Juan",51308672, "Mercedez 8042");
+        Cliente c1 = new Cliente("Franco",48777780, "Parque de Miramar 8042");
         Cliente c2 = new Cliente("Tomás", 51308435, "Miguel Barreiro 3317 901");
-        Cliente c3 = new Cliente("Martin", 16709326, "Luis de la Torre 876");
+        Cliente c3 = new Cliente("Martin", 12345678, "Luis de la Torre 876");
         s.agregarCliente(c1);
         s.agregarCliente(c2);
         s.agregarCliente(c3);

@@ -46,7 +46,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Seleccione una Opción");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 120, 800, 70);
+        jLabel1.setBounds(0, 240, 950, 70);
 
         jButtonCliente.setBackground(new java.awt.Color(153, 255, 51));
         jButtonCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -60,7 +60,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonCliente);
-        jButtonCliente.setBounds(200, 270, 100, 55);
+        jButtonCliente.setBounds(240, 350, 100, 55);
 
         jButtonVendedor.setBackground(new java.awt.Color(153, 255, 51));
         jButtonVendedor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -73,21 +73,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonVendedor);
-        jButtonVendedor.setBounds(480, 270, 110, 55);
+        jButtonVendedor.setBounds(560, 350, 110, 55);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(952, 683));
+        jLabel2.setMinimumSize(new java.awt.Dimension(952, 683));
+        jLabel2.setPreferredSize(new java.awt.Dimension(952, 683));
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 800, 560);
+        jLabel2.setBounds(0, 0, 952, 683);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
         );
 
         pack();
