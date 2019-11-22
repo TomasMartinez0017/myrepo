@@ -5,6 +5,8 @@
  */
 package obligatorio2ingsoftware;
 
+import dominio.Articulo;
+import dominio.Envase;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -19,7 +21,8 @@ import static org.junit.Assert.*;
  */
 public class ArticuloTest {
     
-    Articulo articuloPrueba;
+    private Articulo articuloPrueba;
+    private ArrayList<Envase> lstEnvases;
     
     public ArticuloTest() {
     }
@@ -35,6 +38,9 @@ public class ArticuloTest {
     @Before
     public void setUp() {
         //CREO LOS ATRIBUTOS Y SE LOS SETEO
+        articuloPrueba = new Articulo();
+        lstEnvases=new ArrayList<>();
+        
     }
     
     @After
@@ -47,6 +53,7 @@ public class ArticuloTest {
     @Test
     public void testGetCantidadVendidos() {
         int expResult = 3;
+        articuloPrueba.setCantidadVendidos(expResult);
         int result = articuloPrueba.getCantidadVendidos();
         assertEquals(expResult, result);
     }
@@ -56,12 +63,9 @@ public class ArticuloTest {
      */
     @Test
     public void testSetCantidadVendidos() {
-        System.out.println("setCantidadVendidos");
-        int cantidadVendidos = 0;
-        Articulo instance = new Articulo();
-        instance.setCantidadVendidos(cantidadVendidos);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expResult = 5;
+        articuloPrueba.setCantidadVendidos(expResult);
+        assertEquals(expResult, articuloPrueba.getCantidadVendidos());
     }
 
     /**
@@ -84,6 +88,7 @@ public class ArticuloTest {
     @Test
     public void testGetNombre() {
         String expResult = "Mani";
+        articuloPrueba.setNombre("Mani");
         String result = articuloPrueba.getNombre();
         assertEquals(expResult, result);
     }
@@ -103,13 +108,10 @@ public class ArticuloTest {
      */
     @Test
     public void testGetCodigo() {
-        System.out.println("getCodigo");
-        Articulo instance = new Articulo();
-        int expResult = 0;
-        int result = instance.getCodigo();
+       int expResult = 2;
+       articuloPrueba.setCodigo(expResult);
+       int result = articuloPrueba.getCodigo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -117,13 +119,10 @@ public class ArticuloTest {
      */
     @Test
     public void testGetPrecio() {
-        System.out.println("getPrecio");
-        Articulo instance = new Articulo();
-        int expResult = 0;
-        int result = instance.getPrecio();
+       int expResult = 2;
+       articuloPrueba.setPrecio(expResult);
+       int result = articuloPrueba.getPrecio();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -131,13 +130,10 @@ public class ArticuloTest {
      */
     @Test
     public void testGetOrigen() {
-        System.out.println("getOrigen");
-        Articulo instance = new Articulo();
-        String expResult = "";
-        String result = instance.getOrigen();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       String expResult = "origenprueba";
+       articuloPrueba.setOrigen(expResult);
+       String result = articuloPrueba.getOrigen();
+       assertEquals(expResult, result);
     }
 
     /**
@@ -145,13 +141,10 @@ public class ArticuloTest {
      */
     @Test
     public void testGetMaterial() {
-        System.out.println("getMaterial");
-        Articulo instance = new Articulo();
-        String expResult = "";
-        String result = instance.getMaterial();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       String expResult = "Materialprueba";
+       articuloPrueba.setMaterial(expResult);
+       String result = articuloPrueba.getMaterial();
+       assertEquals(expResult, result);
     }
 
     /**
@@ -159,12 +152,9 @@ public class ArticuloTest {
      */
     @Test
     public void testSetCodigo() {
-        System.out.println("setCodigo");
-        int unCodigo = 0;
-        Articulo instance = new Articulo();
-        instance.setCodigo(unCodigo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expResult = 4;
+        articuloPrueba.setCodigo(expResult);
+        assertEquals(expResult, articuloPrueba.getCodigo());
     }
 
     /**
@@ -172,12 +162,9 @@ public class ArticuloTest {
      */
     @Test
     public void testSetPrecio() {
-        System.out.println("setPrecio");
-        int unPrecio = 0;
-        Articulo instance = new Articulo();
-        instance.setPrecio(unPrecio);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       int expResult = 3;
+       articuloPrueba.setPrecio(expResult);
+       assertEquals(expResult, articuloPrueba.getPrecio());
     }
 
     /**
@@ -185,12 +172,9 @@ public class ArticuloTest {
      */
     @Test
     public void testSetOrigen() {
-        System.out.println("setOrigen");
-        String unOrigen = "";
-        Articulo instance = new Articulo();
-        instance.setOrigen(unOrigen);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "pruebaorigen";
+        articuloPrueba.setOrigen(expResult);
+        assertEquals(expResult, articuloPrueba.getOrigen());
     }
 
     /**
@@ -198,12 +182,9 @@ public class ArticuloTest {
      */
     @Test
     public void testSetMaterial() {
-        System.out.println("setMaterial");
-        String unMaterial = "";
-        Articulo instance = new Articulo();
-        instance.setMaterial(unMaterial);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "pruebaMaterial";
+        articuloPrueba.setMaterial(expResult);
+        assertEquals(expResult, articuloPrueba.getMaterial());
     }
 
     /**
@@ -211,29 +192,35 @@ public class ArticuloTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        Object objeto = null;
-        Articulo instance = new Articulo();
-        boolean expResult = false;
-        boolean result = instance.equals(objeto);
+        Articulo art = new Articulo();
+        articuloPrueba.setCodigo(1212);
+        art.setCodigo(1212);
+        boolean expResult = true;
+        boolean result = articuloPrueba.equals(art);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
+    @Test
+    public void testEquals2() {
+        Articulo art = new Articulo();
+        articuloPrueba.setCodigo(1212);
+        art.setCodigo(1234);
+        boolean expResult = false;
+        boolean result = articuloPrueba.equals(art);
+        assertEquals(expResult, result);
+    }
+    
 
     /**
      * Test of compareTo method, of class Articulo.
      */
     @Test
     public void testCompareTo() {
-        System.out.println("compareTo");
-        Articulo unArticulo = null;
-        Articulo instance = new Articulo();
+        Articulo art = new Articulo();
+        art.setCantidadVendidos(3);
+        articuloPrueba.setCantidadVendidos(3);
         int expResult = 0;
-        int result = instance.compareTo(unArticulo);
+        int result = art.compareTo(articuloPrueba);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -241,13 +228,10 @@ public class ArticuloTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
-        Articulo instance = new Articulo();
-        String expResult = "";
-        String result = instance.toString();
+        articuloPrueba.setNombre("Pruebanombre");
+        String expResult = "Pruebanombre";
+        String result = articuloPrueba.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

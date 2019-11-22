@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Mapa.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Obligatorio2IngSoftware&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">dominio</a> &gt; <span class="el_source">Mapa.java</span></div><h1>Mapa.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dominio;
+import com.teamdev.jxmaps.*;
+import com.teamdev.jxmaps.swing.MapView;
+import java.awt.BorderLayout;
+import javax.swing.*;
+/**
+ *
+ * @author Usuario
+ */
+public class Mapa extends MapView {
+    private Map map;
+     //Constructor
+<span class="nc" id="L18">    public Mapa (String nombreMapa){</span>
+<span class="nc" id="L19">        JFrame frame = new JFrame(nombreMapa);</span>
+        
+<span class="nc" id="L21">        setOnMapReadyHandler(new MapReadyHandler() {</span>
+            
+            @Override
+            public void onMapReady(MapStatus status){
+<span class="nc bnc" id="L25" title="All 2 branches missed.">              if(status == MapStatus.MAP_STATUS_OK){</span>
+<span class="nc" id="L26">                  map = getMap();</span>
+<span class="nc" id="L27">                  MapOptions mapOptions = new MapOptions();</span>
+<span class="nc" id="L28">                  MapTypeControlOptions controlOptions = new MapTypeControlOptions();</span>
+<span class="nc" id="L29">                  mapOptions.setMapTypeControlOptions(controlOptions);</span>
+<span class="nc" id="L30">                  map.setOptions(mapOptions);</span>
+<span class="nc" id="L31">                  map.setCenter(new LatLng(-34.903160, -56.170284));</span>
+<span class="nc" id="L32">                  map.setZoom(11.0);</span>
+                  
+                  
+<span class="nc" id="L35">                  Marker mark1 = new Marker(map);        </span>
+<span class="nc" id="L36">                  mark1.setPosition(new LatLng(-34.894891, -56.099988));</span>
+        
+<span class="nc" id="L38">                  Marker mark2 = new Marker(map);</span>
+<span class="nc" id="L39">                  mark2.setPosition(new LatLng(-34.829551, -56.272001));</span>
+        
+<span class="nc" id="L41">                  Marker mark3 = new Marker(map);</span>
+<span class="nc" id="L42">                  mark3.setPosition(new LatLng(-34.923603, -56.158539));</span>
+        
+<span class="nc" id="L44">                  Marker mark4 = new Marker(map);</span>
+<span class="nc" id="L45">                  mark4.setPosition(new LatLng(-34.915133, -56.155370));</span>
+                  
+                  
+                
+              }  
+<span class="nc" id="L50">            }</span>
+
+        });
+<span class="nc" id="L53">        frame.add(this, BorderLayout.CENTER);</span>
+<span class="nc" id="L54">        frame.setResizable(false);</span>
+<span class="nc" id="L55">        frame.setLocationRelativeTo(null);</span>
+<span class="nc" id="L56">        frame.setSize(952, 683);</span>
+<span class="nc" id="L57">        frame.setVisible(true);</span>
+<span class="nc" id="L58">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

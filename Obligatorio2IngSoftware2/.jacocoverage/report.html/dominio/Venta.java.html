@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Venta.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Obligatorio2IngSoftware&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">dominio</a> &gt; <span class="el_source">Venta.java</span></div><h1>Venta.java</h1><pre class="source lang-java linenums">package dominio;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.Date;
+/**
+ *
+ * @author tomasmartinez
+ */
+public class Venta {
+    private Cliente cliente;
+    private ArrayList&lt;Envase&gt; listaEnvasesUtilizados;
+    private ArrayList&lt;Articulo&gt; listaArticulos;
+    private Local local;
+    private Date fecha;
+    private boolean esPreventa;
+    private int nroVenta;
+    private int huellaCarbono;
+
+<span class="fc" id="L19">    public Venta(){</span>
+<span class="fc" id="L20">        cliente = new Cliente();</span>
+<span class="fc" id="L21">        listaArticulos = new ArrayList();</span>
+<span class="fc" id="L22">        listaEnvasesUtilizados=new ArrayList();</span>
+<span class="fc" id="L23">        local=new Local();</span>
+<span class="fc" id="L24">        nroVenta = 0;    </span>
+<span class="fc" id="L25">        huellaCarbono=0;</span>
+<span class="fc" id="L26">    }</span>
+    
+    public int getHuellaCarbono() {
+<span class="fc" id="L29">        return huellaCarbono;</span>
+    }
+
+    public void setHuellaCarbono(int huellaCarbono) {
+<span class="fc" id="L33">        this.huellaCarbono = huellaCarbono;</span>
+<span class="fc" id="L34">    }</span>
+    
+    
+    public boolean getEsPreventa() {
+<span class="fc" id="L38">        return esPreventa;</span>
+    }
+
+    public void setEsPreventa(boolean esPreventa) {
+<span class="fc" id="L42">        this.esPreventa = esPreventa;</span>
+<span class="fc" id="L43">    }</span>
+
+    public Local getLocal() {
+<span class="fc" id="L46">        return local;</span>
+    }
+
+    public void setLocal(Local local) {
+<span class="fc" id="L50">        this.local = local;</span>
+<span class="fc" id="L51">    }</span>
+    
+    public ArrayList&lt;Envase&gt; getListaEnvasesUtilizados() {
+<span class="fc" id="L54">        return listaEnvasesUtilizados;</span>
+    }
+
+    public void setListaEnvasesUtilizados(ArrayList&lt;Envase&gt; listaEnvases) {
+<span class="fc" id="L58">        this.listaEnvasesUtilizados = listaEnvases;</span>
+<span class="fc" id="L59">    }</span>
+    
+        public ArrayList&lt;Articulo&gt; getListaArticulos() {
+<span class="fc" id="L62">        return listaArticulos;</span>
+    }    
+    
+    public int getNroVenta() {
+<span class="fc" id="L66">        return nroVenta;</span>
+    }
+    
+    public Cliente getCliente(){
+<span class="fc" id="L70">        return cliente;</span>
+    }
+    
+    
+    public void setCliente(Cliente unCliente){
+<span class="fc" id="L75">        cliente = unCliente;</span>
+<span class="fc" id="L76">    }</span>
+    
+    
+    public void setNroVenta(int nroVenta) {
+<span class="fc" id="L80">        this.nroVenta = nroVenta;</span>
+<span class="fc" id="L81">    }</span>
+    
+    public Date getFecha(){
+<span class="fc" id="L84">        return fecha;</span>
+    }
+    
+    public void setFecha(Date unaFecha){
+<span class="fc" id="L88">        this.fecha = unaFecha;</span>
+<span class="fc" id="L89">    }</span>
+
+    //Poner int mes, int anio, int dia en constructor
+<span class="nc" id="L92">    public Venta(ArrayList&lt;Envase&gt; unaListaEnvases, Cliente cliente, ArrayList&lt;Articulo&gt; unaListaArticulos, int nroVenta, Local local, Date fecha) {</span>
+<span class="nc" id="L93">        this.setCliente(cliente);</span>
+<span class="nc" id="L94">        this.setLocal(local);</span>
+<span class="nc" id="L95">        this.listaArticulos = unaListaArticulos;</span>
+<span class="nc" id="L96">        this.listaEnvasesUtilizados=unaListaEnvases;</span>
+        /*
+        this.setAnio(anio);
+        this.setDia(dia);
+        this.setMes(mes);
+        */
+<span class="nc" id="L102">        this.setNroVenta(nroVenta);</span>
+<span class="nc" id="L103">        this.setFecha(fecha);</span>
+<span class="nc" id="L104">    }</span>
+    
+    public void agregarArticuloVenta(Articulo art){
+<span class="pc bpc" id="L107" title="1 of 2 branches missed.">        if(this.listaArticulos.contains(art)){</span>
+<span class="nc" id="L108">            int pos = listaArticulos.indexOf(art);</span>
+<span class="nc" id="L109">            this.listaArticulos.get(pos).setCantidadVendidos(this.listaArticulos.get(pos).getCantidadVendidos()+ 1);</span>
+<span class="nc" id="L110">        }</span>
+        else{
+<span class="fc" id="L112">            this.listaArticulos.add(art);</span>
+        }
+<span class="fc" id="L114">    }</span>
+
+    
+    @Override
+    public boolean equals (Object objeto){
+<span class="fc" id="L119">        Venta venta = (Venta)objeto;</span>
+<span class="pc bpc" id="L120" title="1 of 2 branches missed.">        return this.getNroVenta()==venta.getNroVenta();</span>
+    }
+
+    
+    //metodo que dado una lista de articulos me devuelve la cantidad de co2 ahorrado.
+    //para ello por cada producto, envase de plastico contamina 10g aprox
+    public int calculoHuella(ArrayList&lt;Articulo&gt; lstArt){
+<span class="fc" id="L127">        int cant=0;</span>
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        for (int i = 0; i &lt; lstArt.size(); i++) {</span>
+<span class="nc" id="L129">            cant+=lstArt.get(i).getCantidadVendidos()*10;</span>
+        }
+<span class="fc" id="L131">        return cant;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

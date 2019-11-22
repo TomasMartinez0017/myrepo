@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/Interfaz/VentanaConfirmacion.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/obligatorio2ingsoftware/Obligatorio2IngSoftware.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Sistema.java</file>
             <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/obligatorio2ingsoftware/ArticuloTest.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/obligatorio2ingsoftware/Envase.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/Interfaz/VentanaTicket.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/Interfaz/VentanaCompra1.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/obligatorio2ingsoftware/Mapa.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/Interfaz/VentanaEstadisticas.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/Interfaz/VentanaCliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/obligatorio2ingsoftware/Sistema.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Obligatorio2IngSoftware.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Venta.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaCliente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaCompra1.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Articulo.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/obligatorio2ingsoftware/VentaTest.java</file>
         </group>
     </open-files>
 </project-private>
