@@ -7,8 +7,6 @@ package interfaz_;
 import javax.swing.JOptionPane;
 import dominio.Sistema;
 import dominio.Cliente;
-import javax.swing.ListSelectionModel;
-import javax.swing.JList;
 /**
  *
  * @author Usuario
@@ -18,11 +16,11 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
     /**
      * Creates new form VentanaAgregarCliente
      */
-<span class="nc" id="L21">    public VentanaAgregarCliente(Sistema unSistema) {</span>
-<span class="nc" id="L22">        initComponents();</span>
-<span class="nc" id="L23">        this.setLocationRelativeTo(null);</span>
-<span class="nc" id="L24">        modelo=unSistema;</span>
-<span class="nc" id="L25">    }</span>
+<span class="nc" id="L19">    public VentanaAgregarCliente(Sistema unSistema) {</span>
+<span class="nc" id="L20">        initComponents();</span>
+<span class="nc" id="L21">        this.setLocationRelativeTo(null);</span>
+<span class="nc" id="L22">        modelo=unSistema;</span>
+<span class="nc" id="L23">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,198 +31,198 @@ public class VentanaAgregarCliente extends javax.swing.JFrame {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L36">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="nc" id="L37">        txtNombre = new javax.swing.JTextField();</span>
-<span class="nc" id="L38">        jLabel2 = new javax.swing.JLabel();</span>
-<span class="nc" id="L39">        txtCI = new javax.swing.JTextField();</span>
-<span class="nc" id="L40">        jLabel3 = new javax.swing.JLabel();</span>
-<span class="nc" id="L41">        txtDireccion = new javax.swing.JTextField();</span>
-<span class="nc" id="L42">        btnAgregar = new javax.swing.JButton();</span>
-<span class="nc" id="L43">        jPanel1 = new javax.swing.JPanel();</span>
-<span class="nc" id="L44">        jButtonAtras = new javax.swing.JButton();</span>
-<span class="nc" id="L45">        jButtonHome = new javax.swing.JButton();</span>
-<span class="nc" id="L46">        jLabel4 = new javax.swing.JLabel();</span>
+<span class="nc" id="L34">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L35">        txtNombre = new javax.swing.JTextField();</span>
+<span class="nc" id="L36">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L37">        txtCI = new javax.swing.JTextField();</span>
+<span class="nc" id="L38">        jLabel3 = new javax.swing.JLabel();</span>
+<span class="nc" id="L39">        txtDireccion = new javax.swing.JTextField();</span>
+<span class="nc" id="L40">        btnAgregar = new javax.swing.JButton();</span>
+<span class="nc" id="L41">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L42">        jButtonAtras = new javax.swing.JButton();</span>
+<span class="nc" id="L43">        jButtonHome = new javax.swing.JButton();</span>
+<span class="nc" id="L44">        jLabel4 = new javax.swing.JLabel();</span>
 
-<span class="nc" id="L48">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L49">        setMinimumSize(new java.awt.Dimension(952, 683));</span>
-<span class="nc" id="L50">        setSize(new java.awt.Dimension(952, 683));</span>
+<span class="nc" id="L46">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L47">        setMinimumSize(new java.awt.Dimension(952, 683));</span>
+<span class="nc" id="L48">        setSize(new java.awt.Dimension(952, 683));</span>
 
-<span class="nc" id="L52">        jLabel1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
-<span class="nc" id="L53">        jLabel1.setText(&quot;Nombre&quot;);</span>
+<span class="nc" id="L50">        jLabel1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L51">        jLabel1.setText(&quot;Nombre&quot;);</span>
 
-<span class="nc" id="L55">        txtNombre.setBackground(new java.awt.Color(204, 255, 204));</span>
+<span class="nc" id="L53">        txtNombre.setBackground(new java.awt.Color(204, 255, 204));</span>
 
-<span class="nc" id="L57">        jLabel2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
-<span class="nc" id="L58">        jLabel2.setText(&quot;Cedula de identidad&quot;);</span>
+<span class="nc" id="L55">        jLabel2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L56">        jLabel2.setText(&quot;Cedula de identidad&quot;);</span>
 
-<span class="nc" id="L60">        txtCI.setBackground(new java.awt.Color(204, 255, 204));</span>
-<span class="nc" id="L61">        txtCI.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L58">        txtCI.setBackground(new java.awt.Color(204, 255, 204));</span>
+<span class="nc" id="L59">        txtCI.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L63">                txtCIActionPerformed(evt);</span>
-<span class="nc" id="L64">            }</span>
+<span class="nc" id="L61">                txtCIActionPerformed(evt);</span>
+<span class="nc" id="L62">            }</span>
         });
 
-<span class="nc" id="L67">        jLabel3.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
-<span class="nc" id="L68">        jLabel3.setText(&quot;Direccion&quot;);</span>
+<span class="nc" id="L65">        jLabel3.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L66">        jLabel3.setText(&quot;Direccion&quot;);</span>
 
-<span class="nc" id="L70">        txtDireccion.setBackground(new java.awt.Color(204, 255, 204));</span>
+<span class="nc" id="L68">        txtDireccion.setBackground(new java.awt.Color(204, 255, 204));</span>
 
-<span class="nc" id="L72">        btnAgregar.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L73">        btnAgregar.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 14)); // NOI18N</span>
-<span class="nc" id="L74">        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L75">        btnAgregar.setText(&quot;Agregar&quot;);</span>
-<span class="nc" id="L76">        btnAgregar.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L70">        btnAgregar.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L71">        btnAgregar.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L72">        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L73">        btnAgregar.setText(&quot;Agregar&quot;);</span>
+<span class="nc" id="L74">        btnAgregar.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L78">                btnAgregarActionPerformed(evt);</span>
-<span class="nc" id="L79">            }</span>
+<span class="nc" id="L76">                btnAgregarActionPerformed(evt);</span>
+<span class="nc" id="L77">            }</span>
         });
 
-<span class="nc" id="L82">        jPanel1.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L80">        jPanel1.setBackground(new java.awt.Color(51, 204, 0));</span>
 
-<span class="nc" id="L84">        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L85">        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/back.png&quot;))); // NOI18N</span>
-<span class="nc" id="L86">        jButtonAtras.setBorder(null);</span>
-<span class="nc" id="L87">        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L88">        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L89">        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L90">        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L82">        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L83">        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes_/back.png&quot;))); // NOI18N</span>
+<span class="nc" id="L84">        jButtonAtras.setBorder(null);</span>
+<span class="nc" id="L85">        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L86">        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L87">        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L88">        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L92">                jButtonAtrasActionPerformed(evt);</span>
-<span class="nc" id="L93">            }</span>
+<span class="nc" id="L90">                jButtonAtrasActionPerformed(evt);</span>
+<span class="nc" id="L91">            }</span>
         });
 
-<span class="nc" id="L96">        jButtonHome.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L97">        jButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/home (1).png&quot;))); // NOI18N</span>
-<span class="nc" id="L98">        jButtonHome.setBorder(null);</span>
-<span class="nc" id="L99">        jButtonHome.setMaximumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L100">        jButtonHome.setMinimumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L101">        jButtonHome.setPreferredSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L102">        jButtonHome.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L94">        jButtonHome.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L95">        jButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes_/home (1).png&quot;))); // NOI18N</span>
+<span class="nc" id="L96">        jButtonHome.setBorder(null);</span>
+<span class="nc" id="L97">        jButtonHome.setMaximumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L98">        jButtonHome.setMinimumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L99">        jButtonHome.setPreferredSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L100">        jButtonHome.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L104">                jButtonHomeActionPerformed(evt);</span>
-<span class="nc" id="L105">            }</span>
+<span class="nc" id="L102">                jButtonHomeActionPerformed(evt);</span>
+<span class="nc" id="L103">            }</span>
         });
 
-<span class="nc" id="L108">        jLabel4.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 36)); // NOI18N</span>
-<span class="nc" id="L109">        jLabel4.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L110">        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="nc" id="L111">        jLabel4.setText(&quot;Agregar Cliente&quot;);</span>
+<span class="nc" id="L106">        jLabel4.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L107">        jLabel4.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L108">        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="nc" id="L109">        jLabel4.setText(&quot;Agregar Cliente&quot;);</span>
 
-<span class="nc" id="L113">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
-<span class="nc" id="L114">        jPanel1.setLayout(jPanel1Layout);</span>
-<span class="nc" id="L115">        jPanel1Layout.setHorizontalGroup(</span>
-<span class="nc" id="L116">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L117">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L118">                .addContainerGap()</span>
-<span class="nc" id="L119">                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L111">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L112">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L113">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L114">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L115">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L116">                .addContainerGap()</span>
+<span class="nc" id="L117">                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L118">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L119">                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
 <span class="nc" id="L120">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L121">                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="nc" id="L122">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L123">                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L124">                .addContainerGap())</span>
+<span class="nc" id="L121">                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L122">                .addContainerGap())</span>
         );
-<span class="nc" id="L126">        jPanel1Layout.setVerticalGroup(</span>
-<span class="nc" id="L127">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L128">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L129">                .addContainerGap(29, Short.MAX_VALUE)</span>
-<span class="nc" id="L130">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="nc" id="L131">                    .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L132">                    .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L133">                .addContainerGap())</span>
-<span class="nc" id="L134">            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L124">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L125">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L126">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L127">                .addContainerGap(29, Short.MAX_VALUE)</span>
+<span class="nc" id="L128">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L129">                    .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L130">                    .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L131">                .addContainerGap())</span>
+<span class="nc" id="L132">            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
         );
 
-<span class="nc" id="L137">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L138">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L139">        layout.setHorizontalGroup(</span>
-<span class="nc" id="L140">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L141">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="nc" id="L142">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L143">                .addGap(411, 411, 411)</span>
-<span class="nc" id="L144">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="nc" id="L145">                    .addComponent(jLabel2)</span>
-<span class="nc" id="L146">                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L147">                    .addComponent(txtNombre)</span>
-<span class="nc" id="L148">                    .addComponent(txtCI)</span>
-<span class="nc" id="L149">                    .addComponent(txtDireccion)</span>
-<span class="nc" id="L150">                    .addComponent(jLabel3)</span>
-<span class="nc" id="L151">                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L152">                .addContainerGap(415, Short.MAX_VALUE))</span>
+<span class="nc" id="L135">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L136">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L137">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L138">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L139">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L140">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L141">                .addGap(411, 411, 411)</span>
+<span class="nc" id="L142">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L143">                    .addComponent(jLabel2)</span>
+<span class="nc" id="L144">                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L145">                    .addComponent(txtNombre)</span>
+<span class="nc" id="L146">                    .addComponent(txtCI)</span>
+<span class="nc" id="L147">                    .addComponent(txtDireccion)</span>
+<span class="nc" id="L148">                    .addComponent(jLabel3)</span>
+<span class="nc" id="L149">                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L150">                .addContainerGap(415, Short.MAX_VALUE))</span>
         );
-<span class="nc" id="L154">        layout.setVerticalGroup(</span>
-<span class="nc" id="L155">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L156">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L157">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L158">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)</span>
-<span class="nc" id="L159">                .addComponent(jLabel1)</span>
-<span class="nc" id="L160">                .addGap(10, 10, 10)</span>
-<span class="nc" id="L161">                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L162">                .addGap(18, 18, 18)</span>
-<span class="nc" id="L163">                .addComponent(jLabel2)</span>
-<span class="nc" id="L164">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L165">                .addComponent(txtCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L166">                .addGap(18, 18, 18)</span>
-<span class="nc" id="L167">                .addComponent(jLabel3)</span>
-<span class="nc" id="L168">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L169">                .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L170">                .addGap(46, 46, 46)</span>
-<span class="nc" id="L171">                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L172">                .addGap(128, 128, 128))</span>
+<span class="nc" id="L152">        layout.setVerticalGroup(</span>
+<span class="nc" id="L153">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L154">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L155">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L156">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)</span>
+<span class="nc" id="L157">                .addComponent(jLabel1)</span>
+<span class="nc" id="L158">                .addGap(10, 10, 10)</span>
+<span class="nc" id="L159">                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L160">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L161">                .addComponent(jLabel2)</span>
+<span class="nc" id="L162">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L163">                .addComponent(txtCI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L164">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L165">                .addComponent(jLabel3)</span>
+<span class="nc" id="L166">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L167">                .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L168">                .addGap(46, 46, 46)</span>
+<span class="nc" id="L169">                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L170">                .addGap(128, 128, 128))</span>
         );
 
-<span class="nc" id="L175">        pack();</span>
-<span class="nc" id="L176">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L173">        pack();</span>
+<span class="nc" id="L174">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void txtCIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCIActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L180">    }//GEN-LAST:event_txtCIActionPerformed</span>
+<span class="nc" id="L178">    }//GEN-LAST:event_txtCIActionPerformed</span>
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L184">        Cliente cliente=new Cliente();</span>
-<span class="nc" id="L185">        String nombre=txtNombre.getText();</span>
-<span class="nc" id="L186">        String ci=txtCI.getText();</span>
-<span class="nc" id="L187">        String direccion=txtDireccion.getText();</span>
+<span class="nc" id="L182">        Cliente cliente=new Cliente();</span>
+<span class="nc" id="L183">        String nombre=txtNombre.getText();</span>
+<span class="nc" id="L184">        String ci=txtCI.getText();</span>
+<span class="nc" id="L185">        String direccion=txtDireccion.getText();</span>
         
-<span class="nc bnc" id="L189" title="All 6 branches missed.">        if(!nombre.isEmpty() &amp;&amp; !ci.isEmpty() &amp;&amp; !direccion.isEmpty()){</span>
-<span class="nc bnc" id="L190" title="All 4 branches missed.">            if(modelo.esNumerico(ci) &amp;&amp; modelo.esCedula(ci)){</span>
-<span class="nc" id="L191">                cliente.setCedula(Integer.parseInt(ci));</span>
-<span class="nc bnc" id="L192" title="All 2 branches missed.">                if(!modelo.agregarCliente(cliente)){</span>
-<span class="nc" id="L193">                     JOptionPane.showMessageDialog(this, &quot;Cliente ya registrado&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc bnc" id="L187" title="All 6 branches missed.">        if(!nombre.isEmpty() &amp;&amp; !ci.isEmpty() &amp;&amp; !direccion.isEmpty()){</span>
+<span class="nc bnc" id="L188" title="All 4 branches missed.">            if(modelo.esNumerico(ci) &amp;&amp; modelo.esCedula(ci)){</span>
+<span class="nc" id="L189">                cliente.setCedula(Integer.parseInt(ci));</span>
+<span class="nc bnc" id="L190" title="All 2 branches missed.">                if(!modelo.agregarCliente(cliente)){</span>
+<span class="nc" id="L191">                     JOptionPane.showMessageDialog(this, &quot;Cliente ya registrado&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
                 }
                 else{
-<span class="nc" id="L196">                    cliente.setDireccion(direccion);</span>
-<span class="nc" id="L197">                    cliente.setNombre(nombre);</span>
-<span class="nc" id="L198">                    JOptionPane.showMessageDialog(this, &quot;Cliente registrado&quot;);</span>
-<span class="nc" id="L199">                    this.setVisible(false);</span>
-<span class="nc" id="L200">                    VentanaEditarCliente vent=new VentanaEditarCliente(modelo);</span>
-<span class="nc" id="L201">                    vent.setVisible(true);</span>
-<span class="nc" id="L202">                }</span>
+<span class="nc" id="L194">                    cliente.setDireccion(direccion);</span>
+<span class="nc" id="L195">                    cliente.setNombre(nombre);</span>
+<span class="nc" id="L196">                    JOptionPane.showMessageDialog(this, &quot;Cliente registrado&quot;);</span>
+<span class="nc" id="L197">                    this.setVisible(false);</span>
+<span class="nc" id="L198">                    VentanaEditarCliente vent=new VentanaEditarCliente(modelo);</span>
+<span class="nc" id="L199">                    vent.setVisible(true);</span>
+<span class="nc" id="L200">                }</span>
             }
             else{
-<span class="nc" id="L205">                JOptionPane.showMessageDialog(this, &quot;Cedula invalida&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L203">                JOptionPane.showMessageDialog(this, &quot;Cedula invalida&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
             }
         }
         else{
-<span class="nc" id="L209">            JOptionPane.showMessageDialog(this, &quot;Faltan campos por rellenar&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L207">            JOptionPane.showMessageDialog(this, &quot;Faltan campos por rellenar&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
         }
-<span class="nc" id="L211">    }//GEN-LAST:event_btnAgregarActionPerformed</span>
+<span class="nc" id="L209">    }//GEN-LAST:event_btnAgregarActionPerformed</span>
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L215">        VentanaEditarCliente vent = new VentanaEditarCliente(modelo);</span>
-<span class="nc" id="L216">        this.setVisible(false);</span>
-<span class="nc" id="L217">        vent.setVisible(true);</span>
-<span class="nc" id="L218">        vent.setResizable(false);</span>
-<span class="nc" id="L219">    }//GEN-LAST:event_jButtonAtrasActionPerformed</span>
+<span class="nc" id="L213">        VentanaEditarCliente vent = new VentanaEditarCliente(modelo);</span>
+<span class="nc" id="L214">        this.setVisible(false);</span>
+<span class="nc" id="L215">        vent.setVisible(true);</span>
+<span class="nc" id="L216">        vent.setResizable(false);</span>
+<span class="nc" id="L217">    }//GEN-LAST:event_jButtonAtrasActionPerformed</span>
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L223">        VentanaPrincipal vent = new VentanaPrincipal(modelo);</span>
-<span class="nc" id="L224">        this.setVisible(false);</span>
-<span class="nc" id="L225">        vent.setVisible(true);</span>
-<span class="nc" id="L226">        vent.setResizable(false);</span>
-<span class="nc" id="L227">    }//GEN-LAST:event_jButtonHomeActionPerformed</span>
+<span class="nc" id="L221">        VentanaPrincipal vent = new VentanaPrincipal(modelo);</span>
+<span class="nc" id="L222">        this.setVisible(false);</span>
+<span class="nc" id="L223">        vent.setVisible(true);</span>
+<span class="nc" id="L224">        vent.setResizable(false);</span>
+<span class="nc" id="L225">    }//GEN-LAST:event_jButtonHomeActionPerformed</span>
 
  
 

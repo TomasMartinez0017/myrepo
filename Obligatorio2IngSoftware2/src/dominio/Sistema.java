@@ -1,4 +1,5 @@
 
+
 package dominio;
 import java.util.*;
 
@@ -187,7 +188,7 @@ public class Sistema {
         return copia;
     }
     
-    public ArrayList<Envase> EnvasesReutilizados(){
+    public ArrayList<Envase> envasesReutilizados(){
         ArrayList<Envase> listaReutilizados=new ArrayList();
         for(int i=0;i<this.listaVentas.size();i++){
             Venta vent=this.listaVentas.get(i);
@@ -209,7 +210,7 @@ public class Sistema {
         }
     }
     
-    public int VentasDadoUnMes(int mes){
+    public int ventasDadoUnMes(int mes){
         int cant=0;
         for(int i=0;i<this.listaVentas.size();i++){
             Venta vent= this.listaVentas.get(i);
@@ -241,7 +242,13 @@ public class Sistema {
     }
     
     public boolean esCedula(String ci){
-        return ci.length()==8;
+        if(esNumerico(ci)){
+            return ci.length()==8;
+        }
+        else{
+            return false;
+        }
+        
     }
     
     public  boolean sonIguales(ArrayList<Articulo> listaArticulos){

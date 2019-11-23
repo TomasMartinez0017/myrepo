@@ -16,21 +16,21 @@ public class Cliente implements Comparable&lt;Cliente&gt; {
     private String direccion;
 
 <span class="fc" id="L18">    public Cliente(){</span>
-<span class="fc" id="L19">        nombre = &quot; &quot;;</span>
-<span class="fc" id="L20">        cedula = 0;</span>
-<span class="fc" id="L21">        direccion = &quot; &quot;;</span>
+<span class="fc" id="L19">        this.setNombre(&quot;&quot;);</span>
+<span class="fc" id="L20">        this.setCedula(0);</span>
+<span class="fc" id="L21">        this.setDireccion(&quot;&quot;);</span>
 <span class="fc" id="L22">    }</span>
     
-<span class="nc" id="L24">    public Cliente(String nombre, int cedula, String direccion) {</span>
-<span class="nc" id="L25">        this.setNombre(nombre);</span>
-<span class="nc" id="L26">        this.setCedula(cedula);</span>
-<span class="nc" id="L27">        this.setDireccion(direccion);</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L24">    public Cliente(String nombre, int cedula, String direccion) {</span>
+<span class="fc" id="L25">        this.setNombre(nombre);</span>
+<span class="fc" id="L26">        this.setCedula(cedula);</span>
+<span class="fc" id="L27">        this.setDireccion(direccion);</span>
+<span class="fc" id="L28">    }</span>
     
     
     
     public String getNombre(){
-<span class="nc" id="L33">        return nombre;</span>
+<span class="fc" id="L33">        return nombre;</span>
     }
     
     public int getCedula(){
@@ -38,34 +38,34 @@ public class Cliente implements Comparable&lt;Cliente&gt; {
     }
     
     public String getDireccion(){
-<span class="nc" id="L41">        return direccion;</span>
+<span class="fc" id="L41">        return direccion;</span>
     }
     
     public void setNombre(String unNombre){
-<span class="nc" id="L45">        nombre = unNombre;</span>
-<span class="nc" id="L46">    }</span>
+<span class="fc" id="L45">        nombre = unNombre;</span>
+<span class="fc" id="L46">    }</span>
     
     public void setCedula(int unaCedula){
-<span class="nc" id="L49">        cedula = unaCedula;</span>
-<span class="nc" id="L50">    }</span>
+<span class="fc" id="L49">        cedula = unaCedula;</span>
+<span class="fc" id="L50">    }</span>
     
     public void setDireccion(String unaDireccion){
-<span class="nc" id="L53">        direccion = unaDireccion;</span>
-<span class="nc" id="L54">    }</span>
+<span class="fc" id="L53">        direccion = unaDireccion;</span>
+<span class="fc" id="L54">    }</span>
     
     @Override
     public boolean equals (Object objeto){
 <span class="fc" id="L58">        Cliente cliente = (Cliente)objeto;</span>
-<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        return this.getCedula()==cliente.getCedula();</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        return this.getCedula()==cliente.getCedula();</span>
     }
     
     @Override
     public int compareTo (Cliente unCliente){
-<span class="nc" id="L64">        return this.getNombre().compareTo(unCliente.getNombre());</span>
+<span class="fc" id="L64">        return this.getNombre().compareTo(unCliente.getNombre());</span>
     }
      @Override
     public String toString() {
-<span class="nc" id="L68">        return &quot;Nombre: &quot; + this.getNombre();</span>
+<span class="fc" id="L68">        return &quot;Nombre: &quot; + this.getNombre();</span>
     }
     
     

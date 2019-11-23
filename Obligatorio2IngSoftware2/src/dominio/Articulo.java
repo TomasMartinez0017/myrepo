@@ -10,6 +10,11 @@ public class Articulo implements Comparable<Articulo> {
     private String nombre;
     private int cantidadVendidos;
     private ArrayList<Envase> listaEnvases;
+
+    public void setListaEnvases(ArrayList<Envase> listaEnvases) {
+        this.listaEnvases = listaEnvases;
+    }
+    
     /**
      * 
      */

@@ -17,9 +17,9 @@ public class Envase {
     private String material;
     
     public Envase(){
-        nroEnvase = 0;
-        nombre = " ";
-        material = " ";
+        this.setNroEnvase(0);
+        this.setNombre("");
+        this.setMaterial("");
     }
 
     public Envase(int nroEnvase, String nombre, String material) {

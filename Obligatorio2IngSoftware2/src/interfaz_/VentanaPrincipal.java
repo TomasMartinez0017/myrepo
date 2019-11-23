@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package interfaz_;
-import javax.swing.JOptionPane;
 import dominio.Sistema;
 /**
  *

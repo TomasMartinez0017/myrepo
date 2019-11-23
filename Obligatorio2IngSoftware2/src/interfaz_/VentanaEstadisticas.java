@@ -4,13 +4,7 @@
  * and open the template in the editor.
  */
 package interfaz_;
-import java.util.Calendar;
-import java.util.Date;
-import javax.swing.JOptionPane;
 import dominio.Sistema;
-import dominio.Articulo;
-import javax.swing.ListSelectionModel;
-import javax.swing.JList;
 
 /**
  *
@@ -25,7 +19,7 @@ public class VentanaEstadisticas extends javax.swing.JFrame {
         initComponents();
         modelo = unSistema;
         this.setLocationRelativeTo(null);
-        lstEnvasesReutilizados.setListData(modelo.EnvasesReutilizados().toArray());
+        lstEnvasesReutilizados.setListData(modelo.envasesReutilizados().toArray());
         lstProductosMasVendidos.setListData(modelo.productosMasVendidos(modelo.getListaArticulos()).toArray());
     }
 
@@ -217,7 +211,7 @@ public class VentanaEstadisticas extends javax.swing.JFrame {
         // TODO add your handling code here:
         int mes =jComboBoxMes.getSelectedIndex();
        
-        jLabelVentasMes.setText(Integer.toString(modelo.VentasDadoUnMes(mes)));
+        jLabelVentasMes.setText(Integer.toString(modelo.ventasDadoUnMes(mes)));
     }//GEN-LAST:event_jComboBoxMesActionPerformed
 
     private void lstProductosMasVendidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstProductosMasVendidosMouseClicked

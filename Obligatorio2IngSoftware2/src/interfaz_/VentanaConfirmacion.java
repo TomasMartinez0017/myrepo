@@ -5,7 +5,6 @@
  */
 package interfaz_;
 import dominio.Sistema;
-import dominio.Articulo;
 
 /**
  *

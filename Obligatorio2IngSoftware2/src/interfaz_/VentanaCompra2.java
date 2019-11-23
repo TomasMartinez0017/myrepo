@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package interfaz_;
-import java.util.*;
 import java.util.Date;
-import java.util.List;
 import dominio.Sistema;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;

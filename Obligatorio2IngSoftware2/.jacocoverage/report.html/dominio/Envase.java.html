@@ -16,53 +16,53 @@ public class Envase {
     private String nombre;
     private String material;
     
-<span class="nc" id="L19">    public Envase(){</span>
-<span class="nc" id="L20">        nroEnvase = 0;</span>
-<span class="nc" id="L21">        nombre = &quot; &quot;;</span>
-<span class="nc" id="L22">        material = &quot; &quot;;</span>
-<span class="nc" id="L23">    }</span>
+<span class="fc" id="L19">    public Envase(){</span>
+<span class="fc" id="L20">        this.setNroEnvase(0);</span>
+<span class="fc" id="L21">        this.setNombre(&quot;&quot;);</span>
+<span class="fc" id="L22">        this.setMaterial(&quot;&quot;);</span>
+<span class="fc" id="L23">    }</span>
 
-<span class="nc" id="L25">    public Envase(int nroEnvase, String nombre, String material) {</span>
-<span class="nc" id="L26">        this.setNroEnvase(nroEnvase);</span>
-<span class="nc" id="L27">        this.setNombre(nombre);</span>
-<span class="nc" id="L28">        this.setMaterial(material);</span>
-<span class="nc" id="L29">    }</span>
+<span class="fc" id="L25">    public Envase(int nroEnvase, String nombre, String material) {</span>
+<span class="fc" id="L26">        this.setNroEnvase(nroEnvase);</span>
+<span class="fc" id="L27">        this.setNombre(nombre);</span>
+<span class="fc" id="L28">        this.setMaterial(material);</span>
+<span class="fc" id="L29">    }</span>
     
     
     public String getNombre(){
-<span class="nc" id="L33">        return nombre;</span>
+<span class="fc" id="L33">        return nombre;</span>
     }
     
     public String getMaterial(){
-<span class="nc" id="L37">        return material;</span>
+<span class="fc" id="L37">        return material;</span>
     }
     
     
     public void setNombre(String unNombre){
-<span class="nc" id="L42">        nombre = unNombre;</span>
-<span class="nc" id="L43">    }</span>
+<span class="fc" id="L42">        nombre = unNombre;</span>
+<span class="fc" id="L43">    }</span>
     
     public void setMaterial(String unMaterial){
-<span class="nc" id="L46">        material = unMaterial;</span>
-<span class="nc" id="L47">    }</span>
+<span class="fc" id="L46">        material = unMaterial;</span>
+<span class="fc" id="L47">    }</span>
     
     public int getNroEnvase() {
-<span class="nc" id="L50">        return nroEnvase;</span>
+<span class="fc" id="L50">        return nroEnvase;</span>
     }
 
     public void setNroEnvase(int nroEnvase) {
-<span class="nc" id="L54">        this.nroEnvase = nroEnvase;</span>
-<span class="nc" id="L55">    }</span>
+<span class="fc" id="L54">        this.nroEnvase = nroEnvase;</span>
+<span class="fc" id="L55">    }</span>
 
     @Override
     public boolean equals (Object objeto){
-<span class="nc" id="L59">        Envase envase = (Envase)objeto;</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">        return this.getNroEnvase()==envase.getNroEnvase();</span>
+<span class="fc" id="L59">        Envase envase = (Envase)objeto;</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        return this.getNroEnvase()==envase.getNroEnvase();</span>
     }    
     
       @Override
     public String toString() {
-<span class="nc" id="L65">        return this.getNombre();</span>
+<span class="fc" id="L65">        return this.getNombre();</span>
     }
     
 }

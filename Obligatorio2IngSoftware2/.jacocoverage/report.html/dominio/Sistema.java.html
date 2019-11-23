@@ -1,321 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Sistema.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Obligatorio2IngSoftware&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">dominio</a> &gt; <span class="el_source">Sistema.java</span></div><h1>Sistema.java</h1><pre class="source lang-java linenums">
+
 package dominio;
 import java.util.*;
 
-<span class="nc" id="L5">public class Sistema {</span>
-<span class="nc" id="L6">    private ArrayList&lt;Cliente&gt; listaClientes = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L7">    private ArrayList&lt;Articulo&gt; listaArticulos = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L8">    private ArrayList&lt;Local&gt; listaLocales = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L9">    private ArrayList&lt;Venta&gt; listaVentas = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L10">    private ArrayList&lt;Envase&gt; listaEnvases = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L11">    private ArrayList&lt;Articulo&gt; listaArticulosOriginales = new ArrayList&lt;&gt;();</span>
+public class Sistema {
+    private ArrayList&lt;Cliente&gt; listaClientes;
+    private ArrayList&lt;Articulo&gt; listaArticulos;
+    private ArrayList&lt;Local&gt; listaLocales;
+    private ArrayList&lt;Venta&gt; listaVentas;
+    private ArrayList&lt;Envase&gt; listaEnvases;
+    private ArrayList&lt;Articulo&gt; listaArticulosOriginales;
     
-
+<span class="fc" id="L14">    public Sistema (){</span>
+<span class="fc" id="L15">        listaClientes = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L16">        listaArticulos = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L17">        listaLocales = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L18">        listaVentas = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L19">        listaEnvases = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L20">        listaArticulosOriginales = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">    }</span>
     public ArrayList&lt;Articulo&gt; getListaArticulosOriginales() {
-<span class="nc" id="L15">        return listaArticulosOriginales;</span>
+<span class="fc" id="L23">        return listaArticulosOriginales;</span>
     }
 
     public void setListaArticulosOriginales(ArrayList&lt;Articulo&gt; listaArticulosOriginales) {
-<span class="nc" id="L19">        this.listaArticulosOriginales = listaArticulosOriginales;</span>
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L27">        this.listaArticulosOriginales = listaArticulosOriginales;</span>
+<span class="fc" id="L28">    }</span>
 
     public ArrayList&lt;Cliente&gt; getListaClientes() {
-<span class="nc" id="L23">        return listaClientes;</span>
+<span class="fc" id="L31">        return listaClientes;</span>
     }
 
     public void setListaClientes(ArrayList&lt;Cliente&gt; listaClientes) {
-<span class="nc" id="L27">        this.listaClientes = listaClientes;</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L35">        this.listaClientes = listaClientes;</span>
+<span class="fc" id="L36">    }</span>
 
     public ArrayList&lt;Articulo&gt; getListaArticulos() {
-<span class="nc" id="L31">        return listaArticulos;</span>
+<span class="fc" id="L39">        return listaArticulos;</span>
     }
 
     public void setListaArticulos(ArrayList&lt;Articulo&gt; listaArticulos) {
-<span class="nc" id="L35">        this.listaArticulos = listaArticulos;</span>
-<span class="nc" id="L36">    }</span>
+<span class="fc" id="L43">        this.listaArticulos = listaArticulos;</span>
+<span class="fc" id="L44">    }</span>
 
     public ArrayList&lt;Local&gt; getListaLocales() {
-<span class="nc" id="L39">        return listaLocales;</span>
+<span class="fc" id="L47">        return listaLocales;</span>
     }
 
     public void setListaLocales(ArrayList&lt;Local&gt; listaLocales) {
-<span class="nc" id="L43">        this.listaLocales = listaLocales;</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L51">        this.listaLocales = listaLocales;</span>
+<span class="fc" id="L52">    }</span>
 
     public ArrayList&lt;Venta&gt; getListaVentas() {
-<span class="nc" id="L47">        return listaVentas;</span>
+<span class="fc" id="L55">        return listaVentas;</span>
     }
 
     public void setListaVentas(ArrayList&lt;Venta&gt; listaVentas) {
-<span class="nc" id="L51">        this.listaVentas = listaVentas;</span>
-<span class="nc" id="L52">    }</span>
+<span class="fc" id="L59">        this.listaVentas = listaVentas;</span>
+<span class="fc" id="L60">    }</span>
 
     public ArrayList&lt;Envase&gt; getListaEnvases() {
-<span class="nc" id="L55">        return listaEnvases;</span>
+<span class="fc" id="L63">        return listaEnvases;</span>
     }
 
     public void setListaEnvases(ArrayList&lt;Envase&gt; listaEnvases) {
-<span class="nc" id="L59">        this.listaEnvases = listaEnvases;</span>
-<span class="nc" id="L60">    }</span>
+<span class="fc" id="L67">        this.listaEnvases = listaEnvases;</span>
+<span class="fc" id="L68">    }</span>
     
     public boolean agregarCliente(Cliente unCliente){
-<span class="nc" id="L63">        Cliente aux = new Cliente();</span>
-<span class="nc" id="L64">        aux.setCedula(unCliente.getCedula());</span>
+<span class="fc" id="L71">        Cliente aux = new Cliente();</span>
+<span class="fc" id="L72">        aux.setCedula(unCliente.getCedula());</span>
         
-<span class="nc bnc" id="L66" title="All 2 branches missed.">        if(!this.listaClientes.contains(aux)){</span>
-<span class="nc" id="L67">            this.listaClientes.add(unCliente);</span>
-<span class="nc" id="L68">            return true;</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if(!this.listaClientes.contains(aux)){</span>
+<span class="fc" id="L75">            this.listaClientes.add(unCliente);</span>
+<span class="fc" id="L76">            return true;</span>
         }
         else{
-<span class="nc" id="L71">            return false;</span>
+<span class="fc" id="L79">            return false;</span>
         }
     }
     
     public boolean eliminarCliente(Cliente unCliente){
-<span class="nc bnc" id="L76" title="All 2 branches missed.">        if(this.listaClientes.contains(unCliente)){</span>
-<span class="nc" id="L77">            this.listaClientes.remove(unCliente);   </span>
-<span class="nc" id="L78">            return true;</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        if(this.listaClientes.contains(unCliente)){</span>
+<span class="fc" id="L85">            this.listaClientes.remove(unCliente);   </span>
+<span class="fc" id="L86">            return true;</span>
         }
         else{
-<span class="nc" id="L81">            return false;</span>
+<span class="fc" id="L89">            return false;</span>
         }
     }
     
     public boolean agregarArticulo(Articulo unArticulo){
-<span class="nc" id="L86">        Articulo aux = new Articulo();</span>
-<span class="nc" id="L87">        aux.setCodigo(unArticulo.getCodigo());</span>
+<span class="fc" id="L94">        Articulo aux = new Articulo();</span>
+<span class="fc" id="L95">        aux.setCodigo(unArticulo.getCodigo());</span>
         
-<span class="nc bnc" id="L89" title="All 2 branches missed.">        if(!this.listaArticulos.contains(aux)){</span>
-<span class="nc" id="L90">            this.listaArticulos.add(unArticulo);</span>
-<span class="nc" id="L91">            return true;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        if(!this.listaArticulos.contains(aux)){</span>
+<span class="fc" id="L98">            this.listaArticulos.add(unArticulo);</span>
+<span class="fc" id="L99">            return true;</span>
         }
         else{
-<span class="nc" id="L94">            return false;</span>
+<span class="fc" id="L102">            return false;</span>
         }        
     }
     
     public boolean eliminarArticulo(Articulo unArticulo){
-<span class="nc bnc" id="L99" title="All 2 branches missed.">        if(this.listaArticulos.contains(unArticulo)){</span>
-<span class="nc" id="L100">            this.listaArticulos.remove(unArticulo);   </span>
-<span class="nc" id="L101">            return true;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">        if(this.listaArticulos.contains(unArticulo)){</span>
+<span class="fc" id="L108">            this.listaArticulos.remove(unArticulo);   </span>
+<span class="fc" id="L109">            return true;</span>
         }
         else{
-<span class="nc" id="L104">            return false;</span>
+<span class="fc" id="L112">            return false;</span>
         }
     }    
     
     public boolean agregarLocal(Local unLocal){
-<span class="nc" id="L109">        Local aux = new Local();</span>
-<span class="nc" id="L110">        aux.setNroLocal(unLocal.getNroLocal());</span>
+<span class="fc" id="L117">        Local aux = new Local();</span>
+<span class="fc" id="L118">        aux.setNroLocal(unLocal.getNroLocal());</span>
         
-<span class="nc bnc" id="L112" title="All 2 branches missed.">        if(!this.listaLocales.contains(aux)){</span>
-<span class="nc" id="L113">            this.listaLocales.add(unLocal);</span>
-<span class="nc" id="L114">            return true;</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        if(!this.listaLocales.contains(aux)){</span>
+<span class="fc" id="L121">            this.listaLocales.add(unLocal);</span>
+<span class="fc" id="L122">            return true;</span>
         }
         else{
-<span class="nc" id="L117">            return false;</span>
+<span class="fc" id="L125">            return false;</span>
         }        
     }
     
     public boolean eliminarLocal(Local unLocal){
-<span class="nc bnc" id="L122" title="All 2 branches missed.">        if(this.listaLocales.contains(unLocal)){</span>
-<span class="nc" id="L123">            this.listaLocales.remove(unLocal);   </span>
-<span class="nc" id="L124">            return true;</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">        if(this.listaLocales.contains(unLocal)){</span>
+<span class="fc" id="L131">            this.listaLocales.remove(unLocal);   </span>
+<span class="fc" id="L132">            return true;</span>
         }
         else{
-<span class="nc" id="L127">            return false;</span>
+<span class="fc" id="L135">            return false;</span>
         }
     }    
 
     public boolean agregarVenta(Venta unaVenta){
-<span class="nc" id="L132">        Venta aux = new Venta();</span>
-<span class="nc" id="L133">        aux.setNroVenta(unaVenta.getNroVenta());</span>
+<span class="fc" id="L140">        Venta aux = new Venta();</span>
+<span class="fc" id="L141">        aux.setNroVenta(unaVenta.getNroVenta());</span>
         
-<span class="nc bnc" id="L135" title="All 2 branches missed.">        if(!this.listaVentas.contains(aux)){</span>
-<span class="nc" id="L136">            this.listaVentas.add(unaVenta);</span>
-<span class="nc" id="L137">            return true;</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">        if(!this.listaVentas.contains(aux)){</span>
+<span class="fc" id="L144">            this.listaVentas.add(unaVenta);</span>
+<span class="fc" id="L145">            return true;</span>
         }
         else{
-<span class="nc" id="L140">            return false;</span>
+<span class="fc" id="L148">            return false;</span>
         }        
     }
     
     public boolean eliminarVenta(Venta unaVenta){
-<span class="nc bnc" id="L145" title="All 2 branches missed.">        if(this.listaVentas.contains(unaVenta)){</span>
-<span class="nc" id="L146">            this.listaVentas.remove(unaVenta);   </span>
-<span class="nc" id="L147">            return true;</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">        if(this.listaVentas.contains(unaVenta)){</span>
+<span class="fc" id="L154">            this.listaVentas.remove(unaVenta);   </span>
+<span class="fc" id="L155">            return true;</span>
         }
         else{
-<span class="nc" id="L150">            return false;</span>
+<span class="fc" id="L158">            return false;</span>
         }
     }    
     
     public boolean agregarEnvase(Envase unEnvase){
-<span class="nc" id="L155">        Envase aux = new Envase();</span>
-<span class="nc" id="L156">        aux.setNroEnvase(unEnvase.getNroEnvase());</span>
+<span class="fc" id="L163">        Envase aux = new Envase();</span>
+<span class="fc" id="L164">        aux.setNroEnvase(unEnvase.getNroEnvase());</span>
         
-<span class="nc bnc" id="L158" title="All 2 branches missed.">        if(!this.listaEnvases.contains(aux)){</span>
-<span class="nc" id="L159">            this.listaEnvases.add(unEnvase);</span>
-<span class="nc" id="L160">            return true;</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">        if(!this.listaEnvases.contains(aux)){</span>
+<span class="fc" id="L167">            this.listaEnvases.add(unEnvase);</span>
+<span class="fc" id="L168">            return true;</span>
         }
         else{
-<span class="nc" id="L163">            return false;</span>
+<span class="fc" id="L171">            return false;</span>
         }        
     }
     
     public boolean eliminarEnvase(Envase unEnvase){
-<span class="nc bnc" id="L168" title="All 2 branches missed.">        if(this.listaEnvases.contains(unEnvase)){</span>
-<span class="nc" id="L169">            this.listaEnvases.remove(unEnvase);   </span>
-<span class="nc" id="L170">            return true;</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">        if(this.listaEnvases.contains(unEnvase)){</span>
+<span class="fc" id="L177">            this.listaEnvases.remove(unEnvase);   </span>
+<span class="fc" id="L178">            return true;</span>
         }
         else{
-<span class="nc" id="L173">            return false;</span>
+<span class="fc" id="L181">            return false;</span>
         }
     }    
     //Ordeno la lista de articulos segun la cantidad de veces que se vendio.
     public ArrayList&lt;Articulo&gt; productosMasVendidos(ArrayList&lt;Articulo&gt; lista){
-<span class="nc" id="L178">        ArrayList&lt;Articulo&gt; copia=copiarLista(lista);</span>
-<span class="nc" id="L179">        Collections.sort(copia);</span>
-<span class="nc" id="L180">        return copia;</span>
+<span class="fc" id="L186">        ArrayList&lt;Articulo&gt; copia=copiarLista(lista);</span>
+<span class="fc" id="L187">        Collections.sort(copia);</span>
+<span class="fc" id="L188">        return copia;</span>
     }
     
     public ArrayList&lt;Envase&gt; EnvasesReutilizados(){
-<span class="nc" id="L184">        ArrayList&lt;Envase&gt; listaReutilizados=new ArrayList();</span>
-<span class="nc bnc" id="L185" title="All 2 branches missed.">        for(int i=0;i&lt;this.listaVentas.size();i++){</span>
-<span class="nc" id="L186">            Venta vent=this.listaVentas.get(i);</span>
-<span class="nc bnc" id="L187" title="All 2 branches missed.">            for(int j=0;j&lt;vent.getListaEnvasesUtilizados().size();j++){</span>
-<span class="nc" id="L188">                listaReutilizados.add(vent.getListaEnvasesUtilizados().get(j));</span>
+<span class="fc" id="L192">        ArrayList&lt;Envase&gt; listaReutilizados=new ArrayList();</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">        for(int i=0;i&lt;this.listaVentas.size();i++){</span>
+<span class="fc" id="L194">            Venta vent=this.listaVentas.get(i);</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">            for(int j=0;j&lt;vent.getListaEnvasesUtilizados().size();j++){</span>
+<span class="fc" id="L196">                listaReutilizados.add(vent.getListaEnvasesUtilizados().get(j));</span>
             }
         }
-<span class="nc" id="L191">        eliminarEnvasesRepetidos(listaReutilizados);</span>
-<span class="nc" id="L192">        return listaReutilizados;</span>
+<span class="fc" id="L199">        eliminarEnvasesRepetidos(listaReutilizados);</span>
+<span class="fc" id="L200">        return listaReutilizados;</span>
     }
     
     public void eliminarEnvasesRepetidos(ArrayList&lt;Envase&gt; lista){
-<span class="nc bnc" id="L196" title="All 2 branches missed.">        for(int i=0;i&lt;lista.size();i++){</span>
-<span class="nc bnc" id="L197" title="All 2 branches missed.">            for(int j=i+1;j&lt;lista.size();j++){</span>
-<span class="nc bnc" id="L198" title="All 2 branches missed.">                if(lista.get(i).getNroEnvase()==lista.get(j).getNroEnvase()){</span>
-<span class="nc" id="L199">                    lista.remove(i);</span>
+<span class="fc bfc" id="L204" title="All 2 branches covered.">        for(int i=0;i&lt;lista.size();i++){</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">            for(int j=i+1;j&lt;lista.size();j++){</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">                if(lista.get(i).getNroEnvase()==lista.get(j).getNroEnvase()){</span>
+<span class="fc" id="L207">                    lista.remove(i);</span>
                 }
             }
         }
-<span class="nc" id="L203">    }</span>
+<span class="fc" id="L211">    }</span>
     
     public int VentasDadoUnMes(int mes){
-<span class="nc" id="L206">        int cant=0;</span>
-<span class="nc bnc" id="L207" title="All 2 branches missed.">        for(int i=0;i&lt;this.listaVentas.size();i++){</span>
-<span class="nc" id="L208">            Venta vent= this.listaVentas.get(i);</span>
-<span class="nc" id="L209">            Calendar calaux=Calendar.getInstance();</span>
-<span class="nc" id="L210">            calaux.setTime(vent.getFecha());</span>
-<span class="nc" id="L211">            int mesaux=calaux.get(Calendar.MONTH);</span>
-<span class="nc bnc" id="L212" title="All 2 branches missed.">            if(mesaux==mes){</span>
-<span class="nc" id="L213">                cant++;</span>
+<span class="fc" id="L214">        int cant=0;</span>
+<span class="fc bfc" id="L215" title="All 2 branches covered.">        for(int i=0;i&lt;this.listaVentas.size();i++){</span>
+<span class="fc" id="L216">            Venta vent= this.listaVentas.get(i);</span>
+<span class="fc" id="L217">            Calendar calaux=Calendar.getInstance();</span>
+<span class="fc" id="L218">            calaux.setTime(vent.getFecha());</span>
+<span class="fc" id="L219">            int mesaux=calaux.get(Calendar.MONTH);</span>
+<span class="fc bfc" id="L220" title="All 2 branches covered.">            if(mesaux==mes){</span>
+<span class="fc" id="L221">                cant++;</span>
             }
         }
-<span class="nc" id="L216">        return cant;</span>
+<span class="fc" id="L224">        return cant;</span>
     }
 
     
     public boolean esNumerico(String dato) {
-<span class="nc" id="L221">        boolean esNumerico = true;</span>
-<span class="nc bnc" id="L222" title="All 2 branches missed.">        if(dato.equals(&quot;&quot;)){</span>
-<span class="nc" id="L223">            return false;</span>
+<span class="fc" id="L229">        boolean esNumerico = true;</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">        if(dato.equals(&quot;&quot;)){</span>
+<span class="fc" id="L231">            return false;</span>
         }
         else{
             try {
-<span class="nc" id="L227">                int valor = Integer.parseInt(dato);</span>
-<span class="nc" id="L228">            } catch (NumberFormatException e) {</span>
-<span class="nc" id="L229">                esNumerico = false;</span>
-<span class="nc" id="L230">        }</span>
-<span class="nc" id="L231">        return esNumerico;    </span>
+<span class="fc" id="L235">                int valor = Integer.parseInt(dato);</span>
+<span class="fc" id="L236">            } catch (NumberFormatException e) {</span>
+<span class="fc" id="L237">                esNumerico = false;</span>
+<span class="fc" id="L238">        }</span>
+<span class="fc" id="L239">        return esNumerico;    </span>
         }
         
     }
     
     public boolean esCedula(String ci){
-<span class="nc bnc" id="L237" title="All 2 branches missed.">        return ci.length()==8;</span>
+<span class="fc bfc" id="L245" title="All 2 branches covered.">        if(esNumerico(ci)){</span>
+<span class="fc bfc" id="L246" title="All 2 branches covered.">            return ci.length()==8;</span>
+        }
+        else{
+<span class="fc" id="L249">            return false;</span>
+        }
+        
     }
     
     public  boolean sonIguales(ArrayList&lt;Articulo&gt; listaArticulos){
-<span class="nc bnc" id="L241" title="All 2 branches missed.">        if (this.listaArticulosOriginales.size() == listaArticulos.size()){</span>
-<span class="nc bnc" id="L242" title="All 2 branches missed.">            for(int i = 0; i&lt;this.listaArticulosOriginales.size(); i++){</span>
-<span class="nc bnc" id="L243" title="All 2 branches missed.">                if(this.listaArticulosOriginales.get(i) != listaArticulos.get(i)){</span>
-<span class="nc" id="L244">                    return false;</span>
+<span class="fc bfc" id="L255" title="All 2 branches covered.">        if (this.listaArticulosOriginales.size() == listaArticulos.size()){</span>
+<span class="fc bfc" id="L256" title="All 2 branches covered.">            for(int i = 0; i&lt;this.listaArticulosOriginales.size(); i++){</span>
+<span class="fc bfc" id="L257" title="All 2 branches covered.">                if(this.listaArticulosOriginales.get(i) != listaArticulos.get(i)){</span>
+<span class="fc" id="L258">                    return false;</span>
                 }
             }
-<span class="nc" id="L247">            return true;</span>
+<span class="fc" id="L261">            return true;</span>
         }
         else{
-<span class="nc" id="L250">            return false;</span>
+<span class="fc" id="L264">            return false;</span>
         }
     }
     
     public boolean estaRegistrado(String ci){
-<span class="nc" id="L255">        Cliente aux = new Cliente();</span>
-<span class="nc" id="L256">        aux.setCedula(Integer.parseInt(ci));</span>
-<span class="nc" id="L257">        return (this.listaClientes.contains(aux));       </span>
+<span class="fc" id="L269">        Cliente aux = new Cliente();</span>
+<span class="fc" id="L270">        aux.setCedula(Integer.parseInt(ci));</span>
+<span class="fc" id="L271">        return (this.listaClientes.contains(aux));       </span>
     }
     
     public boolean validacionCompra(ArrayList&lt;Articulo&gt; listaArticulos, ArrayList&lt;Envase&gt; listaEnvases){
-<span class="nc bnc" id="L261" title="All 2 branches missed.">        return (listaArticulos.size() == listaEnvases.size());</span>
+<span class="fc bfc" id="L275" title="All 2 branches covered.">        return (listaArticulos.size() == listaEnvases.size());</span>
     }
     
     public ArrayList&lt;Articulo&gt; copiarLista(ArrayList&lt;Articulo&gt; lista){
-<span class="nc" id="L265">        ArrayList&lt;Articulo&gt; retorno = new ArrayList();</span>
-<span class="nc bnc" id="L266" title="All 2 branches missed.">        for(int i = 0; i &lt; lista.size(); i++){</span>
-<span class="nc" id="L267">            retorno.add(lista.get(i));</span>
+<span class="fc" id="L279">        ArrayList&lt;Articulo&gt; retorno = new ArrayList();</span>
+<span class="fc bfc" id="L280" title="All 2 branches covered.">        for(int i = 0; i &lt; lista.size(); i++){</span>
+<span class="fc" id="L281">            retorno.add(lista.get(i));</span>
         }
-<span class="nc" id="L269">        return retorno;</span>
+<span class="fc" id="L283">        return retorno;</span>
     }
     
     public String precioTotal(ArrayList&lt;Articulo&gt; lista){
-<span class="nc" id="L273">        int total = 0;</span>
-<span class="nc bnc" id="L274" title="All 2 branches missed.">        for(int i = 0; i&lt;lista.size(); i++){</span>
-<span class="nc bnc" id="L275" title="All 2 branches missed.">            for(int j = 0; j &lt; lista.get(i).getCantidadVendidos(); j++){</span>
-<span class="nc" id="L276">                total = total + lista.get(i).getPrecio();</span>
+<span class="fc" id="L287">        int total = 0;</span>
+<span class="fc bfc" id="L288" title="All 2 branches covered.">        for(int i = 0; i&lt;lista.size(); i++){</span>
+<span class="fc bfc" id="L289" title="All 2 branches covered.">            for(int j = 0; j &lt; lista.get(i).getCantidadVendidos(); j++){</span>
+<span class="fc" id="L290">                total = total + lista.get(i).getPrecio();</span>
             }
             
         }
-<span class="nc" id="L280">        String retorno = Integer.toString(total);</span>
-<span class="nc" id="L281">        return retorno;</span>
+<span class="fc" id="L294">        String retorno = Integer.toString(total);</span>
+<span class="fc" id="L295">        return retorno;</span>
     }
     
     public boolean esHoy(Date FechaHoy,Date FechaSeleccionado){
-<span class="nc" id="L285">        Calendar cal=Calendar.getInstance();</span>
-<span class="nc" id="L286">        cal.setTime(FechaHoy);</span>
-<span class="nc" id="L287">        int anoHoy=cal.get(Calendar.YEAR);</span>
-<span class="nc" id="L288">        int mesHoy=cal.get(Calendar.MONTH);</span>
-<span class="nc" id="L289">        int diaHoy=cal.get(Calendar.DAY_OF_MONTH);</span>
+<span class="fc" id="L299">        Calendar cal=Calendar.getInstance();</span>
+<span class="fc" id="L300">        cal.setTime(FechaHoy);</span>
+<span class="fc" id="L301">        int anoHoy=cal.get(Calendar.YEAR);</span>
+<span class="fc" id="L302">        int mesHoy=cal.get(Calendar.MONTH);</span>
+<span class="fc" id="L303">        int diaHoy=cal.get(Calendar.DAY_OF_MONTH);</span>
         
-<span class="nc" id="L291">        Calendar cal2=Calendar.getInstance();</span>
-<span class="nc" id="L292">        cal2.setTime(FechaSeleccionado);</span>
-<span class="nc" id="L293">        int anoSeleccionado=cal2.get(Calendar.YEAR);</span>
-<span class="nc" id="L294">        int mesSeleccionado=cal2.get(Calendar.MONTH);</span>
-<span class="nc" id="L295">        int diaSeleccionado=cal2.get(Calendar.DAY_OF_MONTH);</span>
+<span class="fc" id="L305">        Calendar cal2=Calendar.getInstance();</span>
+<span class="fc" id="L306">        cal2.setTime(FechaSeleccionado);</span>
+<span class="fc" id="L307">        int anoSeleccionado=cal2.get(Calendar.YEAR);</span>
+<span class="fc" id="L308">        int mesSeleccionado=cal2.get(Calendar.MONTH);</span>
+<span class="fc" id="L309">        int diaSeleccionado=cal2.get(Calendar.DAY_OF_MONTH);</span>
         
-<span class="nc bnc" id="L297" title="All 6 branches missed.">        return (anoHoy == anoSeleccionado) &amp;&amp; (mesHoy==mesSeleccionado) &amp;&amp; (diaHoy==diaSeleccionado);  </span>
+<span class="fc bfc" id="L311" title="All 6 branches covered.">        return (anoHoy == anoSeleccionado) &amp;&amp; (mesHoy==mesSeleccionado) &amp;&amp; (diaHoy==diaSeleccionado);  </span>
     }
     
     public boolean aplicaDescuento(ArrayList&lt;Articulo&gt; lstArticulo){
-<span class="nc" id="L301">        int cont = 0;</span>
-<span class="nc bnc" id="L302" title="All 2 branches missed.">        for(int i = 0; i&lt; lstArticulo.size(); i++){</span>
-<span class="nc" id="L303">            cont += lstArticulo.get(i).getCantidadVendidos();</span>
+<span class="fc" id="L315">        int cont = 0;</span>
+<span class="fc bfc" id="L316" title="All 2 branches covered.">        for(int i = 0; i&lt; lstArticulo.size(); i++){</span>
+<span class="fc" id="L317">            cont += lstArticulo.get(i).getCantidadVendidos();</span>
         }
-<span class="nc bnc" id="L305" title="All 2 branches missed.">        return cont&gt;4;</span>
+<span class="fc bfc" id="L319" title="All 2 branches covered.">        return cont&gt;4;</span>
     }
     
     public int calculoDescuento(int precioTotal){
-<span class="nc" id="L309">        int descuento = (int) (precioTotal*0.10);</span>
-<span class="nc" id="L310">        return precioTotal-descuento;</span>
+<span class="fc" id="L323">        int descuento = (int) (precioTotal*0.10);</span>
+<span class="fc" id="L324">        return precioTotal-descuento;</span>
         
     }
     public ArrayList&lt;Integer&gt; listaCantidadVendidos(ArrayList&lt;Articulo&gt; lstArticulos){
-<span class="nc" id="L314">        ArrayList&lt;Integer&gt; retorno = new ArrayList&lt;&gt;();</span>
-<span class="nc bnc" id="L315" title="All 2 branches missed.">        for(int i=0; i&lt;lstArticulos.size(); i++){</span>
-<span class="nc" id="L316">            retorno.add(lstArticulos.get(i).getCantidadVendidos());</span>
+<span class="fc" id="L328">        ArrayList&lt;Integer&gt; retorno = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L329" title="All 2 branches covered.">        for(int i=0; i&lt;lstArticulos.size(); i++){</span>
+<span class="fc" id="L330">            retorno.add(lstArticulos.get(i).getCantidadVendidos());</span>
         }
-<span class="nc" id="L318">        return retorno;</span>
+<span class="fc" id="L332">        return retorno;</span>
     }
     
     

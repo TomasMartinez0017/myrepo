@@ -8,8 +8,6 @@ import javax.swing.JOptionPane;
 import dominio.Sistema;
 import dominio.Articulo;
 import javax.swing.ListSelectionModel;
-import javax.swing.JList;
-
 /**
  *
  * @author Usuario
@@ -19,14 +17,14 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
     /**
      * Creates new form VentanaEditarArticulos
      */
-<span class="nc" id="L22">    public VentanaEditarArticulos(Sistema unSistema) {</span>
-<span class="nc" id="L23">        initComponents();</span>
-<span class="nc" id="L24">        modelo=unSistema;</span>
-<span class="nc" id="L25">        this.setLocationRelativeTo(null);</span>
-<span class="nc" id="L26">        lstArticulos.setListData(modelo.getListaArticulos().toArray());</span>
-<span class="nc" id="L27">        lstArticulos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);</span>
+<span class="nc" id="L20">    public VentanaEditarArticulos(Sistema unSistema) {</span>
+<span class="nc" id="L21">        initComponents();</span>
+<span class="nc" id="L22">        modelo=unSistema;</span>
+<span class="nc" id="L23">        this.setLocationRelativeTo(null);</span>
+<span class="nc" id="L24">        lstArticulos.setListData(modelo.getListaArticulos().toArray());</span>
+<span class="nc" id="L25">        lstArticulos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);</span>
         
-<span class="nc" id="L29">    }</span>
+<span class="nc" id="L27">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,165 +35,165 @@ public class VentanaEditarArticulos extends javax.swing.JFrame {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L40">        jButtonAgregarArticulo = new javax.swing.JButton();</span>
-<span class="nc" id="L41">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="nc" id="L42">        jScrollPane1 = new javax.swing.JScrollPane();</span>
-<span class="nc" id="L43">        lstArticulos = new javax.swing.JList&lt;&gt;();</span>
-<span class="nc" id="L44">        jButtonBorarArticulo = new javax.swing.JButton();</span>
-<span class="nc" id="L45">        jPanel2 = new javax.swing.JPanel();</span>
-<span class="nc" id="L46">        jLabel2 = new javax.swing.JLabel();</span>
-<span class="nc" id="L47">        jButtonAtras1 = new javax.swing.JButton();</span>
-<span class="nc" id="L48">        jButtonAtras = new javax.swing.JButton();</span>
+<span class="nc" id="L38">        jButtonAgregarArticulo = new javax.swing.JButton();</span>
+<span class="nc" id="L39">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L40">        jScrollPane1 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L41">        lstArticulos = new javax.swing.JList&lt;&gt;();</span>
+<span class="nc" id="L42">        jButtonBorarArticulo = new javax.swing.JButton();</span>
+<span class="nc" id="L43">        jPanel2 = new javax.swing.JPanel();</span>
+<span class="nc" id="L44">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L45">        jButtonAtras1 = new javax.swing.JButton();</span>
+<span class="nc" id="L46">        jButtonAtras = new javax.swing.JButton();</span>
 
-<span class="nc" id="L50">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L51">        setMinimumSize(new java.awt.Dimension(952, 683));</span>
-<span class="nc" id="L52">        setSize(new java.awt.Dimension(952, 683));</span>
+<span class="nc" id="L48">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L49">        setMinimumSize(new java.awt.Dimension(952, 683));</span>
+<span class="nc" id="L50">        setSize(new java.awt.Dimension(952, 683));</span>
 
-<span class="nc" id="L54">        jButtonAgregarArticulo.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L55">        jButtonAgregarArticulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 14)); // NOI18N</span>
-<span class="nc" id="L56">        jButtonAgregarArticulo.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L57">        jButtonAgregarArticulo.setText(&quot;Agregar Articulo&quot;);</span>
-<span class="nc" id="L58">        jButtonAgregarArticulo.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L52">        jButtonAgregarArticulo.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L53">        jButtonAgregarArticulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L54">        jButtonAgregarArticulo.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L55">        jButtonAgregarArticulo.setText(&quot;Agregar Articulo&quot;);</span>
+<span class="nc" id="L56">        jButtonAgregarArticulo.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L60">                jButtonAgregarArticuloActionPerformed(evt);</span>
-<span class="nc" id="L61">            }</span>
+<span class="nc" id="L58">                jButtonAgregarArticuloActionPerformed(evt);</span>
+<span class="nc" id="L59">            }</span>
         });
 
-<span class="nc" id="L64">        jLabel1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 18)); // NOI18N</span>
-<span class="nc" id="L65">        jLabel1.setText(&quot;Lista Articulos&quot;);</span>
+<span class="nc" id="L62">        jLabel1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L63">        jLabel1.setText(&quot;Lista Articulos&quot;);</span>
 
-<span class="nc" id="L67">        lstArticulos.setBackground(new java.awt.Color(204, 255, 204));</span>
-<span class="nc" id="L68">        lstArticulos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
-<span class="nc" id="L69">        lstArticulos.setModel(new javax.swing.AbstractListModel() {</span>
-<span class="nc" id="L70">            String[] strings = { &quot;-Item 1&quot;, &quot;-Item 2&quot;, &quot;-Item 3&quot;, &quot;-Item 4&quot;, &quot;-Item 5&quot; };</span>
-<span class="nc" id="L71">            public int getSize() { return strings.length; }</span>
-<span class="nc" id="L72">            public Object getElementAt(int i) { return strings[i]; }</span>
+<span class="nc" id="L65">        lstArticulos.setBackground(new java.awt.Color(204, 255, 204));</span>
+<span class="nc" id="L66">        lstArticulos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L67">        lstArticulos.setModel(new javax.swing.AbstractListModel() {</span>
+<span class="nc" id="L68">            String[] strings = { &quot;-Item 1&quot;, &quot;-Item 2&quot;, &quot;-Item 3&quot;, &quot;-Item 4&quot;, &quot;-Item 5&quot; };</span>
+<span class="nc" id="L69">            public int getSize() { return strings.length; }</span>
+<span class="nc" id="L70">            public Object getElementAt(int i) { return strings[i]; }</span>
         });
-<span class="nc" id="L74">        jScrollPane1.setViewportView(lstArticulos);</span>
+<span class="nc" id="L72">        jScrollPane1.setViewportView(lstArticulos);</span>
 
-<span class="nc" id="L76">        jButtonBorarArticulo.setBackground(new java.awt.Color(204, 204, 204));</span>
-<span class="nc" id="L77">        jButtonBorarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/trash.png&quot;))); // NOI18N</span>
-<span class="nc" id="L78">        jButtonBorarArticulo.setBorder(null);</span>
-<span class="nc" id="L79">        jButtonBorarArticulo.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L74">        jButtonBorarArticulo.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L75">        jButtonBorarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes_/trash.png&quot;))); // NOI18N</span>
+<span class="nc" id="L76">        jButtonBorarArticulo.setBorder(null);</span>
+<span class="nc" id="L77">        jButtonBorarArticulo.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L81">                jButtonBorarArticuloActionPerformed(evt);</span>
-<span class="nc" id="L82">            }</span>
+<span class="nc" id="L79">                jButtonBorarArticuloActionPerformed(evt);</span>
+<span class="nc" id="L80">            }</span>
         });
 
-<span class="nc" id="L85">        jPanel2.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L86">        jPanel2.setMaximumSize(new java.awt.Dimension(800, 100));</span>
-<span class="nc" id="L87">        jPanel2.setMinimumSize(new java.awt.Dimension(800, 100));</span>
-<span class="nc" id="L88">        jPanel2.setLayout(null);</span>
+<span class="nc" id="L83">        jPanel2.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L84">        jPanel2.setMaximumSize(new java.awt.Dimension(800, 100));</span>
+<span class="nc" id="L85">        jPanel2.setMinimumSize(new java.awt.Dimension(800, 100));</span>
+<span class="nc" id="L86">        jPanel2.setLayout(null);</span>
 
-<span class="nc" id="L90">        jLabel2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 36)); // NOI18N</span>
-<span class="nc" id="L91">        jLabel2.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L92">        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="nc" id="L93">        jLabel2.setText(&quot;Edición de Articulos&quot;);</span>
-<span class="nc" id="L94">        jPanel2.add(jLabel2);</span>
-<span class="nc" id="L95">        jLabel2.setBounds(0, 0, 940, 80);</span>
+<span class="nc" id="L88">        jLabel2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L89">        jLabel2.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L90">        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="nc" id="L91">        jLabel2.setText(&quot;Edición de Articulos&quot;);</span>
+<span class="nc" id="L92">        jPanel2.add(jLabel2);</span>
+<span class="nc" id="L93">        jLabel2.setBounds(0, 0, 940, 80);</span>
 
-<span class="nc" id="L97">        jButtonAtras1.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L98">        jButtonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/home (1).png&quot;))); // NOI18N</span>
-<span class="nc" id="L99">        jButtonAtras1.setBorder(null);</span>
-<span class="nc" id="L100">        jButtonAtras1.setMaximumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L101">        jButtonAtras1.setMinimumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L102">        jButtonAtras1.setPreferredSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L103">        jButtonAtras1.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L95">        jButtonAtras1.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L96">        jButtonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes_/home (1).png&quot;))); // NOI18N</span>
+<span class="nc" id="L97">        jButtonAtras1.setBorder(null);</span>
+<span class="nc" id="L98">        jButtonAtras1.setMaximumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L99">        jButtonAtras1.setMinimumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L100">        jButtonAtras1.setPreferredSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L101">        jButtonAtras1.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L105">                jButtonAtras1ActionPerformed(evt);</span>
-<span class="nc" id="L106">            }</span>
+<span class="nc" id="L103">                jButtonAtras1ActionPerformed(evt);</span>
+<span class="nc" id="L104">            }</span>
         });
-<span class="nc" id="L108">        jPanel2.add(jButtonAtras1);</span>
-<span class="nc" id="L109">        jButtonAtras1.setBounds(870, 10, 60, 63);</span>
+<span class="nc" id="L106">        jPanel2.add(jButtonAtras1);</span>
+<span class="nc" id="L107">        jButtonAtras1.setBounds(870, 10, 60, 63);</span>
 
-<span class="nc" id="L111">        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));</span>
-<span class="nc" id="L112">        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/back.png&quot;))); // NOI18N</span>
-<span class="nc" id="L113">        jButtonAtras.setBorder(null);</span>
-<span class="nc" id="L114">        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L115">        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L116">        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));</span>
-<span class="nc" id="L117">        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L109">        jButtonAtras.setBackground(new java.awt.Color(51, 204, 0));</span>
+<span class="nc" id="L110">        jButtonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes_/back.png&quot;))); // NOI18N</span>
+<span class="nc" id="L111">        jButtonAtras.setBorder(null);</span>
+<span class="nc" id="L112">        jButtonAtras.setMaximumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L113">        jButtonAtras.setMinimumSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L114">        jButtonAtras.setPreferredSize(new java.awt.Dimension(63, 63));</span>
+<span class="nc" id="L115">        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L119">                jButtonAtrasActionPerformed(evt);</span>
-<span class="nc" id="L120">            }</span>
+<span class="nc" id="L117">                jButtonAtrasActionPerformed(evt);</span>
+<span class="nc" id="L118">            }</span>
         });
-<span class="nc" id="L122">        jPanel2.add(jButtonAtras);</span>
-<span class="nc" id="L123">        jButtonAtras.setBounds(10, 10, 70, 63);</span>
+<span class="nc" id="L120">        jPanel2.add(jButtonAtras);</span>
+<span class="nc" id="L121">        jButtonAtras.setBounds(10, 10, 70, 63);</span>
 
-<span class="nc" id="L125">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L126">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L127">        layout.setHorizontalGroup(</span>
-<span class="nc" id="L128">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L129">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L130">                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 941, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L131">                .addGap(0, 0, Short.MAX_VALUE))</span>
-<span class="nc" id="L132">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()</span>
-<span class="nc" id="L133">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="nc" id="L134">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L135">                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L136">                    .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L137">                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L138">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L139">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L140">                            .addComponent(jButtonAgregarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L141">                            .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
-<span class="nc" id="L142">                .addGap(213, 213, 213))</span>
+<span class="nc" id="L123">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L124">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L125">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L126">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L127">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L128">                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 941, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L129">                .addGap(0, 0, Short.MAX_VALUE))</span>
+<span class="nc" id="L130">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()</span>
+<span class="nc" id="L131">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L132">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L133">                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L134">                    .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L135">                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L136">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L137">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L138">                            .addComponent(jButtonAgregarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L139">                            .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
+<span class="nc" id="L140">                .addGap(213, 213, 213))</span>
         );
-<span class="nc" id="L144">        layout.setVerticalGroup(</span>
-<span class="nc" id="L145">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L146">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L147">                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L148">                .addGap(107, 107, 107)</span>
-<span class="nc" id="L149">                .addComponent(jLabel1)</span>
-<span class="nc" id="L150">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L151">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="nc" id="L152">                    .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L153">                        .addComponent(jButtonAgregarArticulo)</span>
-<span class="nc" id="L154">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="nc" id="L155">                        .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L156">                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L157">                .addContainerGap(118, Short.MAX_VALUE))</span>
+<span class="nc" id="L142">        layout.setVerticalGroup(</span>
+<span class="nc" id="L143">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L144">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L145">                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L146">                .addGap(107, 107, 107)</span>
+<span class="nc" id="L147">                .addComponent(jLabel1)</span>
+<span class="nc" id="L148">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L149">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L150">                    .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L151">                        .addComponent(jButtonAgregarArticulo)</span>
+<span class="nc" id="L152">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L153">                        .addComponent(jButtonBorarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L154">                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L155">                .addContainerGap(118, Short.MAX_VALUE))</span>
         );
 
-<span class="nc" id="L160">        pack();</span>
-<span class="nc" id="L161">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L158">        pack();</span>
+<span class="nc" id="L159">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void jButtonBorarArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorarArticuloActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L165">        Articulo art= (Articulo)lstArticulos.getSelectedValue();</span>
-<span class="nc bnc" id="L166" title="All 2 branches missed.">        if(art!=null){</span>
-<span class="nc" id="L167">            modelo.eliminarArticulo(art);</span>
-<span class="nc" id="L168">        lstArticulos.setListData(modelo.getListaArticulos().toArray());</span>
+<span class="nc" id="L163">        Articulo art= (Articulo)lstArticulos.getSelectedValue();</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">        if(art!=null){</span>
+<span class="nc" id="L165">            modelo.eliminarArticulo(art);</span>
+<span class="nc" id="L166">        lstArticulos.setListData(modelo.getListaArticulos().toArray());</span>
         }
         else{
-<span class="nc" id="L171">            JOptionPane.showMessageDialog(this,&quot;Seleccione un articulo de la lista&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L169">            JOptionPane.showMessageDialog(this,&quot;Seleccione un articulo de la lista&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
         }
         
         
-<span class="nc" id="L175">    }//GEN-LAST:event_jButtonBorarArticuloActionPerformed</span>
+<span class="nc" id="L173">    }//GEN-LAST:event_jButtonBorarArticuloActionPerformed</span>
 
     private void jButtonAgregarArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarArticuloActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L179">        VentanaAgregarArticulo vent=new VentanaAgregarArticulo(modelo);</span>
-<span class="nc" id="L180">        vent.setVisible(true);</span>
-<span class="nc" id="L181">        this.setVisible(false);</span>
-<span class="nc" id="L182">    }//GEN-LAST:event_jButtonAgregarArticuloActionPerformed</span>
+<span class="nc" id="L177">        VentanaAgregarArticulo vent=new VentanaAgregarArticulo(modelo);</span>
+<span class="nc" id="L178">        vent.setVisible(true);</span>
+<span class="nc" id="L179">        this.setVisible(false);</span>
+<span class="nc" id="L180">    }//GEN-LAST:event_jButtonAgregarArticuloActionPerformed</span>
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L186">        VentanaVendedor vent = new VentanaVendedor(modelo);</span>
-<span class="nc" id="L187">        this.setVisible(false);</span>
-<span class="nc" id="L188">        vent.setVisible(true);</span>
-<span class="nc" id="L189">        vent.setResizable(false);</span>
-<span class="nc" id="L190">    }//GEN-LAST:event_jButtonAtrasActionPerformed</span>
+<span class="nc" id="L184">        VentanaVendedor vent = new VentanaVendedor(modelo);</span>
+<span class="nc" id="L185">        this.setVisible(false);</span>
+<span class="nc" id="L186">        vent.setVisible(true);</span>
+<span class="nc" id="L187">        vent.setResizable(false);</span>
+<span class="nc" id="L188">    }//GEN-LAST:event_jButtonAtrasActionPerformed</span>
 
     private void jButtonAtras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras1ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L194">        VentanaPrincipal vent = new VentanaPrincipal(modelo);</span>
-<span class="nc" id="L195">        this.setVisible(false);</span>
-<span class="nc" id="L196">        vent.setVisible(true);</span>
-<span class="nc" id="L197">        vent.setResizable(false);</span>
-<span class="nc" id="L198">    }//GEN-LAST:event_jButtonAtras1ActionPerformed</span>
+<span class="nc" id="L192">        VentanaPrincipal vent = new VentanaPrincipal(modelo);</span>
+<span class="nc" id="L193">        this.setVisible(false);</span>
+<span class="nc" id="L194">        vent.setVisible(true);</span>
+<span class="nc" id="L195">        vent.setResizable(false);</span>
+<span class="nc" id="L196">    }//GEN-LAST:event_jButtonAtras1ActionPerformed</span>
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

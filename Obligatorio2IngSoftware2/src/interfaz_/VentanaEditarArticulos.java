@@ -8,8 +8,6 @@ import javax.swing.JOptionPane;
 import dominio.Sistema;
 import dominio.Articulo;
 import javax.swing.ListSelectionModel;
-import javax.swing.JList;
-
 /**
  *
  * @author Usuario

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package obligatorio2ingsoftware;
+package dominio;
 
 import dominio.Cliente;
 import dominio.Local;
@@ -24,6 +24,7 @@ import static org.junit.Assert.*;
  *
  * @author Usuario
  */
+
 public class VentaTest {
     Venta ventaPrueba=new Venta();
     
@@ -45,7 +46,8 @@ public class VentaTest {
     @After
     public void tearDown() {
     }
-
+    
+    
     /**
      * Test of getHuellaCarbono method, of class Venta.
      */
@@ -114,13 +116,20 @@ public class VentaTest {
      */
     @Test
     public void testGetListaEnvasesUtilizados() {
-        System.out.println("getListaEnvasesUtilizados");
-        Venta instance = new Venta();
-        ArrayList<Envase> expResult = null;
-        ArrayList<Envase> result = instance.getListaEnvasesUtilizados();
+        ArrayList<Envase> lstEnvase = new ArrayList();
+        Envase e1 = new Envase();
+        e1.setNroEnvase(1);
+        Envase e2 = new Envase();
+        e2.setNroEnvase(2);
+        
+        lstEnvase.add(e1);
+        lstEnvase.add(e2);
+        
+        ventaPrueba.setListaEnvasesUtilizados(lstEnvase);
+        
+        ArrayList<Envase> expResult = lstEnvase;
+        ArrayList<Envase> result = ventaPrueba.getListaEnvasesUtilizados();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -128,12 +137,18 @@ public class VentaTest {
      */
     @Test
     public void testSetListaEnvasesUtilizados() {
-        System.out.println("setListaEnvasesUtilizados");
-        ArrayList<Envase> listaEnvases = null;
-        Venta instance = new Venta();
-        instance.setListaEnvasesUtilizados(listaEnvases);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        ArrayList<Envase> lstEnvase = new ArrayList();
+        Envase e1 = new Envase();
+        e1.setNroEnvase(1);
+        Envase e2 = new Envase();
+        e2.setNroEnvase(2);
+        
+        lstEnvase.add(e1);
+        lstEnvase.add(e2);
+    
+        ventaPrueba.setListaEnvasesUtilizados(lstEnvase);
+        assertEquals(ventaPrueba.getListaEnvasesUtilizados(), lstEnvase);
     }
 
     /**
@@ -141,13 +156,25 @@ public class VentaTest {
      */
     @Test
     public void testGetListaArticulos() {
-        System.out.println("getListaArticulos");
-        Venta instance = new Venta();
-        ArrayList<Articulo> expResult = null;
-        ArrayList<Articulo> result = instance.getListaArticulos();
+        Articulo art1 = new Articulo();
+        art1.setCodigo(1);
+        ArrayList<Articulo> lstArticulos = new ArrayList();
+        lstArticulos.add(art1);
+        ventaPrueba.setListaArticulos(lstArticulos);
+        ArrayList<Articulo> expResult = lstArticulos;
+        ArrayList<Articulo> result = ventaPrueba.getListaArticulos();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testSetListaArticulos() {
+        Articulo art1 = new Articulo();
+        art1.setCodigo(1);
+        ArrayList<Articulo> lstArticulos = new ArrayList();
+        lstArticulos.add(art1);
+        ArrayList<Articulo> expResult = lstArticulos;
+        ventaPrueba.setListaArticulos(lstArticulos);
+        assertEquals(expResult, ventaPrueba.getListaArticulos());
     }
 
     /**
@@ -218,12 +245,24 @@ public class VentaTest {
      */
     @Test
     public void testAgregarArticuloVenta() {
-        System.out.println("agregarArticuloVenta");
-        Articulo art = null;
-        Venta instance = new Venta();
-        instance.agregarArticuloVenta(art);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Articulo artAgrego = new Articulo();
+        ventaPrueba.agregarArticuloVenta(artAgrego);
+        ArrayList<Articulo> lstArticulos = new ArrayList();
+        lstArticulos.add(artAgrego);
+        assertEquals(lstArticulos, ventaPrueba.getListaArticulos());
+    }
+    
+    @Test
+    public void testAgregarArticuloVenta2() {
+        Articulo artAgrego = new Articulo();
+        artAgrego.setCantidadVendidos(1);
+        ventaPrueba.agregarArticuloVenta(artAgrego);
+        ventaPrueba.agregarArticuloVenta(artAgrego);
+        
+        ArrayList<Articulo> lstArticulos = new ArrayList();
+        artAgrego.setCantidadVendidos(2);
+        lstArticulos.add(artAgrego);
+        assertEquals(lstArticulos, ventaPrueba.getListaArticulos());
     }
 
     /**
@@ -231,9 +270,15 @@ public class VentaTest {
      */
     @Test
     public void testEquals() {
-        Venta vent = new Venta();
+        ArrayList<Envase> lstEnvase = new ArrayList();
+        ArrayList<Articulo> lstArticulos = new ArrayList();
+        Cliente cl = new Cliente();
+        int nroVenta = 1212;
+        Local loc = new Local();
+        Date fecha = new Date();
+        Venta vent = new Venta(lstEnvase, cl, lstArticulos, nroVenta, loc, fecha);
         ventaPrueba.setNroVenta(1212);
-        vent.setNroVenta(1212);
+        
         boolean expResult = true;
         boolean result = ventaPrueba.equals(vent);
         assertEquals(expResult, result);
@@ -246,6 +291,17 @@ public class VentaTest {
     public void testCalculoHuella() {
         ArrayList<Articulo> lstArt = new ArrayList<Articulo>();
         int expResult = 0;
+        int result = ventaPrueba.calculoHuella(lstArt);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testCalculoHuella2() {
+        ArrayList<Articulo> lstArt = new ArrayList<Articulo>();
+        Articulo art = new Articulo();
+        art.setCantidadVendidos(2);
+        lstArt.add(art);
+        int expResult = 20;
         int result = ventaPrueba.calculoHuella(lstArt);
         assertEquals(expResult, result);
     }

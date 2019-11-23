@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package obligatorio2ingsoftware;
+package dominio;
 
 import dominio.Articulo;
 import dominio.Envase;
@@ -22,7 +22,7 @@ import static org.junit.Assert.*;
 public class ArticuloTest {
     
     private Articulo articuloPrueba;
-    private ArrayList<Envase> lstEnvases;
+ 
     
     public ArticuloTest() {
     }
@@ -39,7 +39,7 @@ public class ArticuloTest {
     public void setUp() {
         //CREO LOS ATRIBUTOS Y SE LOS SETEO
         articuloPrueba = new Articulo();
-        lstEnvases=new ArrayList<>();
+        
         
     }
     
@@ -73,13 +73,30 @@ public class ArticuloTest {
      */
     @Test
     public void testGetListaEnvases() {
-        System.out.println("getListaEnvases");
-        Articulo instance = new Articulo();
-        ArrayList<Envase> expResult = null;
-        ArrayList<Envase> result = instance.getListaEnvases();
+        ArrayList<Envase> lst=new ArrayList<>();
+        Envase e=new Envase(1,"nombre","material");
+        lst.add(e);
+        articuloPrueba.setListaEnvases(lst);
+        ArrayList<Envase> expResult = lst;
+        ArrayList<Envase> result = articuloPrueba.getListaEnvases();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+     @Test
+    public void testSetListaEnvases() {
+        ArrayList<Envase> lst = new ArrayList();
+        
+        Envase e1 = new Envase(2,"nom","mat");
+        Envase e2 = new Envase(3,"nomb","mate");
+        Envase e3 = new Envase(3,"nombr","mate");
+        
+        lst.add(e1);
+        lst.add(e2);
+        lst.add(e3);
+        
+        
+        articuloPrueba.setListaEnvases(lst);
+        assertEquals(lst, articuloPrueba.getListaEnvases());
     }
 
     /**

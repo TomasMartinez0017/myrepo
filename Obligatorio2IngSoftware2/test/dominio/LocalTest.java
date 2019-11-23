@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package obligatorio2ingsoftware;
+package dominio;
 
 import dominio.Local;
 import org.junit.After;
@@ -86,9 +86,10 @@ public class LocalTest {
      */
     @Test
     public void testEquals() {
-        Local loc = new Local();
+        String direccion = "Pocitos";
+        int nroLocal = 12; 
+        Local loc = new Local(direccion, nroLocal);
         localPrueba.setNroLocal(12);
-        loc.setNroLocal(12);
         boolean expResult = true;
         boolean result = localPrueba.equals(loc);
         assertEquals(expResult, result);

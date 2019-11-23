@@ -4,13 +4,7 @@
  * and open the template in the editor.
  */
 package interfaz_;
-import java.awt.Dimension;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
 import dominio.Sistema;
-import javax.swing.ListSelectionModel;
-
 /**
  *
  * @author Usuario

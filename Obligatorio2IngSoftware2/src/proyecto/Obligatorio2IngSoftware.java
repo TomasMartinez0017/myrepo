@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
+package proyecto;
+import dominio.Articulo;
+import dominio.Cliente;
+import dominio.Envase;
+import dominio.Local;
+import dominio.Sistema;
 import java.util.*;
-import interfaz_.VentanaEditarArticulos;
-import interfaz_.VentanaAgregarArticulo;
-import interfaz_.VentanaVendedor;
 import interfaz_.VentanaPrincipal;
-import java.util.Date;
+
 
 
 /**

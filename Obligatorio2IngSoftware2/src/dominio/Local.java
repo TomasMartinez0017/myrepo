@@ -5,8 +5,8 @@ public class Local {
     private int nroLocal;
 
     public Local(){
-        direccion = " ";
-        nroLocal = 0;
+        this.setDireccion("");
+        this.setNroLocal(0);
     }
     
     public Local(String direccion, int nroLocal) {

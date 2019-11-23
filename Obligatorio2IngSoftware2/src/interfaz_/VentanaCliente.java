@@ -2,8 +2,7 @@
 package interfaz_;
 import dominio.Sistema;
 import dominio.Mapa;
-import com.teamdev.jxmaps.*;
-import java.util.concurrent.TimeUnit;
+
 
 public class VentanaCliente extends javax.swing.JFrame {
 

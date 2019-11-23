@@ -16,9 +16,9 @@ public class Cliente implements Comparable<Cliente> {
     private String direccion;
 
     public Cliente(){
-        nombre = " ";
-        cedula = 0;
-        direccion = " ";
+        this.setNombre("");
+        this.setCedula(0);
+        this.setDireccion("");
     }
     
     public Cliente(String nombre, int cedula, String direccion) {

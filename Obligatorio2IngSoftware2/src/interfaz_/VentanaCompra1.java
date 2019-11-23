@@ -8,11 +8,9 @@ package interfaz_;
 import java.util.*;
 import javax.swing.JOptionPane;
 import dominio.Sistema;
-import dominio.Articulo;
 import dominio.Venta;
 import dominio.Cliente;
 import dominio.Local;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 

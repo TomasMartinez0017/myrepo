@@ -1,5 +1,4 @@
 package dominio;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Date;
 /**
@@ -21,8 +20,8 @@ public class Venta {
         listaArticulos = new ArrayList();
         listaEnvasesUtilizados=new ArrayList();
         local=new Local();
-        nroVenta = 0;    
-        huellaCarbono=0;
+        this.setNroVenta(0);
+        this.setHuellaCarbono(0);
     }
     
     public int getHuellaCarbono() {
@@ -58,9 +57,13 @@ public class Venta {
         this.listaEnvasesUtilizados = listaEnvases;
     }
     
-        public ArrayList<Articulo> getListaArticulos() {
+    public ArrayList<Articulo> getListaArticulos() {
         return listaArticulos;
-    }    
+    }
+
+    public void setListaArticulos(ArrayList<Articulo> listaArticulos) {
+        this.listaArticulos = listaArticulos;
+    }
     
     public int getNroVenta() {
         return nroVenta;
