@@ -11,13 +11,7 @@ public class Articulo implements Comparable<Articulo> {
     private int cantidadVendidos;
     private ArrayList<Envase> listaEnvases;
 
-    public void setListaEnvases(ArrayList<Envase> listaEnvases) {
-        this.listaEnvases = listaEnvases;
-    }
     
-    /**
-     * 
-     */
     public Articulo(){
         this.setCantidadVendidos(0);
         this.setPrecio(0);
@@ -37,12 +31,7 @@ public class Articulo implements Comparable<Articulo> {
         this.setCantidadVendidos(cantidadVendidos);
         this.listaEnvases = unaLista;
     }
-    /**
-     * @author ..
-     * pre
-     * post
-     * @return retorna la cantidad de articulos vendidos de un producto
-     */
+    
     public int getCantidadVendidos() {
         return cantidadVendidos;
     }
@@ -52,11 +41,14 @@ public class Articulo implements Comparable<Articulo> {
     }
     
     
-
     public ArrayList<Envase> getListaEnvases() {
         return listaEnvases;
     }
-
+    
+    public void setListaEnvases(ArrayList<Envase> listaEnvases) {
+        this.listaEnvases = listaEnvases;
+    }
+    
     public String getNombre() {
         return nombre;
     }
@@ -69,28 +61,28 @@ public class Articulo implements Comparable<Articulo> {
         return codigo;
     }
     
+    public void setCodigo(int unCodigo){
+       codigo = unCodigo;
+    }
+    
     public int getPrecio(){
         return precio;
-    }
-    
-    public String getOrigen(){
-        return origen;
-    }
-    
-    public String getMaterial(){
-        return material;
-    }
-    
-    public void setCodigo(int unCodigo){
-        codigo = unCodigo;
     }
     
     public void setPrecio(int unPrecio){
         precio = unPrecio;
     }
     
+    public String getOrigen(){
+        return origen;
+    }
+    
     public void setOrigen(String unOrigen){
         origen = unOrigen;
+    }
+    
+    public String getMaterial(){
+        return material;
     }
     
     public void setMaterial(String unMaterial){
@@ -108,7 +100,7 @@ public class Articulo implements Comparable<Articulo> {
         return unArticulo.getCantidadVendidos() - this.getCantidadVendidos();
     }
     
-      @Override
+    @Override
     public String toString() {
         return this.getNombre();
     }

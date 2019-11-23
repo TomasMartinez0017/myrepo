@@ -1,5 +1,4 @@
 
-
 package dominio;
 import java.util.*;
 
@@ -67,6 +66,10 @@ public class Sistema {
         this.listaEnvases = listaEnvases;
     }
     
+    /*Metodo que agrega un cliente a la lista de clientes. Si el cliente no
+    estaba en la lista lo agrega y retorna true. Si el cliente esta en la
+    lista no lo agrega y retorna false
+    */
     public boolean agregarCliente(Cliente unCliente){
         Cliente aux = new Cliente();
         aux.setCedula(unCliente.getCedula());
@@ -79,7 +82,10 @@ public class Sistema {
             return false;
         }
     }
-    
+    /*Metodo que elimina un cliente de la lista de clientes. Si el cliente no
+    estaba en la lista retorna false. Si el cliente esta en la
+    lista lo elimina y retorna true
+    */
     public boolean eliminarCliente(Cliente unCliente){
         if(this.listaClientes.contains(unCliente)){
             this.listaClientes.remove(unCliente);   
@@ -90,6 +96,10 @@ public class Sistema {
         }
     }
     
+    /*Metodo que agrega un articulo a la lista de articulos. Si el articulo no
+    estaba en la lista lo agrega y retorna true. Si el articulo esta en la
+    lista no lo agrega y retorna false
+    */
     public boolean agregarArticulo(Articulo unArticulo){
         Articulo aux = new Articulo();
         aux.setCodigo(unArticulo.getCodigo());
@@ -103,6 +113,10 @@ public class Sistema {
         }        
     }
     
+    /*Metodo que elimina un articulo de la lista de clientes. Si el artiuclo no
+    estaba en la lista retorna false. Si el articulo esta en la
+    lista lo elimina y retorna true
+    */
     public boolean eliminarArticulo(Articulo unArticulo){
         if(this.listaArticulos.contains(unArticulo)){
             this.listaArticulos.remove(unArticulo);   
@@ -113,6 +127,10 @@ public class Sistema {
         }
     }    
     
+    /*Metodo que agrega un local a la lista de locales. Si el local no
+    estaba en la lista lo agrega y retorna true. Si el local esta en la
+    lista no lo agrega y retorna false
+    */
     public boolean agregarLocal(Local unLocal){
         Local aux = new Local();
         aux.setNroLocal(unLocal.getNroLocal());
@@ -126,6 +144,10 @@ public class Sistema {
         }        
     }
     
+    /*Metodo que elimina un local de la lista de locales. Si el local no
+    estaba en la lista retorna false. Si el local esta en la
+    lista lo elimina y retorna true
+    */
     public boolean eliminarLocal(Local unLocal){
         if(this.listaLocales.contains(unLocal)){
             this.listaLocales.remove(unLocal);   
@@ -135,7 +157,11 @@ public class Sistema {
             return false;
         }
     }    
-
+    
+    /*Metodo que agrega una venta a la lista de ventas. Si la venta no
+    estaba en la lista la agrega y retorna true. Si la venta esta en la
+    lista no la agrega y retorna false
+    */
     public boolean agregarVenta(Venta unaVenta){
         Venta aux = new Venta();
         aux.setNroVenta(unaVenta.getNroVenta());
@@ -149,6 +175,10 @@ public class Sistema {
         }        
     }
     
+    /*Metodo que elimina una venta de la lista de ventas. Si la venta no
+    estaba en la lista retorna false. Si la venta esta en la
+    lista la elimina y retorna true
+    */
     public boolean eliminarVenta(Venta unaVenta){
         if(this.listaVentas.contains(unaVenta)){
             this.listaVentas.remove(unaVenta);   
@@ -159,6 +189,10 @@ public class Sistema {
         }
     }    
     
+    /*Metodo que agrega un envase a la lista de envases. Si el envase no
+    estaba en la lista lo agrega y retorna true. Si el envase esta en la
+    lista no la agrega y retorna false
+    */
     public boolean agregarEnvase(Envase unEnvase){
         Envase aux = new Envase();
         aux.setNroEnvase(unEnvase.getNroEnvase());
@@ -172,6 +206,10 @@ public class Sistema {
         }        
     }
     
+    /*Metodo que elimina un envase de la lista de envases. Si el envase no
+    estaba en la lista retorna false. Si el envase esta en la
+    lista lo elimina y retorna true
+    */
     public boolean eliminarEnvase(Envase unEnvase){
         if(this.listaEnvases.contains(unEnvase)){
             this.listaEnvases.remove(unEnvase);   
@@ -180,14 +218,17 @@ public class Sistema {
         else{
             return false;
         }
-    }    
+    }
+    
     //Ordeno la lista de articulos segun la cantidad de veces que se vendio.
     public ArrayList<Articulo> productosMasVendidos(ArrayList<Articulo> lista){
         ArrayList<Articulo> copia=copiarLista(lista);
         Collections.sort(copia);
         return copia;
     }
-    
+    /*Metodo que recorre la lista de ventas y por cada venta agrega a una lista
+    los envases utilizados y luego la retorna
+    */
     public ArrayList<Envase> envasesReutilizados(){
         ArrayList<Envase> listaReutilizados=new ArrayList();
         for(int i=0;i<this.listaVentas.size();i++){
@@ -200,6 +241,7 @@ public class Sistema {
         return listaReutilizados;
     }
     
+    //Metodo que elimina los envases repetidos de una lista de envases
     public void eliminarEnvasesRepetidos(ArrayList<Envase> lista){
         for(int i=0;i<lista.size();i++){
             for(int j=i+1;j<lista.size();j++){
@@ -209,7 +251,7 @@ public class Sistema {
             }
         }
     }
-    
+    //Metodo que retorna el total de ventas dado un mes
     public int ventasDadoUnMes(int mes){
         int cant=0;
         for(int i=0;i<this.listaVentas.size();i++){
@@ -224,7 +266,7 @@ public class Sistema {
         return cant;
     }
 
-    
+    //Metodo que verifica que un String sea numerico
     public boolean esNumerico(String dato) {
         boolean esNumerico = true;
         if(dato.equals("")){
@@ -240,7 +282,7 @@ public class Sistema {
         }
         
     }
-    
+    //Metodo que verifica que un String sea una cedula
     public boolean esCedula(String ci){
         if(esNumerico(ci)){
             return ci.length()==8;
@@ -251,6 +293,8 @@ public class Sistema {
         
     }
     
+    /*Metodo que identifica si una lista de Articulos es igual a la listaArticulosOriginales
+    (listaArticulosOriginales es una lista pre cargada con todos los articulos disponibles)*/
     public  boolean sonIguales(ArrayList<Articulo> listaArticulos){
         if (this.listaArticulosOriginales.size() == listaArticulos.size()){
             for(int i = 0; i<this.listaArticulosOriginales.size(); i++){
@@ -265,16 +309,22 @@ public class Sistema {
         }
     }
     
+    //Metodo que verifica si un cliente esta registrado en el sistema
     public boolean estaRegistrado(String ci){
         Cliente aux = new Cliente();
         aux.setCedula(Integer.parseInt(ci));
         return (this.listaClientes.contains(aux));       
     }
     
+    /*Metodo que verifica que cada articulo tenga un envase asignado. Para ello
+    verificamos que el largo de la lista de articulos sea igual al largo de 
+    la lista de envases
+    */
     public boolean validacionCompra(ArrayList<Articulo> listaArticulos, ArrayList<Envase> listaEnvases){
         return (listaArticulos.size() == listaEnvases.size());
     }
     
+    //Metodo que copia un ArrayList
     public ArrayList<Articulo> copiarLista(ArrayList<Articulo> lista){
         ArrayList<Articulo> retorno = new ArrayList();
         for(int i = 0; i < lista.size(); i++){
@@ -283,6 +333,7 @@ public class Sistema {
         return retorno;
     }
     
+    //Metodo que calcula el precio total de una venta
     public String precioTotal(ArrayList<Articulo> lista){
         int total = 0;
         for(int i = 0; i<lista.size(); i++){
@@ -295,6 +346,7 @@ public class Sistema {
         return retorno;
     }
     
+    //Metodo que valida que la fecha seleccionada sea igual a la fecha de hoy
     public boolean esHoy(Date FechaHoy,Date FechaSeleccionado){
         Calendar cal=Calendar.getInstance();
         cal.setTime(FechaHoy);
@@ -311,6 +363,7 @@ public class Sistema {
         return (anoHoy == anoSeleccionado) && (mesHoy==mesSeleccionado) && (diaHoy==diaSeleccionado);  
     }
     
+    //Metodo que decide si a la compra se le aplica un descuento o no
     public boolean aplicaDescuento(ArrayList<Articulo> lstArticulo){
         int cont = 0;
         for(int i = 0; i< lstArticulo.size(); i++){
@@ -319,11 +372,13 @@ public class Sistema {
         return cont>4;
     }
     
+    //Metodo que calcula el descuento
     public int calculoDescuento(int precioTotal){
         int descuento = (int) (precioTotal*0.10);
-        return precioTotal-descuento;
-        
+        return precioTotal-descuento;    
     }
+    
+    //Metodo que retorna una lista con la cantidad de articulos vendidos por articulo
     public ArrayList<Integer> listaCantidadVendidos(ArrayList<Articulo> lstArticulos){
         ArrayList<Integer> retorno = new ArrayList<>();
         for(int i=0; i<lstArticulos.size(); i++){

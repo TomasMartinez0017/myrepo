@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class EnvaseTest {
     
-    Envase envasePrueba = new Envase();
+    Envase envasePrueba;
     
     public EnvaseTest() {
     }
@@ -33,6 +33,7 @@ public class EnvaseTest {
     
     @Before
     public void setUp() {
+        envasePrueba = new Envase();
     }
     
     @After

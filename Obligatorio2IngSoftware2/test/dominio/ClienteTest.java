@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 public class ClienteTest {
     
-    Cliente clientePrueba = new Cliente();
+    Cliente clientePrueba;
     
     public ClienteTest() {
     }
@@ -30,6 +30,7 @@ public class ClienteTest {
     
     @Before
     public void setUp() {
+        clientePrueba = new Cliente();
     }
     
     @After

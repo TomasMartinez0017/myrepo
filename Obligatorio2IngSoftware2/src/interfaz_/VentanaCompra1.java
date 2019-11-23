@@ -1,9 +1,4 @@
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interfaz_;
 import java.util.*;
 import javax.swing.JOptionPane;
@@ -13,17 +8,8 @@ import dominio.Cliente;
 import dominio.Local;
 import java.util.Date;
 
-
-
-/**
- *
- * @author tomasmartinez
- */
 public class VentanaCompra1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VentanaCompra
-     */
     public VentanaCompra1(Sistema unSistema) {
         initComponents();
         modelo = unSistema;
@@ -381,21 +367,17 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarActionPerformed
-        // TODO add your handling code here:
-        /*
-        int cantidadPasas=Integer.parseInt(spinerPasas.getValue().toString());
-        int cantidadCafe = Integer.parseInt(spinerCafe.getValue().toString());
-        int cantidadHongos = Integer.parseInt(spinerHongos.getValue().toString());
-        int cantidadKombucha =Integer.parseInt(spinerKombucha.getValue().toString());
-        */
-        
+
         venta = modelo.getListaVentas().get(modelo.getListaVentas().size()-1);
         
         String ci=txtCedula.getText();
+            //Verifico que el cliente este registrado
             if(modelo.estaRegistrado(ci)){
                 Local loc = (Local)lstLocales.getSelectedValue();
+                //Verifico que se halla elegido un local
                 if(loc != null){
                     Date fecha = rSDateChooser.getDatoFecha();
+                    //Verifico que se halla seleccionado una fecha
                     if(fecha!=null){
                         Date fechaHoy = new Date();
                         Calendar cal = Calendar.getInstance();
@@ -412,6 +394,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         int diaS = cal2.get(Calendar.DAY_OF_MONTH);
                         int res= fechaHoy.compareTo(fechaSeleccionada);
                         
+                        //Identifico si es o no una preventa
                         if(modelo.esHoy(fechaHoy, fechaSeleccionada)|| res==-1){
                             if(res==-1){
                                 venta.setEsPreventa(true);
@@ -424,31 +407,9 @@ public class VentanaCompra1 extends javax.swing.JFrame {
                         
                             venta.setLocal(loc);
                             
-                            /*
-                            if(cantidadPasas>0){
-                                Articulo artPasas = modelo.getListaArticulosOriginales().get(0);
-                                artPasas.setCantidadVendidos(cantidadPasas);
-                                venta.getListaArticulos().add(artPasas);
-                            }
-                            if(cantidadCafe>0){
-                                Articulo artCafe = modelo.getListaArticulosOriginales().get(1);
-                                artCafe.setCantidadVendidos(cantidadCafe);
-                                venta.getListaArticulos().add(artCafe);
-                            }
-                            if(cantidadHongos>0){
-                                Articulo artHongos = modelo.getListaArticulosOriginales().get(2);
-                                artHongos.setCantidadVendidos(cantidadHongos);
-                                venta.getListaArticulos().add(artHongos);
-                            }
-                            if(cantidadKombucha>0){
-                                Articulo artKombucha = modelo.getListaArticulosOriginales().get(3);
-                                artKombucha.setCantidadVendidos(cantidadKombucha);
-                                venta.getListaArticulos().add(artKombucha);
-                            }
-                            */
-                            
                             int huellaCarbono=venta.calculoHuella(venta.getListaArticulos());
                             venta.setHuellaCarbono(huellaCarbono);
+                            //Verifico que se hayan seleccionado articulos
                             if(!venta.getListaArticulos().isEmpty()){
                                 VentanaConfirmacion vent = new VentanaConfirmacion(modelo);
                                 this.setVisible(false);
@@ -478,7 +439,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonComprarActionPerformed
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
-        // TODO add your handling code here:
+
         VentanaCliente vent = new VentanaCliente(modelo);
         this.setVisible(false);
         vent.setVisible(true);
@@ -486,7 +447,7 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+
          VentanaPrincipal vent = new VentanaPrincipal(modelo);
         this.setVisible(false);
         vent.setVisible(true);
@@ -494,28 +455,28 @@ public class VentanaCompra1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void btnPasasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPasasActionPerformed
-        // TODO add your handling code here:
+
         VentanaDescripcionPasas vent = new VentanaDescripcionPasas(modelo);
         vent.setVisible(true);
         vent.setResizable(false);
     }//GEN-LAST:event_btnPasasActionPerformed
 
     private void btncafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncafeActionPerformed
-        // TODO add your handling code here:
+
         VentanaDescripcionCafe vent = new VentanaDescripcionCafe(modelo);
         vent.setVisible(true);
         vent.setResizable(false);
     }//GEN-LAST:event_btncafeActionPerformed
 
     private void btnHongosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHongosActionPerformed
-        // TODO add your handling code here:
+
         VentanaDescripcionHongo vent = new VentanaDescripcionHongo(modelo);
         vent.setVisible(true);
         vent.setResizable(false);
     }//GEN-LAST:event_btnHongosActionPerformed
 
     private void btnKombuchaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKombuchaActionPerformed
-        // TODO add your handling code here:
+
         VentanaDescripcionKombucha vent = new VentanaDescripcionKombucha(modelo);
         vent.setVisible(true);
         vent.setResizable(false);

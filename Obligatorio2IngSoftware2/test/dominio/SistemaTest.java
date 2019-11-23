@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dominio;
 
 import java.util.ArrayList;
@@ -15,13 +11,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author tomasmartinez
- */
+
 public class SistemaTest {
     
-    Sistema sistemaPrueba = new Sistema();
+    Sistema sistemaPrueba;
     
     public SistemaTest() {
     }
@@ -36,6 +29,7 @@ public class SistemaTest {
     
     @Before
     public void setUp() {
+        sistemaPrueba = new Sistema();
     }
     
     @After

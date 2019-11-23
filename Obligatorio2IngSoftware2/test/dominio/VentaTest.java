@@ -26,7 +26,7 @@ import static org.junit.Assert.*;
  */
 
 public class VentaTest {
-    Venta ventaPrueba=new Venta();
+    Venta ventaPrueba;
     
     public VentaTest() {
     }
@@ -41,6 +41,7 @@ public class VentaTest {
     
     @Before
     public void setUp() {
+        ventaPrueba = new Venta();
     }
     
     @After

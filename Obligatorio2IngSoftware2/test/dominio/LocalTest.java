@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  * @author Usuario
  */
 public class LocalTest {
-    Local localPrueba=new Local();
+    Local localPrueba;
     
     public LocalTest() {
     }
@@ -33,6 +33,7 @@ public class LocalTest {
     
     @Before
     public void setUp() {
+        localPrueba = new Local();
     }
     
     @After

@@ -3,31 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaAgregarCliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Local.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaPrincipal.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaTicket.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaDescripcionHongo.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaCompra1.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Cliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaVendedor.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/SistemaTest.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaConfirmacion.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaEditarCliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/proyecto/Obligatorio2IngSoftware.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaEditarArticulos.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaAgregarArticulo.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaCliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaSeleccionarEnvases.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Sistema.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaDescripcionKombucha.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaDescripcionPasas.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaCompra2.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaDescripcionCafe.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Envase.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Articulo.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/dominio/Venta.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaEstadisticas.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/src/interfaz_/VentanaVendedor.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/LocalTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/ClienteTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/EnvaseTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/VentaTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/SistemaTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/MapaTest.java</file>
+            <file>file:/Users/tomasmartinez/Documents/GitHub/myrepo/Obligatorio2IngSoftware2/test/dominio/ArticuloTest.java</file>
         </group>
     </open-files>
 </project-private>
