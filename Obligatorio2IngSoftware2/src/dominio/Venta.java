@@ -106,6 +106,7 @@ public class Venta {
         this.setFecha(fecha);
     }
     
+    
     public void agregarArticuloVenta(Articulo art){
         if(this.listaArticulos.contains(art)){
             int pos = listaArticulos.indexOf(art);

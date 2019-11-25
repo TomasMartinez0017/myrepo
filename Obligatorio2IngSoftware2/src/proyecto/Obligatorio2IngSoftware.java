@@ -24,8 +24,8 @@ public class Obligatorio2IngSoftware {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int valor;
         Sistema s = new Sistema();
+        
         Envase e1 = new Envase(1,"Botella","Vidrio");
         Envase e2 = new Envase(2,"Tupper","Plastico");
         Envase e3 = new Envase(3,"Caja","Carton");
